@@ -18,5 +18,17 @@
                 ]
             }
         ]
+    },
+    {
+        "label": "Camera settings",
+        "name": "camera_settings",
+        "inputs": [
+            { "type": "text", "name": "whep_url_1", "label": "Player slot 1 (Blue 1) — WHEP URL" },
+            { "type": "text", "name": "whep_url_2", "label": "Player slot 2 (Blue 2) — WHEP URL" },
+            { "type": "text", "name": "whep_url_3", "label": "Player slot 3 (Blue 3) — WHEP URL" },
+            { "type": "text", "name": "whep_url_4", "label": "Player slot 4 (Orange 1) — WHEP URL" },
+            { "type": "text", "name": "whep_url_5", "label": "Player slot 5 (Orange 2) — WHEP URL" },
+            { "type": "text", "name": "whep_url_6", "label": "Player slot 6 (Orange 3) — WHEP URL" }
+        ]
     }
 ]

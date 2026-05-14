@@ -7,6 +7,7 @@ import { Sidebar } from "./Sidebar";
 import { SponsorContainer } from "./SponsorContainer";
 import { Timer } from "./Timer";
 import { UnifiedEventFeed } from "./UnifiedEventFeed";
+import WhepCycler from "../../../whep/WhepCycler";
 
 /** 2026-v1 ingame shell (timers + room for more). Reads ingame state from BlueBottle context. */
 export default function Ingame2026V1() {
@@ -21,6 +22,7 @@ export default function Ingame2026V1() {
       <UnifiedEventFeed />
       <LatestSmiteReaction />
       <Sidebar />
+      <WhepCycler />
     </div>
   );
 }

@@ -1,334 +1,57 @@
 export const panelDefinition = [
   {
-    "label": "Trivia",
-    "name": "trivia",
+    "label": "Camera settings",
+    "name": "camera_settings",
     "inputs": [
       {
         "type": "text",
-        "name": "title",
-        "label": "Trivia title"
+        "name": "whep_url_1",
+        "label": "Player slot 1 — WHEP URL"
       },
       {
         "type": "text",
-        "name": "content",
-        "label": "Trivia content"
-      },
-      {
-        "type": "action",
-        "name": "triviaState",
-        "values": [
-          {
-            "name": "show",
-            "label": "Show trivia"
-          },
-          {
-            "name": "hide",
-            "label": "Hide trivia"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "label": "Display settings",
-    "name": "display_settings",
-    "inputs": [
-      {
-        "type": "text",
-        "name": "left_title",
-        "label": "Left box's title"
+        "name": "whep_url_2",
+        "label": "Player slot 2 — WHEP URL"
       },
       {
         "type": "text",
-        "name": "right_title",
-        "label": "Right box's title"
+        "name": "whep_url_3",
+        "label": "Player slot 3 — WHEP URL"
       },
       {
         "type": "text",
-        "name": "left_subtitle",
-        "label": "Left box's subtitle"
+        "name": "whep_url_4",
+        "label": "Player slot 4 — WHEP URL"
       },
       {
         "type": "text",
-        "name": "right_subtitle",
-        "label": "Right box's subtitle"
+        "name": "whep_url_5",
+        "label": "Player slot 5 — WHEP URL"
       },
       {
-        "type": "image",
-        "name": "left_image",
-        "label": "Left box's image logo"
+        "type": "text",
+        "name": "whep_url_6",
+        "label": "Player slot 6 — WHEP URL"
       },
       {
-        "type": "image",
-        "name": "right_image",
-        "label": "Right box's image logo"
+        "type": "text",
+        "name": "whep_url_7",
+        "label": "Player slot 7 — WHEP URL"
       },
       {
-        "type": "select",
-        "name": "replace_avatars",
-        "label": "Use team logos as player avatars",
-        "values": [
-          {
-            "label": "Only if player has no avatar",
-            "name": "if_missing"
-          },
-          {
-            "label": "Always",
-            "name": "always"
-          }
-        ]
+        "type": "text",
+        "name": "whep_url_8",
+        "label": "Player slot 8 — WHEP URL"
       },
       {
-        "type": "action",
-        "name": "boxesState",
-        "values": [
-          {
-            "name": "show",
-            "label": "Show boxes"
-          },
-          {
-            "name": "hide",
-            "label": "Hide boxes"
-          }
-        ]
+        "type": "text",
+        "name": "whep_url_9",
+        "label": "Player slot 9 — WHEP URL"
       },
       {
-        "type": "action",
-        "name": "toggleRadarView",
-        "values": [
-          {
-            "name": "toggler",
-            "label": "Toggle radar view"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "label": "Player & Match overview",
-    "name": "preview_settings",
-    "inputs": [
-      {
-        "type": "match",
-        "name": "match_preview",
-        "label": "Pick an upcoming match"
-      },
-      {
-        "type": "select",
-        "name": "select_preview",
-        "label": "Mood indicator",
-        "values": [
-          {
-            "name": "show",
-            "label": ":)"
-          },
-          {
-            "name": "hide",
-            "label": ":("
-          }
-        ]
-      },
-      {
-        "type": "player",
-        "name": "player_preview",
-        "label": "Pick a player to preview"
-      },
-      {
-        "type": "checkbox",
-        "name": "player_preview_toggle",
-        "label": "Show player preview"
-      },
-      {
-        "type": "checkbox",
-        "name": "match_preview_toggle",
-        "label": "Show upcoming match"
-      },
-      {
-        "type": "action",
-        "name": "showTournament",
-        "values": [
-          {
-            "name": "show",
-            "label": "Show tournament"
-          },
-          {
-            "name": "hide",
-            "label": "Hide tournament"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "label": "Theme settings",
-    "name": "theme_settings",
-    "inputs": [
-      {
-        "type": "select",
-        "name": "theme_preset",
-        "label": "Theme preset",
-        "values": [
-          {
-            "name": "default",
-            "label": "Default"
-          },
-          {
-            "name": "lol_2026",
-            "label": "LoL 2026"
-          },
-          {
-            "name": "dark_clean",
-            "label": "Dark clean"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "name": "overlay_opacity",
-        "label": "Overlay opacity",
-        "values": [
-          {
-            "name": "solid",
-            "label": "Solid"
-          },
-          {
-            "name": "balanced",
-            "label": "Balanced"
-          },
-          {
-            "name": "light",
-            "label": "Light"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "name": "animation_profile",
-        "label": "Animation profile",
-        "values": [
-          {
-            "name": "standard",
-            "label": "Standard"
-          },
-          {
-            "name": "fast",
-            "label": "Fast"
-          },
-          {
-            "name": "reduced",
-            "label": "Reduced"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "label": "Layout settings",
-    "name": "layout_settings",
-    "inputs": [
-      {
-        "type": "select",
-        "name": "layout_mode",
-        "label": "Layout mode",
-        "values": [
-          {
-            "name": "standard",
-            "label": "Standard"
-          },
-          {
-            "name": "compact",
-            "label": "Compact"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "name": "radar_mode",
-        "label": "Radar mode",
-        "values": [
-          {
-            "name": "default",
-            "label": "Default"
-          },
-          {
-            "name": "focus",
-            "label": "Focus"
-          },
-          {
-            "name": "mini",
-            "label": "Mini"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "name": "feed_density",
-        "label": "Event feed density",
-        "values": [
-          {
-            "name": "full",
-            "label": "Full"
-          },
-          {
-            "name": "compact",
-            "label": "Compact"
-          }
-        ]
-      },
-      {
-        "type": "checkbox",
-        "name": "clean_feed",
-        "label": "Enable clean feed mode"
-      },
-      {
-        "type": "action",
-        "name": "cycleLayoutMode",
-        "values": [
-          {
-            "name": "next",
-            "label": "Cycle layout mode"
-          }
-        ]
-      },
-      {
-        "type": "action",
-        "name": "toggleCompactObserved",
-        "values": [
-          {
-            "name": "toggle",
-            "label": "Toggle compact observed panel"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "label": "Timer settings",
-    "name": "timer_settings",
-    "inputs": [
-      {
-        "type": "select",
-        "name": "urgent_threshold",
-        "label": "Urgent threshold",
-        "values": [
-          {
-            "name": "10",
-            "label": "10 seconds"
-          },
-          {
-            "name": "8",
-            "label": "8 seconds"
-          },
-          {
-            "name": "6",
-            "label": "6 seconds"
-          }
-        ]
-      },
-      {
-        "type": "checkbox",
-        "name": "bomb_pulse",
-        "label": "Pulse bomb timer in urgent state"
+        "type": "text",
+        "name": "whep_url_0",
+        "label": "Player slot 0 (10th) — WHEP URL"
       }
     ]
   }

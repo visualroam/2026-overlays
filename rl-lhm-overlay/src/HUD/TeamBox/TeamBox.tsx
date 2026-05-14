@@ -2,6 +2,8 @@ import React from "react";
 import { StatfeedEvent } from "../../lhm-rl-module";
 import HexPattern from "../HexPattern";
 import CameraView from "../Camera/Camera";
+import WhepSlotVideo from "../Camera/WhepSlotVideo";
+import { Slot } from "../Camera/whepStreams";
 import "./TeamBox.scss";
 
 import { actions } from "./../../App";
@@ -37,6 +39,12 @@ const TeamBox = (props: Props) => {
       setShow((s) => !s);
     });
   }, []);
+
+  // Slot mapping: blue team → 1..3, orange team → 4..6 (idx 0..2 within team).
+  const slotFor = (idx: number): Slot => {
+    const base = side === "blue" ? 1 : 4;
+    return (base + idx) as Slot;
+  };
 
   const createPlayerBox = (player: any, idx: number) => {
     const earliest = Date.now() - 3 * 1000;
@@ -82,9 +90,12 @@ const TeamBox = (props: Props) => {
       >
         <div className="player-bg" />
 
-        {show && player.steamid && (
+        {show && (
           <div className="player-cam">
-            <CameraView steamid={player.steamid} visible={true} />
+            {player.steamid && (
+              <CameraView steamid={player.steamid} visible={true} />
+            )}
+            <WhepSlotVideo slot={slotFor(idx)} />
           </div>
         )}
 

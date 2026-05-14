@@ -16,6 +16,7 @@ import Tournament from "../Tournament/Tournament";
 import Pause from "../PauseTimeout/Pause";
 import Timeout from "../PauseTimeout/Timeout";
 import RoundWinBanner from "./RoundWinBanner";
+import WhepOverlay from "../Camera/WhepOverlay";
 import { CSGO } from "csgogsi";
 import { Match } from "../../API/types";
 import { useAction, useConfig } from "../../API/contexts/actions";
@@ -32,8 +33,13 @@ interface State {
   forceHide: boolean
 }*/
 
+// Mirrors the same list used in <Observed />. Anything in here means the
+// observed-player UI (and therefore the WHEP cam) should be hidden.
+const PHASE_IGNORE = ["over", "freezetime", "timeout_ct", "paused", "timeout_t"];
+
 const Layout = ({game,match}: Props) => {
   const [ forceHide, setForceHide ] = useState(false);
+  const [ showCam, setShowCam ] = useState(true);
   const layoutSettings = useConfig("layout_settings");
 
   useAction('boxesState', (state) => {
@@ -42,6 +48,10 @@ const Layout = ({game,match}: Props) => {
     } else if (state === "hide") {
       setForceHide(true);
     }
+  });
+
+  useAction('toggleCams', () => {
+    setShowCam(p => !p);
   });
 
   const left = game.map.team_ct.orientation === "left" ? game.map.team_ct : game.map.team_t;
@@ -71,8 +81,22 @@ const Layout = ({game,match}: Props) => {
     isBombPhase ? "phase-bomb" : isFreezetime ? "phase-freezetime" : "phase-live"
   }`;
 
+  // Mirror the visibility rules of <Observed />: hide the WHEP cam when
+  // there is no observed player, when the observed player is dead, when the
+  // round phase is one we ignore (freezetime, timeout, paused, over), or
+  // when the "Show cams" toggle is off. Passing null hides every slot; the
+  // peer connections stay alive in the background.
+  const observedPlayer = game.player;
+  const dontShowObserved =
+    !observedPlayer ||
+    observedPlayer.state.health === 0 ||
+    PHASE_IGNORE.includes(phase || "");
+  const whepObservedSlot =
+    showCam && !dontShowObserved ? observedPlayer?.observer_slot ?? null : null;
+
   return (
     <div className={layoutClasses}>
+      <WhepOverlay observedSlot={whepObservedSlot} />
       {showKillfeed ? <Killfeed /> : null}
       <PlayersAlive game={game} />
       {showOverview ? <Overview match={match} map={game.map} players={game.players || []} /> : null}

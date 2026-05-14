@@ -8,6 +8,7 @@ import { Player, StatfeedEvent } from "../../lhm-rl-module";
 import "./Layout.scss";
 import Scoreboard from "../Scoreboard";
 import Trivia from "../Trivia/Trivia";
+import { WhepStreamsProvider } from "../Camera/whepStreams";
 
 enum MatchStates {
   InProgress,
@@ -64,6 +65,7 @@ const Layout = (props: Props) => {
   const replayActive = !!isReplay || !!game?.isReplay;
 
   return (
+    <WhepStreamsProvider>
     <div className="layout overlay-theme-2026">
       <div className={`replay-frame ${replayActive ? "show" : "hide"}`}>
         <div className="replay-frame__edge replay-frame__edge--top" />
@@ -142,6 +144,7 @@ const Layout = (props: Props) => {
         />
       )}
     </div>
+    </WhepStreamsProvider>
   );
 };
 
