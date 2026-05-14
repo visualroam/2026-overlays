@@ -1,0 +1,114 @@
+[
+  {
+    "receivedAt": 1710000000000,
+    "payload": {
+      "junglerChampion": {
+        "id": "LeeSin",
+        "alias": "LeeSin",
+        "squareImg": "cache/14.1.1/img/champion/LeeSin.png"
+      },
+      "junglerName": "Jungler",
+      "reactionTimeSeconds": 0.42,
+      "wasKillingBlow": true,
+      "smiteLandedTime": 1710000000000
+    }
+  }
+]
+[
+  {
+      "receivedAt": 1776793478495,
+      "payload": {
+          "junglerChampion": {
+              "id": 121,
+              "alias": "Khazix",
+              "name": "Kha'Zix",
+              "splashCenteredImg": "cache/game/81/81e42f45d779e9fa85574caf4f36c115ed7986a517ca17ad4c2e331806321ced.jpg",
+              "splashImg": "cache/game/22/225bd386e3cd13b7a1792eca2f1b24d8c97641b2057dee1d5b714502a4d98dff.jpg",
+              "loadingImg": "cache/game/a9/a9d588c653a085cac2fb6168ae42be1aeaf54cad21adcaac4cd0e2a9d55cb83a.png",
+              "squareImg": "cache/game/8e/8ec56a7f77e4d58474bdc8ff08f77f2aa13e571f54c1fe22b9b43442c3c714d9.png",
+              "tileImg": "cache/game/e5/e5018bbd873160e718062910f2f80dbd9c98e9bd563f4cec95dcac22bc3cea10.jpg"
+          },
+          "junglerName": "Tonyhawkk#EUW",
+          "junglerTeam": 1,
+          "smiteDamage": 637.2768,
+          "thresholdReachedTime": 623.6247,
+          "healthAtThreshold": 637.2768,
+          "smiteLandedTime": 624.1257,
+          "healthBeforeSmite": 637.2768,
+          "reactionTimeSeconds": 0.50097656,
+          "wasKillingBlow": true
+      }
+  },
+  {
+      "receivedAt": 1776793795839,
+      "payload": {
+          "junglerChampion": {
+              "id": 11,
+              "alias": "MasterYi",
+              "name": "Master Yi",
+              "splashCenteredImg": "cache/game/78/78ed07e69a0e002baa6a77b6d54f743d3b729356be2dcff9505f58af2c586ec2.jpg",
+              "splashImg": "cache/game/9c/9cd1cc04f1190165b8aeadc8ceb77a2b53edf8cdf917f4c8c9a880f60dac9a54.jpg",
+              "loadingImg": "cache/game/ab/abd7b93e5579e01e60d88d44062686096adf32be140cf591d024a8d1cac4dba4.png",
+              "squareImg": "cache/game/3c/3ca5642002b468344c2f31e3a3d20a32aa94d42102f6a0642c5c1b2c71e62df4.png",
+              "tileImg": "cache/game/94/941c8e712f6ff90ed08a53b9c73776b54761eb6dd22c4ff2eb693daa5fb243c8.jpg"
+          },
+          "junglerName": "corpus vile#wmv",
+          "junglerTeam": 2,
+          "smiteDamage": 1400,
+          "thresholdReachedTime": 941.37225,
+          "healthAtThreshold": 1400,
+          "smiteLandedTime": 941.2705,
+          "healthBeforeSmite": 1409.0358,
+          "reactionTimeSeconds": -0.101745605,
+          "wasKillingBlow": false
+      }
+  },
+  {
+      "receivedAt": 1776794133386,
+      "payload": {
+          "junglerChampion": {
+              "id": 11,
+              "alias": "MasterYi",
+              "name": "Master Yi",
+              "splashCenteredImg": "cache/game/78/78ed07e69a0e002baa6a77b6d54f743d3b729356be2dcff9505f58af2c586ec2.jpg",
+              "splashImg": "cache/game/9c/9cd1cc04f1190165b8aeadc8ceb77a2b53edf8cdf917f4c8c9a880f60dac9a54.jpg",
+              "loadingImg": "cache/game/ab/abd7b93e5579e01e60d88d44062686096adf32be140cf591d024a8d1cac4dba4.png",
+              "squareImg": "cache/game/3c/3ca5642002b468344c2f31e3a3d20a32aa94d42102f6a0642c5c1b2c71e62df4.png",
+              "tileImg": "cache/game/94/941c8e712f6ff90ed08a53b9c73776b54761eb6dd22c4ff2eb693daa5fb243c8.jpg"
+          },
+          "junglerName": "corpus vile#wmv",
+          "junglerTeam": 2,
+          "smiteDamage": 1400,
+          "thresholdReachedTime": 1278.8958,
+          "healthAtThreshold": 1400,
+          "smiteLandedTime": 1278.8958,
+          "healthBeforeSmite": 1518.7521,
+          "reactionTimeSeconds": 0,
+          "wasKillingBlow": false
+      }
+  },
+  {
+      "receivedAt": 1776794516615,
+      "payload": {
+          "junglerChampion": {
+              "id": 11,
+              "alias": "MasterYi",
+              "name": "Master Yi",
+              "splashCenteredImg": "cache/game/78/78ed07e69a0e002baa6a77b6d54f743d3b729356be2dcff9505f58af2c586ec2.jpg",
+              "splashImg": "cache/game/9c/9cd1cc04f1190165b8aeadc8ceb77a2b53edf8cdf917f4c8c9a880f60dac9a54.jpg",
+              "loadingImg": "cache/game/ab/abd7b93e5579e01e60d88d44062686096adf32be140cf591d024a8d1cac4dba4.png",
+              "squareImg": "cache/game/3c/3ca5642002b468344c2f31e3a3d20a32aa94d42102f6a0642c5c1b2c71e62df4.png",
+              "tileImg": "cache/game/94/941c8e712f6ff90ed08a53b9c73776b54761eb6dd22c4ff2eb693daa5fb243c8.jpg"
+          },
+          "junglerName": "corpus vile#wmv",
+          "junglerTeam": 2,
+          "smiteDamage": 1211.3303,
+          "thresholdReachedTime": 1661.871,
+          "healthAtThreshold": 1211.3303,
+          "smiteLandedTime": 1661.8988,
+          "healthBeforeSmite": 1211.3303,
+          "reactionTimeSeconds": 0.027832031,
+          "wasKillingBlow": true
+      }
+  }
+]

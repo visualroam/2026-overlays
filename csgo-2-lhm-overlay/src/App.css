@@ -1,0 +1,161 @@
+@import "fonts/montserrat.css";
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", 'Montserrat', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /*background-image: url('./assets/bg.png');/**/
+
+  --overlayBackground: rgba(0, 0, 0, 0.94);
+  --overlayBorderRadius: 10px;
+  --overlayBorder: rgba(255, 255, 255, 0.15);
+
+  --transitionDuration: 0.55s;
+
+  --dragonAir: #bcd0d1;
+  --dragonFire: #ff0000;
+  --dragonWater: #1da37b;
+  --dragonEarth: #a35a1d;
+  --dragonHextech: #03ecfc;
+  --dragonChemtech: #a0ff00;
+  --dragonElder: #13edc2;
+  --baron: #c542f5;
+
+  --blueSide: #318CE7;
+  --redSide: #d90718;
+}
+
+@font-face {
+  font-family: 'Louis George Cafe';
+  src: local('Louis George Cafe'), url('./fonts/Louis George Cafe.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rounded_Elegance';
+  src: local('Rounded_Elegance'), url('./fonts/Rounded_Elegance.ttf') format('truetype');
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.layout {
+  width: 100%;
+  height: 100%;
+  perspective: 500px;
+}
+
+/* 2026-general tokens (same names as League 2026-v1 — see ../../GENERAL.md) */
+:root {
+  --overlayBackground: rgba(0, 0, 0, 0.94);
+  --overlayBorderRadius: 10px;
+  --overlayBorder: rgba(255, 255, 255, 0.15);
+  --transitionDuration: 0.55s;
+
+  --blueSide: #318ce7;
+  --redSide: #d90718;
+
+  --dragonAir: #bcd0d1;
+  --dragonFire: #ff0000;
+  --dragonWater: #1da37b;
+  --dragonEarth: #a35a1d;
+  --dragonHextech: #03ecfc;
+  --dragonChemtech: #a0ff00;
+  --dragonElder: #13edc2;
+  --baron: #c542f5;
+
+  --main-panel-color: var(--overlayBackground);
+  --sub-panel-color: var(--overlayBackground);
+  --white-dull: rgba(10, 5, 5, 0.25);
+  --white-full: rgba(250, 250, 250, 1);
+  --white-half: rgba(250, 250, 250, 0.5);
+  --color-gray: rgba(191, 191, 191, 1);
+  --color-moneys: var(--dragonChemtech);
+  --dev-purple: var(--baron);
+
+  /* CS2 sides → same blue/red family as 2026 LoL (CT = blue, T = red) */
+  --color-ct: var(--blueSide);
+  --color-t: var(--redSide);
+  --color-new-ct: var(--blueSide);
+  --color-new-t: var(--redSide);
+
+  --color-bomb: var(--dragonFire);
+  --color-defuse: var(--dragonHextech);
+
+  /* Pre-computed: blueSide(22%) blended over rgba(12,12,20,0.92) */
+  --ctPanelTrack: rgba(20, 40, 66, 0.94);
+  /* Pre-computed: redSide(22%) blended over rgba(12,12,20,0.92) */
+  --tPanelTrack: rgba(57, 11, 21, 0.94);
+  /* Pre-computed: dragonHextech(32%) blended with #2e2e2e */
+  --neutralBarFill: rgb(32, 107, 112);
+  --lossBoxIdle: #484a4e;
+
+  --panelShadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --textPrimary: var(--white-full);
+  --textSecondary: var(--white-half);
+  --accentWarn: #f29318;
+  --accentCritical: var(--dragonFire);
+}
+
+.layout.overlay-theme-2026 {
+  --overlayBackground: rgba(0, 0, 0, 0.94);
+  --overlayBorder: rgba(255, 255, 255, 0.15);
+}
+
+.layout.overlay-theme-dark {
+  --overlayBackground: rgba(10, 10, 14, 0.94);
+  --overlayBorder: rgba(255, 255, 255, 0.2);
+  --color-new-ct: #38bdf8;
+  --color-new-t: #fb7185;
+  --color-moneys: #a0ff00;
+}
+
+.layout.layout-clean-feed #scout,
+.layout.layout-clean-feed .trivia_container,
+.layout.layout-clean-feed .ladder-container {
+  display: none !important;
+}
+
+.layout.layout-mode-compact .players_alive {
+  width: 148px;
+}
+
+.layout.layout-mode-compact .players_alive .counter_container {
+  height: 38px;
+}
+
+.layout.layout-mode-compact .players_alive .counter_container > div {
+  font-size: 24px;
+}
+
+.layout.layout-mode-compact .teambox .player {
+  height: 62px;
+}
+
+.layout.layout-mode-compact .teambox .player .player_data {
+  width: 390px;
+}
+
+.layout.layout-mode-compact .teambox .player .player_data .avatar {
+  width: 62px;
+}
+
+.layout.layout-mode-compact .teambox .player .player_data .row .username {
+  font-size: 16px;
+}
+
+.layout.phase-bomb #matchbar #timer {
+  box-shadow: 0 0 0 1px var(--overlayBorder), 0 0 22px rgba(255, 0, 0, 0.3);
+}
+
+.layout.phase-freezetime #encapsulator .wins_box {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.105) inset;
+}

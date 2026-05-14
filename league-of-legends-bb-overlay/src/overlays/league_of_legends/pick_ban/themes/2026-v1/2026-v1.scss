@@ -1,0 +1,36 @@
+/* 2026-v1 pick/ban — shared theme tokens + imports (LAN vs card-row are split into dedicated files). */
+.pickban-root-theme-2026-v1 .pick-and-ban-container {
+  --blueSide: #38bdf8;
+  --blueSide-graph-1: #38bdf822;
+  --blueSide-graph-2: #38bdf8dd;
+  --redSide: #fb7185;
+  --redSide-graph-1: #fb718522;
+  --redSide-graph-2: #fb7185dd;
+  --primary: #c4b5fd;
+  --generalBackground: #0c0c14;
+  --timerStroke: #ffffff44;
+
+  /* Match ingame Scoreboard.jsx chrome */
+  --overlayBackground: rgba(0, 0, 0, 0.55);
+  --overlayBorderRadius: 10px;
+  --overlayBorder: rgba(255, 255, 255, 0.15);
+}
+
+/* Default (non-card) pick/ban chrome only — card row styles live in PickBan2026V1CardRow.scss */
+.pickban-root-theme-2026-v1 .pick-and-ban-container:not(.pickban-card-row) .pick-and-ban-bg {
+  border-radius: 12px;
+  box-shadow: 0 0 0 1px rgba(196, 181, 253, 0.35), 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* ?pickbanLayout=full — edge-to-edge bar, no inset / rounded chrome */
+.pickban-root-theme-2026-v1 .pick-and-ban-container.layout-full .pick-and-ban-bg {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  --height: 260px;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+@import "./PickBan2026V1Lan.scss";
+@import "./PickBan2026V1CardRow.scss";

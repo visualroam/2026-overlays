@@ -1,0 +1,103 @@
+.sidebar {
+  position: fixed;
+  top: 80px;
+  left: calc(calc(var(--width) + var(--left)) * -1);
+
+  width: var(--width);
+  --width: 280px;
+  --left: 10px;
+
+  background: var(--overlayBackground);
+  border-radius: var(--overlayBorderRadius);
+  border: 1px solid var(--overlayBorder);
+  padding: 10px;
+  font-size: 14px;
+  color: white;
+  z-index: 10000;
+  transition: left var(--transitionDuration) ease-in-out;
+
+  &.show {
+    left: var(--left);
+  }
+
+  .sidebar-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid var(--overlayBorder);
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .sidebar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sidebar-item {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    img {
+      height: 50px;
+      width: 50px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 5px;
+      border: 1px solid var(--overlayBorder);
+    }
+
+    .sidebar-item-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .sidebar-item-header {
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sidebar-item-name {
+      font-size: 14px;
+      font-weight: bold;
+      color: white;
+      line-height: 1;
+    }
+
+    .sidebar-item-value {
+      font-size: 12px;
+      color: white;
+    }
+
+    .sidebar-item-bar {
+      height: 20px;
+      width: 100%;
+      border: 1px solid var(--overlayBorder);
+      border-radius: 5px;
+      overflow: hidden;
+
+      &.blue .sidebar-item-bar-inner {
+        background: var(--blueSide);
+      }
+
+      &.red .sidebar-item-bar-inner {
+        background: var(--redSide);
+      }
+    }
+
+    .sidebar-item-bar-inner {
+      height: 100%;
+      border-radius: 5px;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+# Ignore node_modules everywhere
+**/node_modules/
+
+# Ignore log files
+*.log
+**/*.log
+
+# Ignore build/dist folders and files
+build/
+dist/
+**/build/
+**/dist/
+
+# Ignore dependency lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+**/package-lock.json
+**/yarn.lock
+**/pnpm-lock.yaml
+
+# Ignore .env files everywhere
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Ignore OS & editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+**/.DS_Store
+**/Thumbs.db
+**/.idea/
+**/.vscode/
+**/*.swp
+
+# Ignore coverage output
+coverage/
+**/coverage/
+
+# Ignore any generated json in build folders
+build/*.json
+**/build/*.json
+
+# Ignore generated static assets
+/static/
+**/static/
+
+# Ignore SASS/SCSS cache
+.sass-cache/
+**/.sass-cache/
+
+# Ignore npm debug log
+npm-debug.log*
+**/npm-debug.log*
+
+# Ignore test output
+junit.xml
+**/junit.xml
+test-results/
+**/test-results/
+
+# Ignore temp files
+tmp/
+temp/
+**/tmp/
+**/temp/
+
+# Ignore signed overlay zip files
+*.zip
+**/*.zip

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200pt" height="1200pt" version="1.1" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <path fill="var(--primary, #f2bc40)" d="m307.99 1039.5-72.059 52.5v108h728.13v-108l-73.559-52.5z"/>
+  <path fill="var(--primary, #f2bc40)" d="m809.76 943.5h-419.54l40.238-470.58h339.07z"/>
+  <path fill="var(--primary, #f2bc40)" d="m766.5 0v201.78h-91.5v-201.78h-160.5v201.78h-91.5v-201.78h-150.61v376.92h655.23v-376.92z"/>
+ </g>
+</svg>

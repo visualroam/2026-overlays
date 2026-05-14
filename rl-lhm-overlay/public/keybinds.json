@@ -1,0 +1,6 @@
+[
+    {
+        "bind":"Ctrl+X",
+        "action":"toggleCams"
+    }
+]

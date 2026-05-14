@@ -1,0 +1,82 @@
+[
+  {
+      "receivedAt": 1776793478495,
+      "payload": {
+          "objective": "DRAGON_FIRE",
+          "eventType": "Kill",
+          "killer": "Tonyhawkk#EUW",
+          "assisters": null,
+          "team": 1
+      }
+  },
+  {
+      "receivedAt": 1776793570199,
+      "payload": {
+          "objective": "GRUB",
+          "eventType": "Kill",
+          "killer": "Tonyhawkk#EUW",
+          "assisters": null,
+          "team": 1
+      }
+  },
+  {
+      "receivedAt": 1776793795839,
+      "payload": {
+          "objective": "DRAGON_HEXTECH",
+          "eventType": "Kill",
+          "killer": "corpus vile#wmv",
+          "assisters": null,
+          "team": 2
+      }
+  },
+  {
+      "receivedAt": 1776794133386,
+      "payload": {
+          "objective": "DRAGON_CHEMTECH",
+          "eventType": "Kill",
+          "killer": "corpus vile#wmv",
+          "assisters": null,
+          "team": 2
+      }
+  },
+  {
+      "receivedAt": 1776794203855,
+      "payload": {
+          "objective": "BARON",
+          "eventType": "Kill",
+          "killer": "corpus vile#wmv",
+          "assisters": null,
+          "team": 2
+      }
+  },
+  {
+      "receivedAt": 1776794516615,
+      "payload": {
+          "objective": "DRAGON_CHEMTECH",
+          "eventType": "Kill",
+          "killer": "corpus vile#wmv",
+          "assisters": null,
+          "team": 2
+      }
+  },
+  {
+      "receivedAt": 1776794602400,
+      "payload": {
+          "objective": "BARON",
+          "eventType": "Kill",
+          "killer": "Tonyhawkk#EUW",
+          "assisters": null,
+          "team": 1
+      }
+  },
+  {
+      "receivedAt": 1776794834361,
+      "payload": {
+          "objective": "DRAGON_CHEMTECH",
+          "eventType": "Kill",
+          "killer": "corpus vile#wmv",
+          "assisters": null,
+          "team": 2
+      }
+  }
+]

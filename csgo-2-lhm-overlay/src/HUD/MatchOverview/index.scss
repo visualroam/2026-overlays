@@ -1,0 +1,48 @@
+.match-overview {
+	opacity: 0;
+	transition: opacity var(--transitionDuration);
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	right: 10px;
+	top: 375px;
+	background-color: var(--overlayBackground);
+	border: 1px solid var(--overlayBorder);
+	border-radius: var(--overlayBorderRadius);
+	text-transform: uppercase;
+	width: 250px;
+	color: white;
+}
+.match-overview.show {
+	opacity: 1;
+}
+.match-overview-teams {
+	display: flex;
+	>div {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding: 5px 0;
+		&:not(.match-overview-vs) {
+			background-color: rgba(0, 0, 0, 0.86);
+		}
+	}
+}
+.match-overview-title {
+	text-align: center;
+	font-weight: 600;
+	background-color: rgba(0, 0, 0, 0.80);
+	border-bottom: 1px solid var(--overlayBorder);
+	padding: 3px 0;
+	letter-spacing: 0.08em;
+}
+.match-overview-vs {
+	width: 20px;
+	flex: unset;
+	background-color: rgba(0, 0, 0, 0.89);
+	border-left: 1px solid var(--overlayBorder);
+	border-right: 1px solid var(--overlayBorder);
+	font-size: 30px;
+}

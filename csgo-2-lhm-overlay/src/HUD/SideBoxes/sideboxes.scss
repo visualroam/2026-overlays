@@ -1,0 +1,314 @@
+.boxes {
+	position: fixed;
+
+	bottom: 10px;
+
+  svg {
+    fill: #fff;
+  }
+}
+.boxes.left {
+	left: 380px;
+}
+.boxes.right {
+	right: 380px;
+}
+.boxes.hide {
+	.utilitybox {
+		height: 0;
+		opacity: 0;
+	}
+	.moneybox {
+		height: 0;
+		opacity: 0;
+	}
+	.sidebox {
+		height: 0;
+		opacity: 0;
+	}
+}
+.utilitybox.hide {
+	height: 0;
+	opacity: 0;
+}
+.moneybox.hide {
+	height: 0;
+	opacity: 0;
+}
+.sidebox.hide {
+	height: 0;
+	opacity: 0;
+}
+
+.sidebox {
+	width: 400px;
+	height: 70px;
+	display: flex;
+	flex-direction: row;
+	opacity: 1;
+	transition: opacity var(--transitionDuration), height var(--transitionDuration);
+
+	border-radius: var(--overlayBorderRadius);
+  background-color: var(--overlayBackground);
+
+	align-items: center;
+
+	.title_container {
+		color: var(--white-full);
+		height: 60px;
+		width: 100%;
+		font-size: 20px;
+		display: flex;
+		flex-direction: column;
+		>div {
+			flex: 1;
+			display: flex;
+			align-items: center;
+			font-weight: 600;
+			font-size: 18px;
+		}
+	}
+	.image_container {
+		width: 70px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img {
+			max-width: 70px;
+			max-height: 70px;
+		}
+	}
+}
+.utilitybox {
+	width: 380px;
+	height: 70px;
+	display: flex;
+	flex-direction: row;
+	opacity: 1;
+	transition: opacity var(--transitionDuration), height var(--transitionDuration);
+	background-color: var(--overlayBackground);
+
+	flex-direction: column;
+
+	border-radius: var(--overlayBorderRadius) var(--overlayBorderRadius) 0 0;
+  position: relative;
+
+  .utility-level {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--overlayBorderRadius) var(--overlayBorderRadius) 0 0;
+    z-index: 1;
+    opacity: 0.2;
+  }
+	.title_container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		font-weight: 600;
+		font-size: 16px;
+		height: 24px;
+	}
+	.title {
+		height: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.grenades_container {
+		display: flex;
+
+		flex: 1;
+		height: 46px;
+    position: relative;
+    z-index: 2;
+		.grenade_container {
+			display: flex;
+			flex: 1;
+			color: white;
+			align-items: center;
+			font-weight: 600;
+			font-size: 18px;
+			justify-content: center;
+
+			gap: 10px;
+
+			.grenade_amount {
+				font-size: 30px;
+				font-weight: bolder;
+				color: #fff;
+			}
+
+			svg {
+				height: 35px;
+				width: auto;
+				fill: #fff;
+			}
+		}
+	}
+}
+.moneybox {
+	width: 380px;
+	min-height: 70px;
+	height: 70px;
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	opacity: 1;
+	transition: opacity var(--transitionDuration), height var(--transitionDuration);
+  background-color: var(--overlayBackground);
+  border-top: 1px solid #fff;
+	border-radius: 0 0 var(--overlayBorderRadius) var(--overlayBorderRadius);
+	margin-bottom: 0;
+	overflow: hidden;
+	.money_container {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		min-width: 0;
+		padding: 8px 6px 10px;
+		justify-content: center;
+		gap: 2px;
+		color: var(--white-full);
+		.title {
+			font-size: 11px;
+			font-weight: 600;
+			line-height: 1.2;
+			letter-spacing: 0.06em;
+			text-transform: uppercase;
+			text-align: center;
+			opacity: 1;
+		}
+		.value {
+			font-size: 25px;
+			font-weight: 700;
+			line-height: 1.1;
+			font-variant-numeric: tabular-nums;
+			text-align: center;
+			letter-spacing: -0.02em;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+
+      span {
+        font-size: 25px;
+        color: gold;
+      }
+		}
+	}
+	.loss_container {
+		flex-shrink: 0;
+		width: 20px;
+		display: flex;
+		align-items: stretch;
+		flex-direction: column;
+		justify-content: center;
+		box-sizing: border-box;
+
+		.loss-box {
+			flex: 1;
+			width: 100%;
+			background-color: var(--lossBoxIdle);
+			transition: background-color 0.15s ease, box-shadow 0.15s ease;
+      font-size: 12px;
+      font-weight: 600;
+      text-align: center;
+      padding: 2px 0;
+      color: #fff;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+		}
+		.loss-box:not(:last-child) {
+			border-bottom: 1px solid #111;
+		}
+		.loss-box.active.CT {
+			background-color: var(--color-new-ct);
+			box-shadow:
+				inset 0 1px 0 rgba(250, 250, 250, 0.25),
+				0 0 10px rgba(49, 140, 231, 0.45);
+		}
+		.loss-box.active.T {
+			background-color: var(--color-new-t);
+			box-shadow:
+				inset 0 1px 0 rgba(250, 250, 250, 0.25),
+				0 0 10px rgba(217, 7, 24, 0.45);
+		}
+	}
+	.money_container + .money_container {
+		border-left: 1px solid rgba(255, 255, 255, 0.13);
+	}
+}
+.sidebox.right {
+	flex-direction: row-reverse;
+	.title_container {
+		>div {
+			flex-direction: row-reverse;
+			text-align: right;
+			padding-right: 10px;
+		}
+	}
+}
+.sidebox.left {
+	.title_container {
+		>div {
+			flex-direction: row;
+			text-align: left;
+			padding-left: 10px;
+		}
+	}
+}
+.utilitybox.CT {
+	.title {
+		color: var(--color-new-ct);
+	}
+}
+.utilitybox.T {
+	.title {
+		color: var(--color-new-t);
+	}
+}
+.moneybox.right {
+	flex-direction: row-reverse;
+	.loss_container {
+		border-right: none;
+		border-left: 1px solid rgba(255, 255, 255, 0.13);
+	}
+	.money_container + .money_container {
+		border-left: none;
+	}
+	/* DOM: loss, loss bonus, team money, equipment → visual L→R: equipment | … | loss strip */
+	.money_container:nth-child(4) {
+		border-right: 1px solid rgba(255, 255, 255, 0.13);
+	}
+	.money_container:nth-child(3) {
+		border-right: 1px solid rgba(255, 255, 255, 0.13);
+	}
+}
+.moneybox.CT {
+	/* Title: ~82% blueSide + 18% white = rgb(85, 159, 235) */
+	.money_container .title {
+		color: rgb(85, 159, 235);
+	}
+	/* Value: ~22% blueSide + 78% white = rgb(206, 226, 247) */
+	.money_container .value {
+		color: rgb(206, 226, 247);
+	}
+}
+.moneybox.T {
+	/* Title: ~82% redSide + 18% white = rgb(223, 50, 60) */
+	.money_container .title {
+		color: rgb(223, 50, 60);
+	}
+	/* Value: ~22% redSide + 78% white = rgb(243, 196, 200) */
+	.money_container .value {
+		color: rgb(243, 196, 200);
+	}
+}

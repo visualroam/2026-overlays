@@ -1,0 +1,43 @@
+/* 2026-v1 ingame root */
+.ingame-overlay-container.theme-2026-v1 {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: transparent;
+
+  --overlayBackground: rgba(0, 0, 0, 0.94);
+  --overlayBorderRadius: 10px;
+  --overlayBorder: rgba(255, 255, 255, 0.15);
+
+  --transitionDuration: 0.55s;
+
+  --dragonAir: #bcd0d1;
+  --dragonFire: #ff0000;
+  --dragonWater: #1da37b;
+  --dragonEarth: #a35a1d;
+  --dragonHextech: #03ecfc;
+  --dragonChemtech: #a0ff00;
+  --dragonElder: #13edc2;
+  --baron: #c542f5;
+
+  --blueSide: #318CE7;
+  --redSide: #d90718;
+}
+
+
+/* If you wrap Default again, this skin applies on top: */
+.ingame-root-theme-2026-v1 .ingame-overlay-container.default {
+  --primary: #c4b5fd !important;
+  --generalBackground: #0c0c14 !important;
+  --blueSide: #38bdf8 !important;
+  --blueSideDarker: #0c4a6e !important;
+  --blueSide-graph-1: #38bdf822 !important;
+  --blueSide-graph-2: #38bdf8dd !important;
+  --redSide: #fb7185 !important;
+  --redSideDarker: #9f1239 !important;
+  --redSide-graph-1: #fb718522 !important;
+  --redSide-graph-2: #fb7185dd !important;
+  --timerStroke: #ffffff44 !important;
+  --overlayBackground: rgba(0, 0, 0, 0.5);
+}

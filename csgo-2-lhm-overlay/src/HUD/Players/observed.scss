@@ -1,0 +1,259 @@
+#cameras-container {
+  position: absolute;
+  bottom: 50px!important;
+  width: 350px!important;
+  height: 230px!important;
+  left: 50%!important;
+  transform: translateX(-50%)!important;
+  border-top-left-radius: var(--overlayBorderRadius)!important;
+  border-top-right-radius: var(--overlayBorderRadius)!important;
+  overflow: hidden!important;
+
+  video {
+    height: 100%!important;
+    width: 100%!important;
+    object-fit: cover!important;
+    object-position: center!important;
+  }
+}
+
+.observed {
+  --width: 350px;
+
+  width: var(--width);
+
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden!important;
+
+  &.T {
+    --sideColor: var(--redSide);
+    --sideTintTop: rgba(217, 7, 24, 0.14);
+    --sideTintBottom: rgba(217, 7, 24, 0.04);
+
+    .grenades {
+      justify-content: end;
+      right: 50px;
+      left: 100px;
+    }
+
+    .ammo-counter {
+      left: 45px;
+    }
+
+    .ammo-icon-container {
+      left: 10px;
+    }
+
+    .observed-player-health {
+      left: 0;
+
+      .observed-player-health-value {
+        left: 35px;
+        justify-content: start;
+      }
+
+      .observed-player-name {
+        right: 10px;
+      }
+
+      .observed-player-health-icon {
+        left: 0;
+      }
+
+      .observed-player-health-bar {
+        background-color: var(--redSide);
+        left: 0;
+      }
+    }
+  }
+
+  &.CT {
+    --sideColor: var(--blueSide);
+    --sideTintTop: rgba(49, 140, 231, 0.14);
+    --sideTintBottom: rgba(49, 140, 231, 0.04);
+
+    .grenades {
+      justify-content: start;
+    }
+
+    .ammo-icon-container {
+      right: 10px;
+    }
+
+    .ammo-counter {
+      right: 45px;
+      flex-direction: row-reverse;
+    }
+
+    .observed-player-health {
+      right: 0;
+
+      .observed-player-name {
+        left: 10px;
+      }
+
+      .observed-player-health-value {
+        right: 35px;
+        justify-content: end;
+      }
+
+      .observed-player-health-icon {
+        right: 0;
+      }
+
+      .observed-player-health-bar {
+        background-color: var(--blueSide);
+        right: 0;
+      }
+    }
+  }
+
+  &.cam-active {
+    .observed-bg {
+      //height: 400px;
+    }
+  }
+
+  height: 85px;
+  border-radius: var(--overlayBorderRadius);
+
+  .ammo-icon-container {
+    position: absolute;
+    bottom: 42px;
+
+    svg {
+      fill: #fff;
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .ammo-counter {
+    position: absolute;
+    bottom: 45px;
+
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 5px;
+    line-height: 1;
+
+    .ammo-clip {
+      font-size: 30px;
+      font-weight: bold;
+      color: #fff;
+      width: 30px;
+      text-align: center;
+    }
+
+    .ammo-reserve {
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+      opacity: 0.8;
+      width: 30px;
+      text-align: center;
+      padding-bottom: 2px;
+    }
+  }
+
+  .observed-player-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 10;
+  }
+
+  .observed-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 85px;
+
+    background:
+      linear-gradient(
+        180deg,
+        var(--sideTintTop) 0%,
+        var(--sideTintBottom) 100%
+      ),
+      rgba(0, 0, 0, 0.94);
+  }
+
+  .grenades {
+    position: absolute;
+
+    left: 50px;
+    right: 100px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    bottom: 50px;
+
+    .weapon {
+      height: 30px;
+      width: 30px;
+      fill: #fff;
+    }
+  }
+
+  .observed-player-health {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    border-top: 1px solid #fff;
+
+    .observed-player-health-value {
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+
+      position: absolute;
+      top: 0;
+      bottom: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      z-index: 10;
+    }
+
+    .observed-player-health-icon {
+      position: absolute;
+      top: 10px;
+      width: 40px;
+      z-index: 10;
+    }
+
+    .observed-player-health-bar {
+      height: 100%;
+      opacity: 0.45;
+      position: relative;
+      overflow: hidden;
+      transition: width 0.15s linear;
+
+      .hex {
+        position: absolute;
+        inset: 0;
+      }
+    }
+  }
+}

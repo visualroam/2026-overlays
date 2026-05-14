@@ -1,0 +1,357 @@
+@import '../_colors.scss';
+
+.teambox {
+  position: fixed;
+  bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  opacity: 1;
+  transition: opacity var(--transitionDuration);
+  z-index: 40;
+
+  &.blue {
+    --sideColor: #{$blue};
+    --sideColorDark: #{darken($blue, 18%)};
+    --sideTintTop: #{rgba($blue, 0.14)};
+    --sideTintBottom: #{rgba($blue, 0.04)};
+    --sideGlow: #{rgba($blue, 0.35)};
+    --sideEventStrong: #{rgba($blue, 0.6)};
+    --sideEventDarkStrong: #{rgba(darken($blue, 18%), 0.7)};
+    left: 12px;
+  }
+
+  &.orange {
+    --sideColor: #{$orange};
+    --sideColorDark: #{darken($orange, 22%)};
+    --sideTintTop: #{rgba($orange, 0.14)};
+    --sideTintBottom: #{rgba($orange, 0.04)};
+    --sideGlow: #{rgba($orange, 0.35)};
+    --sideEventStrong: #{rgba($orange, 0.6)};
+    --sideEventDarkStrong: #{rgba(darken($orange, 22%), 0.7)};
+    right: 12px;
+  }
+
+  .player {
+    --player-height: 90px;
+    width: 360px;
+    height: var(--player-height);
+    position: relative;
+    border-radius: var(--overlayBorderRadius);
+    overflow: hidden;
+    box-shadow: var(--panelShadow);
+
+    transition: filter var(--transitionDuration) ease-in-out,
+      box-shadow var(--transitionDuration) ease-in-out,
+      height var(--transitionDuration) ease-in-out;
+
+    &.with-cam {
+      --player-height: 240px;
+    }
+
+    &.dead {
+      filter: grayscale(80%) brightness(0.65);
+    }
+
+    &.active {
+      box-shadow: var(--panelShadow),
+        0 0 0 1px var(--sideColor),
+        0 0 14px 2px rgba(0, 0, 0, 0.45),
+        0 0 22px 0 var(--sideGlow);
+
+      .player-slot {
+        background: var(--sideColor);
+        color: #fff;
+      }
+    }
+
+    // Background panel
+    .player-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          180deg,
+          var(--sideTintTop) 0%,
+          var(--sideTintBottom) 100%
+        ),
+        rgba(0, 0, 0, 0.94);
+      border: 1px solid var(--overlayBorder);
+      border-radius: var(--overlayBorderRadius);
+      z-index: 0;
+    }
+
+    // Camera mount — fills the area above the content row when with-cam is on
+    .player-cam {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 160px;
+      overflow: hidden;
+      z-index: 1;
+      border-top-left-radius: var(--overlayBorderRadius);
+      border-top-right-radius: var(--overlayBorderRadius);
+      background: #000;
+
+      .cameras-container {
+        position: absolute;
+        inset: 0;
+      }
+
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    // Player content area — only the bottom 80px (above the cam in with-cam mode)
+    .player-content {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 80px;
+      z-index: 2;
+
+      display: flex;
+      flex-direction: column;
+      padding: 9px 12px 0;
+
+      transition: opacity 0.2s ease-in-out;
+
+      &.with-event {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .player-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+
+        &.top {
+          height: 26px;
+        }
+
+        &.stats {
+          flex: 1;
+          justify-content: space-between;
+          padding-top: 6px;
+          padding-bottom: 12px; // reserve room for boost bar
+        }
+      }
+
+      .player-slot {
+        flex-shrink: 0;
+        width: 22px;
+        height: 22px;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid var(--overlayBorder);
+        color: #fff;
+        font-size: 13px;
+        font-weight: bolder;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color var(--transitionDuration) ease-in-out,
+          color var(--transitionDuration) ease-in-out;
+      }
+
+      .player-name {
+        flex: 1;
+        font-size: 18px;
+        line-height: 1;
+        font-weight: bolder;
+        color: #fff;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .boost-num {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 20px;
+        line-height: 1;
+        font-weight: bolder;
+        color: #fff;
+
+        i {
+          font-size: 14px;
+          color: var(--sideColor);
+        }
+
+        &.critical { color: #ff3b3b; i { color: #ff3b3b; } }
+        &.low      { color: #ffb020; i { color: #ffb020; } }
+      }
+
+      .stat {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        line-height: 1;
+
+        i {
+          font-size: 25px;
+          color: var(--sideColor);
+        }
+
+        span {
+          font-size: 25px;
+          font-weight: bolder;
+          color: #fff;
+        }
+      }
+    }
+
+    // Boost bar fills horizontally from the colored side
+    .player-boost-bar {
+      position: absolute;
+      bottom: 0;
+      height: 5px;
+      background: var(--sideColor);
+      transition: width 0.15s linear;
+      z-index: 3;
+      overflow: hidden;
+
+      .hex {
+        position: absolute;
+        inset: 0;
+      }
+    }
+
+    // Dead overlay
+    .dead-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      z-index: 4;
+
+      i {
+        color: rgba(255, 255, 255, 0.25);
+        font-size: 56px;
+      }
+    }
+
+    // Statfeed event overlay
+    .statfeed-event {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 90px;
+      overflow: hidden;
+      z-index: 10;
+
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+
+      &.show {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &::before {
+        content: " ";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          90deg,
+          var(--sideEventStrong) 0%,
+          var(--sideEventDarkStrong) 100%
+        );
+        z-index: 1;
+      }
+
+      .type {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        line-height: 1;
+        font-weight: bolder;
+        color: #fff;
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.55);
+        z-index: 3;
+      }
+
+      .icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 90px;
+        transform: translate(-50%, -50%);
+        opacity: 0.18;
+        color: #fff;
+        z-index: 2;
+      }
+    }
+  }
+
+  &.orange .player {
+    .player-content {
+      // mirror: slot index appears on the inner edge (toward center), name pushed right→left
+      flex-direction: column;
+
+      .player-row.top {
+        flex-direction: row-reverse;
+      }
+
+      .player-row.stats {
+        flex-direction: row-reverse;
+      }
+
+      .boost-num {
+        flex-direction: row-reverse;
+      }
+
+      .player-name {
+        text-align: right;
+      }
+    }
+
+    .player-boost-bar {
+      right: 0;
+    }
+  }
+
+  &.blue .player {
+    .player-boost-bar {
+      left: 0;
+    }
+  }
+}
+
+@keyframes teambox-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-1.5px); }
+  75% { transform: translateX(1.5px); }
+}
+
+.teambox .player .player-content .player-name.shake,
+.teambox .player .player-content .boost-num.shake {
+  animation: teambox-shake 0.18s ease-in-out infinite;
+  color: #ffb020;
+}

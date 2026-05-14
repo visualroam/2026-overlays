@@ -1,0 +1,120 @@
+.timer {
+  &.dragon {
+    right: 10px;
+    flex-direction: row-reverse;
+    .image {
+      border-left: 1px solid var(--overlayBorder);
+    }
+  }
+  &.baron {
+    left: 10px;
+    justify-content: start;
+    .image {
+      border-right: 1px solid var(--overlayBorder);
+    }
+  }
+
+  &.live {
+    width: var(--height);
+  }
+
+  transition: width 0.2s ease;
+
+  position: fixed;
+  top: 10px;
+
+  --height: 60px;
+
+  background: var(--overlayBackground);
+  border-radius: var(--overlayBorderRadius);
+  border: 1px solid var(--overlayBorder);
+
+  height: var(--height);
+  width: calc(var(--height) + 100px);
+
+  display: flex;
+  align-items: end;
+  overflow: hidden;
+
+  .time {
+    height: 100%;
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: white;
+    font-size: 24px;
+    font-weight: bolder;
+    line-height: 1;
+    letter-spacing: 0.04em;
+  }
+
+  .image {
+    min-height: var(--height);
+    min-width: var(--height);
+    max-height: var(--height);
+    max-width: var(--height);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      object-position: center;
+      padding: calc(var(--height) * 0.15);
+    }
+  }
+
+  &.dragon_air {
+    --timerBarColor:
+  }
+
+  &.dragon_fire {
+    --timerBarColor: var(--dragonFire);
+  }
+
+  &.dragon_water {
+    --timerBarColor: var(--dragonWater);
+  }
+
+  &.dragon_earth {
+    --timerBarColor: var(--dragonEarth);
+  }
+
+  &.dragon_hextech {
+    --timerBarColor: var(--dragonHextech);
+  }
+
+  &.dragon_chemtech {
+    --timerBarColor: var(--dragonChemtech);
+  }
+
+  &.dragon_elder {
+    --timerBarColor: #fb7185;
+  }
+
+  &.herald, &.baron, &.grubs {
+    --timerBarColor: var(--baron);
+  }
+
+  .timer-bar {
+    width: 3px;
+    height: 100%;
+    background: #000000aa;
+
+    display: flex;
+    align-items: end;
+
+    .timer-bar-inner {
+      opacity: 0.8;
+      background: var(--timerBarColor);
+      width: 100%;
+    }
+  }
+}

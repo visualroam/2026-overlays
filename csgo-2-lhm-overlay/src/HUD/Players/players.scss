@@ -1,0 +1,476 @@
+.teambox {
+    position: fixed;
+    bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    opacity: 1;
+    transition: opacity var(--transitionDuration);
+
+    &.CT {
+      --sideColor: var(--blueSide);
+      --sideGlow: rgba(49, 140, 231, 0.4);
+      --sideTintTop: rgba(49, 140, 231, 0.12);
+      --sideTintBottom: rgba(49, 140, 231, 0.03);
+      left: 10px;
+
+      .player-bg {
+        border-top-left-radius: 0!important;
+        border-bottom-left-radius: 0!important;
+      }
+
+      .player-health-bar {
+        background-color: var(--blueSide);
+      }
+
+      .player-health {
+        right: 8px;
+      }
+
+      .player-name {
+        left: 30px;
+      }
+
+      .money {
+        left: 28px;
+      }
+
+      .player-kills {
+        left: 28px;
+      }
+
+      .player-deaths {
+        left: 75px;
+      }
+
+      .weapon {
+        left: 150px;
+      }
+
+      .armor-indicator {
+        right: 5px;
+      }
+
+      .bomb-indicator {
+        right: 35px;
+      }
+
+      .defuse-indicator {
+        right: 35px;
+      }
+
+      .grenades {
+        left: 150px;
+      }
+
+      .player-health-bar {
+        left: 0;
+      }
+
+      .dead {
+        left: 0;
+
+        svg {
+          right: -20px;
+        }
+      }
+    }
+    &.T {
+      --sideColor: var(--redSide);
+      --sideGlow: rgba(217, 7, 24, 0.4);
+      --sideTintTop: rgba(217, 7, 24, 0.12);
+      --sideTintBottom: rgba(217, 7, 24, 0.03);
+
+      right: 10px;
+
+      .player-bg {
+        border-top-right-radius: 0!important;
+        border-bottom-right-radius: 0!important;
+      }
+
+        .player-health-bar {
+          background-color: var(--redSide);
+        }
+
+        .player-index {
+          right: 0;
+        }
+
+        .player-bg {
+          right: 0;
+        }
+
+        .player-health {
+          left: 8px;
+        }
+
+        .player-name {
+          right: 30px;
+        }
+
+        .money {
+          right: 28px;
+        }
+
+        .player-kills {
+          right: 28px;
+          flex-direction: row-reverse;
+        }
+
+        .player-deaths {
+          right: 75px;
+          flex-direction: row-reverse;
+        }
+
+        .weapon {
+          right: 150px;
+          transform: scaleX(-1);
+        }
+
+        .grenades {
+          right: 150px;
+        }
+
+        .armor-indicator {
+          left: 5px;
+        }
+
+        .bomb-indicator {
+          left: 35px;
+        }
+
+        .defuse-indicator {
+          left: 65px;
+        }
+
+        .player-health-bar {
+          right: 0;
+        }
+
+        .dead {
+          right: 0;
+
+          svg {
+            left: -20px;
+          }
+        }
+    }
+
+    &.hide {
+        opacity: 0;
+    }
+
+
+    .player {
+
+      width: 350px;
+      height: 80px;
+      position: relative;
+
+      --width: 350px;
+
+      transition: filter var(--transitionDuration) ease-in-out;
+
+      &.active {
+        .player-bg {
+          box-shadow:
+            0 0 0 1px var(--sideColor),
+            0 0 14px 2px rgba(0, 0, 0, 0.45),
+            0 0 22px 0 var(--sideGlow);
+        }
+        .player-index {
+          background-color: var(--sideColor);
+          color: #fff;
+        }
+        .player-name {
+          color: #fff;
+        }
+      }
+
+      &.dead {
+        --width: 250px;
+        filter: grayscale(70%) brightness(0.7);
+
+        .player-health {
+          opacity: 0;
+        }
+
+        .dead {
+          opacity: 1;
+          width: var(--width);
+        }
+      }
+
+      .dead {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        opacity: 0;
+        overflow: hidden;
+        border-radius: var(--overlayBorderRadius);
+
+        svg {
+          position: absolute;
+          top: -10px;
+          opacity: 0.3
+        }
+      }
+
+      .player-health-bar {
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        transition: 0.1s ease;
+        z-index: -1;
+        opacity: 0.4;
+        border-radius: var(--overlayBorderRadius);
+
+        .hex {
+          position: fixed;
+          z-index: 10;
+        }
+      }
+
+      .armor-indicator {
+        position: absolute;
+        bottom: 3px;
+        fill: #fff;
+      }
+
+      .grenades {
+        position: absolute;
+        bottom: 10px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+      }
+
+      .weapon {
+        height: 30px;
+        top: 10px;
+        opacity: 0;
+        transition: opacity var(--transitionDuration);
+
+        &.active {
+          opacity: 1;
+        }
+
+        &.grenade {
+          fill: #fff;
+          opacity: 1;
+          height: 25px;
+          position: unset!important;
+        }
+
+        &.primary-weapon {
+          fill: #fff;
+        }
+
+        &.secondary-weapon {
+          fill: #fff;
+        }
+
+        position: absolute;
+
+      }
+
+      .player-name {
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+        position: absolute;
+        top: 5px;
+        text-align: center;
+        z-index: 10;
+      }
+
+      .player-bg {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: var(--width);
+        background:
+          linear-gradient(
+            180deg,
+            var(--sideTintTop) 0%,
+            var(--sideTintBottom) 100%
+          ),
+          rgba(0, 0, 0, 0.94);
+        border-radius: var(--overlayBorderRadius);
+        z-index: -2;
+        overflow: hidden;
+        transition: box-shadow var(--transitionDuration) ease-in-out;
+      }
+
+      .player-index {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 20px;
+        background-color: #fff;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: #000;
+      }
+
+      .money {
+        position: absolute;
+        bottom: 5px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+
+        span {
+          font-size: 16px;
+          font-weight: bold;
+          color: gold;
+        }
+      }
+
+      .player-health {
+        font-size: 30px;
+        font-weight: bold;
+        color: #fff;
+
+        position: absolute;
+        top: 0;
+      }
+
+      .player-kills {
+        position: absolute;
+        top: 28px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .player-deaths {
+        position: absolute;
+        top: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+}
+
+.players_alive {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 180px;
+    background-color: var(--overlayBackground);
+    border: 1px solid var(--overlayBorder);
+    border-radius: var(--overlayBorderRadius);
+    overflow: hidden;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 135px;
+    opacity: 0;
+
+    transition: opacity 0.35s ease, transform 0.35s ease;
+
+    &.players_alive--peek {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .rolling-digit {
+        display: inline-block;
+        height: 1em;
+        line-height: 1em;
+        overflow: hidden;
+        vertical-align: bottom;
+    }
+
+    .rolling-digit-track {
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .rolling-digit-cell {
+        height: 1em;
+        min-height: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .separator {
+      flex: unset!important;
+      width: 1px!important;
+      height: 50%;
+      background-color: var(--overlayBorder)!important;
+    }
+
+    .title_container {
+      font-size: 14px!important;
+      text-transform: uppercase;
+      line-height: 1;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: normal!important;
+    }
+
+    .counter_container {
+        display: flex;
+        height: 45px;
+
+        align-items: center;
+        gap: 5px;
+        > div {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size:30px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.83);
+            font-weight: bold;
+        }
+        .team_counter {
+            background-color: rgba(0, 0, 0, 0.94);
+        }
+        .CT {
+            color: var(--blueSide);
+        }
+        .T {
+            color: var(--redSide);
+        }
+    }
+    &.hide {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,742 @@
+﻿/* 2026-v1 pick/ban — LAN layout (.lan-pick-ban-*, scoreboard, bans, pick columns). Loaded from 2026-v1.scss. */
+
+.lan-pick-ban-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  --overlayBackground: rgba(0, 0, 0, 0.97);
+  --overlayBorderRadius: 10px;
+  --overlayBorder: rgba(255, 255, 255, 0.15);
+
+  --transitionDuration: 0.55s;
+
+  --dragonAir: #bcd0d1;
+  --dragonFire: #ff0000;
+  --dragonWater: #1da37b;
+  --dragonEarth: #a35a1d;
+  --dragonHextech: #03ecfc;
+  --dragonChemtech: #a0ff00;
+  --dragonElder: #13edc2;
+  --baron: #c542f5;
+
+  --blueSide: #318CE7;
+  --redSide: #d90718;
+}
+
+
+.lan-pick-ban-camera-container {
+  border: 20px solid #000;
+
+  height: 810px;
+  width: 1200px;
+
+  --borderWidth: 20px;
+  --innerBorderWidth: 5px;
+
+  position: absolute;
+  left: 50%;
+  top: 150px;
+  transform: translateX(-50%);
+
+  &::before, &::after {
+    content: " ";
+    position: absolute;
+    height: 200px;
+    width: 200px;
+  }
+
+  &::before {
+    border-top: var(--innerBorderWidth) solid var(--blueSide);
+    border-left: var(--innerBorderWidth) solid var(--blueSide);
+    top: calc(var(--borderWidth) * -1);
+    left: calc(var(--borderWidth) * -1);
+  }
+
+  &::after {
+    border-bottom: var(--innerBorderWidth) solid var(--redSide);
+    border-right: var(--innerBorderWidth) solid var(--redSide);
+    bottom: calc(var(--borderWidth) * -1);
+    right: calc(var(--borderWidth) * -1);
+  }
+}
+
+:root {
+  --pickWidth: 360px;
+}
+
+
+.lan-team-scoreboard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+
+  .lan-timer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 101px;
+    height: 101px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.45);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+
+    .lan-timer-container {
+      position: absolute;
+      top: 50%;
+
+      transform: translateY(-50%);
+      font-size: 35px;
+      transform-origin: center center;
+
+      &.blue {
+        color: var(--blueSide);
+        left: -50px;
+      }
+      &.red {
+        color: var(--redSide);
+        right: -50px;
+        transform: translateY(-50%) scaleX(-1);
+      }
+    }
+
+    .lan-timer-svg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .lan-timer-ring-track {
+      stroke: rgba(255, 255, 255, 0.12);
+    }
+
+    .lan-timer-ring-progress {
+      stroke-linecap: round;
+      transition: stroke-dashoffset 1s linear, stroke 0.25s ease;
+    }
+
+    &.blue .lan-timer-ring-progress {
+      stroke: var(--blueSide);
+    }
+
+    &.red .lan-timer-ring-progress {
+      stroke: var(--redSide);
+    }
+
+    &.none .lan-timer-ring-progress {
+      stroke: rgba(255, 255, 255, 0.5);
+    }
+
+    .lan-timer-label {
+      position: relative;
+      z-index: 1;
+      font-variant-numeric: tabular-nums;
+      font-size: 35px;
+      font-weight: 600;
+      line-height: 1;
+      color: #fff;
+      letter-spacing: -0.02em;
+      transition: color 0.25s ease;
+    }
+  }
+
+  &::after {
+    content: " ";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--overlayBackground);
+    opacity: 1;
+    z-index: -3;
+  }
+
+  &::before {
+    content: " ";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.1;
+    background: linear-gradient(to right, var(--blueSide) 0%, var(--blueSide) 20%, transparent 42%, transparent 58%, var(--redSide) 80%, var(--redSide) 100%);
+    z-index: -2;
+  }
+
+  border-bottom: 1px solid var(--overlayBorder);
+
+  left: calc(var(--pickWidth) - 1px);
+  right: calc(var(--pickWidth) - 1px);
+
+  .series-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    height: 100%;
+    padding: 5px 0;
+    flex-shrink: 0;
+
+    .game {
+      width: 15px;
+      height: 15px;
+      background: transparent;
+      border: 1px solid var(--overlayBorder);
+      border-radius: 3px;
+    }
+
+    &.blue .won {
+      background: var(--blueSide);
+    }
+
+    &.red .won {
+      background: var(--redSide);
+    }
+  }
+
+  .lan-team-scoreboard-side {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    &.blue {
+      left: 0;
+      flex-direction: row;
+      padding-left: 25px;
+
+      .lan-team-scoreboard-side-name-container {
+        .lan-team-scoreboard-side-tag {
+          color: var(--blueSide);
+        }
+      }
+    }
+    &.red {
+      right: 0;
+      flex-direction: row-reverse;
+      padding-right: 25px;
+
+      .lan-team-scoreboard-side-name-container {
+        .lan-team-scoreboard-side-tag {
+          text-align: right;
+          color: var(--redSide);
+        }
+        .lan-team-scoreboard-side-name {
+          text-align: right;
+        }
+      }
+    }
+
+    .lan-team-scoreboard-side-logo {
+      height: 100px;
+      width: 100px;
+    }
+
+    .lan-team-scoreboard-side-name-container {
+      width: 250px;
+      height: 90px;
+      position: relative;
+
+      .lan-team-scoreboard-side-tag {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-75%);
+        left: 0;
+        right: 0;
+
+        font-size: 30px;
+        font-family: "Poppins";
+        font-weight: bolder;
+        color: white;
+      }
+
+      .lan-team-scoreboard-side-name {
+        position: absolute;
+        top: 50%;
+        transform: translateY(40%);
+        left: 0;
+        right: 0;
+
+        font-size: 18px;
+        font-family: "Poppins";
+        color: white;
+      }
+    }
+  }
+}
+
+.lan-bans-container {
+  position: absolute;
+  bottom: 0;
+  height: 120px;
+  left: calc(var(--pickWidth) - 1px);
+  right: calc(var(--pickWidth) - 1px);
+  background-color: var(--overlayBackground);
+  border-top: 1px solid var(--overlayBorder);
+  z-index: 1;
+
+  .fearless-bans {
+    position: absolute;
+    width: 460px;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .fearless-bans-title {
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 18px;
+      font-family: "Poppins";
+      color: gold;
+      opacity: 0;
+    }
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 10px;
+
+    .fearless-bans-lane {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+
+      gap: 0px;
+
+      width: 105px;
+      height: 60px;
+      position: relative;
+
+      &.r2, &.r1 {
+        flex-direction: column;
+        width: 50px;
+      }
+
+      &.r4, &.r3 {
+        flex-direction: column;
+        width: 60px;
+      }
+
+      &.r6, &.r5 {
+        flex-direction: column;
+        width: 85px;
+      }
+
+      &.r8, &.r7 {
+        width: 90px;
+        height: 70px;
+
+        .lane {
+          height: 20px;
+          width: 20px;
+          top: -30px;
+        }
+      }
+
+      .lane {
+        position: absolute;
+        top: -35px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 30px;
+        width: 30px;
+
+        --lane: gold;
+        --laneDark: #ccab00;
+      }
+
+      .fearless-bans-item-icon {
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .lan-bans {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    width: 50%;
+
+    &.blue {
+      left: 0;
+
+      .lan-bans-title {
+        left: 15px;
+      }
+
+      .lan-bans-list {
+        left: 15px;
+      }
+
+      .lan-bans-list-item {
+        &.is-active {
+          border: 1px solid var(--blueSide);
+          &::before {
+            background: linear-gradient(to top, var(--blueSide), #22222200 70%);
+          }
+        }
+      }
+    }
+    &.red {
+      right: 0;
+
+      .lan-bans-title {
+        right: 15px;
+      }
+
+      .lan-bans-list {
+        right: 15px;
+        flex-direction: row-reverse;
+      }
+
+      .lan-bans-list-item {
+        &.is-active {
+          border: 1px solid var(--redSide);
+          &::before {
+            background: linear-gradient(to top, var(--redSide), #22222200 70%);
+          }
+        }
+      }
+    }
+
+    .lan-bans-title {
+      position: absolute;
+      top: 15px;
+
+      font-size: 18px;
+      font-family: "Poppins";
+      color: gold;
+    }
+
+    .lan-bans-list {
+      position: absolute;
+      bottom: 10px;
+      width: 400px;
+      flex-wrap: wrap;
+
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+
+      align-items: center;
+
+      .lan-bans-list-item-separator {
+        height: 3px;
+        width: 10px;
+        background: #fff;
+        border-radius: var(--overlayBorderRadius);
+      }
+
+      .lan-bans-list-item {
+        --banSize: 60px;
+        width: var(--banSize);
+        height: var(--banSize);
+        background-color: #111;
+        border-radius: var(--overlayBorderRadius);
+        border: 1px solid var(--overlayBorder);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        font-family: "Poppins";
+        color: white;
+        position: relative;
+        overflow: hidden;
+
+        &.is-active {
+          &::before {
+            content: " ";
+
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 100;
+
+
+            animation: lanPicksSlotActive 4s ease-in-out infinite;
+          }
+        }
+
+        .lan-bans-list-item-champion {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: var(--banSize);
+          width: var(--banSize);
+
+          &::before {
+            content: " ";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            height: 50px;
+            width: 5px;
+            background-color: red;
+            border: 1px solid #111;
+            z-index: 10;
+            border-radius: var(--overlayBorderRadius);
+          }
+
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transform: scale(1.15);
+          }
+        }
+      }
+    }
+  }
+}
+
+.lan-picks {
+  position: absolute;
+  width: var(--pickWidth);
+  height: calc(100% - var(--padding) * 2);
+  --padding: 0px;
+  overflow: hidden;
+
+  z-index: 5;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500%;
+    background: linear-gradient(to bottom, black, var(--sideColor), black);
+    opacity: 0.6;
+    z-index: -2;
+    animation: moveTopToBottom 15s linear infinite;
+  }
+
+  &::after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlayBackground);
+    opacity: 0.95;
+    z-index: -1;
+  }
+
+  &.blue {
+    top: var(--padding);
+    left: var(--padding);
+    border-right: 1px solid var(--overlayBorder);
+
+    &::before {
+      --sideColor: var(--blueSide);
+    }
+  }
+  &.red {
+    top: var(--padding);
+    right: var(--padding);
+    border-left: 1px solid var(--overlayBorder);
+    &::before {
+      --sideColor: var(--redSide);
+    }
+  }
+
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+
+  .lan-picks-slot {
+    border-bottom: 1px solid var(--overlayBorder);
+    width: 100%;
+    transition: height 0.5s ease-in-out;
+    position: relative;
+
+    &.last {
+      border-bottom: none;
+    }
+
+    &.blue {
+      .lan-picks-slot-lane {
+        right: 17px;
+      }
+    }
+
+    &.red {
+      .lan-picks-slot-name {
+        justify-content: start;
+      }
+      .lan-picks-slot-lane {
+        left: 17px;
+      }
+    }
+
+    .lan-picks-slot-active {
+      height: 100%;
+      width: 100%;
+
+      animation: lanPicksSlotActive 4s ease-in-out infinite;
+
+      &.blue {
+        background: linear-gradient(-45deg, var(--blueSide), #22222200 70%);
+      }
+      &.red {
+        background: linear-gradient(45deg, var(--redSide), #22222200 70%);
+      }
+    }
+
+    .lan-picks-slot-name {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      font-size: 20px;
+      font-family: "Poppins";
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      padding: 17px;
+      z-index: 15;
+    }
+
+    overflow: hidden;
+
+    .lan-picks-slot-champion {
+      position: absolute;
+      height: 100%;
+      width: 130%;
+
+      object-fit: cover;
+
+      z-index: 14;
+    }
+
+    .lan-picks-slot-lane {
+      position: absolute;
+      bottom: 48px;
+
+      text-align: center;
+      font-size: 14px;
+      font-family: "Poppins";
+      z-index: 15;
+      color: gold;
+    }
+
+    .lan-picks-slot-champion-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 12;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      --gradientOpacity: 0.9;
+      --championOffset: 50px;
+
+      &.blue {
+        &::before {
+          background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, var(--gradientOpacity)));
+        }
+
+        .lan-picks-slot-champion {
+          transform: translateX(calc(var(--championOffset) * -1));
+        }
+      }
+      &.red {
+        &::before {
+          background: linear-gradient(to left, transparent 50%, rgba(0, 0, 0, var(--gradientOpacity)));
+        }
+
+        .lan-picks-slot-champion {
+          transform: translateX(var(--championOffset));
+        }
+      }
+
+      &::before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 15;
+      }
+    }
+
+    .lane {
+      position: absolute;
+      height: 80px;
+      width: 80px;
+      opacity: 0.8;
+      z-index: 10;
+      top: 15px;
+
+
+      --laneDark: #fff;
+      --lane: #aaa;
+
+      &.blue {
+        right: 15px;
+      }
+      &.red {
+        left: 15px;
+      }
+
+      z-index: 15;
+    }
+  }
+}
+
+@keyframes lanPicksSlotActive {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes moveTopToBottom {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-70%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,172 @@
+@import '../_colors.scss';
+
+$replayRed: #ff3b3b;
+
+body {
+  overflow: hidden;
+}
+
+@keyframes fadein-layout {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes replay-dot-blink {
+  0%, 49%  { opacity: 1; }
+  50%, 99% { opacity: 0.25; }
+  100%     { opacity: 1; }
+}
+
+@keyframes replay-edge-pulse {
+  0%, 100% { opacity: 1;    box-shadow: 0 0 28px rgba($replayRed, 0.55); }
+  50%      { opacity: 0.85; box-shadow: 0 0 48px rgba($replayRed, 0.85); }
+}
+
+@keyframes replay-title-in {
+  0%   { opacity: 0; transform: translateX(-12px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.layout {
+  position: relative;
+  min-height: 100vh;
+  opacity: 0;
+  animation: fadein-layout 0.6s ease-in;
+  animation-fill-mode: forwards;
+}
+
+// Full-screen replay highlight: 4 solid orange edge bars (more reliable than inset box-shadow)
+// + corner accents + REC pill at top-left.
+.replay-frame {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 200;
+
+  transition: opacity var(--transitionDuration) ease-in-out;
+
+  &.hide {
+    opacity: 0;
+
+    .replay-frame__edge,
+    .replay-frame__corner {
+      opacity: 0;
+    }
+
+    .replay-frame__title {
+      opacity: 0;
+      transform: translateX(-12px);
+    }
+  }
+
+  &.show {
+    opacity: 1;
+
+    .replay-frame__edge {
+      opacity: 1;
+      animation: replay-edge-pulse 1.6s ease-in-out infinite;
+    }
+
+    .replay-frame__corner {
+      opacity: 1;
+    }
+
+    .replay-frame__title {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  // 4 solid red edge bars
+  .replay-frame__edge {
+    position: absolute;
+    background: $replayRed;
+    opacity: 0;
+    transition: opacity var(--transitionDuration) ease-in-out;
+    box-shadow: 0 0 28px rgba($replayRed, 0.55);
+
+    &--top    { top: 0;    left: 0;  right: 0;  height: 4px; }
+    &--bottom { bottom: 0; left: 0;  right: 0;  height: 4px; }
+    &--left   { top: 0;    bottom: 0; left: 0;  width: 4px; }
+    &--right  { top: 0;    bottom: 0; right: 0; width: 4px; }
+  }
+
+  // Corner accents (L-shaped marks) overlay on top of the edges
+  .replay-frame__corner {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+    transition: opacity var(--transitionDuration) ease-in-out;
+    z-index: 1;
+
+    &::before,
+    &::after {
+      content: " ";
+      position: absolute;
+      background: #fff;
+    }
+
+    &::before { width: 100%; height: 4px; }
+    &::after  { width: 4px;  height: 100%; }
+
+    &--tl { top: 0;    left: 0;
+      &::before { top: 0;    left: 0; }
+      &::after  { top: 0;    left: 0; }
+    }
+    &--tr { top: 0;    right: 0;
+      &::before { top: 0;    right: 0; }
+      &::after  { top: 0;    right: 0; }
+    }
+    &--bl { bottom: 0; left: 0;
+      &::before { bottom: 0; left: 0; }
+      &::after  { bottom: 0; left: 0; }
+    }
+    &--br { bottom: 0; right: 0;
+      &::before { bottom: 0; right: 0; }
+      &::after  { bottom: 0; right: 0; }
+    }
+  }
+
+  // REC pill in the top-left corner (out of the way of the matchbar)
+  .replay-frame__title {
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    height: 40px;
+    padding: 0 18px 0 14px;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    background: rgba(0, 0, 0, 0.94);
+    border: 1px solid $replayRed;
+    border-radius: var(--overlayBorderRadius);
+    box-shadow: 0 0 18px rgba($replayRed, 0.55),
+                var(--panelShadow);
+
+    color: #fff;
+    font-size: 15px;
+    font-weight: bolder;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    line-height: 1;
+    white-space: nowrap;
+
+    transition: opacity var(--transitionDuration) ease-in-out,
+      transform var(--transitionDuration) ease-in-out;
+
+    .replay-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: $replayRed;
+      box-shadow: 0 0 10px $replayRed;
+      animation: replay-dot-blink 1.1s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+  }
+}

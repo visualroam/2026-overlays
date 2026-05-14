@@ -1,0 +1,13 @@
+{
+    "name":"CS2 2026 Custom Overlay",
+    "version":"2.0.0",
+    "author":"Dominik",
+    "legacy": false,
+    "radar": true,
+    "killfeed": false,
+    "game":"cs2",
+    "boltobserv":{
+        "css":false,
+        "maps":false
+    }
+}

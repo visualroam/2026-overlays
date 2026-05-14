@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg
+  width="800"
+  height="800"
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- First subpath -->
+  <path
+    fill="var(--feat-1, #f1f1f1)"
+    fill-rule="nonzero"
+    d="M7.05 13.406
+       l3.534 3.536
+       -1.413 1.414
+       1.415 1.415
+       -1.414 1.414
+       -2.475 -2.475
+       -2.829 2.829
+       -1.414 -1.414
+       2.829 -2.83
+       -2.475 -2.474
+       1.414 -1.414
+       1.414 1.413
+       1.413 -1.414
+       z"
+  />
+
+  <!-- Second subpath -->
+  <path
+    fill="var(--feat-3, #f1f1f1)"
+    fill-rule="nonzero"
+    d="M3 3
+       l3.546 0.003
+       11.817 11.818
+       1.415 -1.414
+       1.414 1.414
+       -2.474 2.475
+       2.828 2.829
+       -1.414 1.414
+       -2.829 -2.829
+       -2.475 2.475
+       -1.414 -1.414
+       1.414 -1.415
+       L3.003 6.531
+       3 3
+       z"
+  />
+
+  <!-- Third subpath (converted to absolute commands) -->
+  <path
+    fill="var(--feat-2, #f1f1f1)"
+    fill-rule="nonzero"
+    d="M17.457 3
+       L21 3.003
+       L21.002 6.526
+       L16.949 10.578
+       L13.413 7.043
+       L17.457 3
+       Z"
+  />
+</svg>

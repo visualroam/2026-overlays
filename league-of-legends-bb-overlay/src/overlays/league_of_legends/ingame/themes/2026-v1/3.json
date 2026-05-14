@@ -1,0 +1,110 @@
+[
+  {
+      "receivedAt": 1776793589790,
+      "payload": {
+          "teamId": 1,
+          "platesTaken": 0,
+          "turretsTaken": 1,
+          "inhibitorsTaken": 0
+      }
+  },
+  {
+      "receivedAt": 1776793718895,
+      "payload": {
+          "teamId": 2,
+          "platesTaken": 0,
+          "turretsTaken": 1,
+          "inhibitorsTaken": 0
+      }
+  },
+  {
+      "receivedAt": 1776793826437,
+      "payload": {
+          "teamId": 1,
+          "platesTaken": 0,
+          "turretsTaken": 1,
+          "inhibitorsTaken": 0
+      }
+  },
+  {
+      "receivedAt": 1776793862567,
+      "payload": {
+          "teamId": 2,
+          "platesTaken": 0,
+          "turretsTaken": 1,
+          "inhibitorsTaken": 0
+      }
+  },
+  {
+      "receivedAt": 1776793868695,
+      "payload": {
+          "teamId": 1,
+          "platesTaken": 0,
+          "turretsTaken": 1,
+          "inhibitorsTaken": 0
+      }
+  },
+  {
+      "receivedAt": 1776794079513,
+      "payload": {
+          "teamId": 2,
+          "platesTaken": 0,
+          "turretsTaken": 1,
+          "inhibitorsTaken": 0
+      }
+  },
+  {
+      "receivedAt": 1776794117439,
+      "payload": {
+          "teamId": 1,
+          "platesTaken": 0,
+          "turretsTaken": 1,
+          "inhibitorsTaken": 0
+      }
+  },
+  {
+      "receivedAt": 1776794309317,
+      "payload": {
+          "teamId": 2,
+          "platesTaken": 0,
+          "turretsTaken": 1,
+          "inhibitorsTaken": 0
+      }
+  },
+  {
+      "receivedAt": 1776794313627,
+      "payload": {
+          "teamId": 2,
+          "platesTaken": 0,
+          "turretsTaken": 1,
+          "inhibitorsTaken": 0
+      }
+  },
+  {
+      "receivedAt": 1776794671001,
+      "payload": {
+          "teamId": 2,
+          "platesTaken": 0,
+          "turretsTaken": 1,
+          "inhibitorsTaken": 0
+      }
+  },
+  {
+      "receivedAt": 1776794798088,
+      "payload": {
+          "teamId": 1,
+          "platesTaken": 0,
+          "turretsTaken": 1,
+          "inhibitorsTaken": 0
+      }
+  },
+  {
+      "receivedAt": 1776794934414,
+      "payload": {
+          "teamId": 2,
+          "platesTaken": 0,
+          "turretsTaken": 1,
+          "inhibitorsTaken": 0
+      }
+  }
+]

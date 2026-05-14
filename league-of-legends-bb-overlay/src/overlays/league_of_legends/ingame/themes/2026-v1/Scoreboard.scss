@@ -1,0 +1,309 @@
+.scoreboard {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &.show {
+    top: 10px;
+  }
+
+  &.hide {
+    top: -200px;
+  }
+
+  transition: top var(--transitionDuration) ease;
+
+  .scoreboard-top {
+    --height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    height: var(--height);
+    padding-left: 5px;
+    padding-right: 5px;
+    border-top-left-radius: var(--overlayBorderRadius);
+    border-top-right-radius: var(--overlayBorderRadius);
+
+    .team-logo {
+      height: 50px;
+      width: 50px;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .series-score {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      height: 100%;
+      padding: 5px 0px;
+
+      .game {
+        width: 10px;
+        height: 10px;
+        background: transparent;
+        border: 1px solid var(--overlayBorder);
+        border-radius: 3px;
+      }
+
+      &.blue .won {
+        background: var(--blueSide);
+      }
+
+      &.red .won {
+        background: var(--redSide);
+      }
+    }
+
+    .team-tag {
+      font-size: 24px;
+      font-weight: bolder;
+      color: white;
+      width: 70px;
+
+      &.blue {
+        text-align: start;
+      }
+
+      &.red {
+        text-align: end;
+      }
+    }
+
+    .team-towers {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      position: relative;
+
+      .towers-icon {
+        height: 15px;
+        width: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .towers-text {
+        font-size: 18px;
+        font-weight: bolder;
+        color: white;
+      }
+    }
+
+    .team-gold {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      position: relative;
+      width: 100px;
+      --iconColor: white;
+
+      &.blue {
+        .gold-diff {
+          color: var(--blueSide);
+        }
+      }
+
+      &.red {
+        .gold-diff {
+          color: var(--redSide);
+        }
+      }
+
+      .gold-icon {
+        height: 15px;
+        width: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .gold-text {
+        font-size: 18px;
+        font-weight: bolder;
+        color: white;
+      }
+
+      .gold-diff {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -6px;
+        height: 14px;
+        color: #fff;
+        font-weight: bolder;
+        text-align: center;
+        font-size: 15px;
+        border-radius: 3px;
+        padding: 2px 5px;
+      }
+    }
+
+    .score {
+      min-width: 160px;
+      max-width: 200px;
+      height: var(--height);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      color: white;
+      font-size: 30px;
+      font-weight: bolder;
+      border-left: 1px solid var(--overlayBorder);
+      border-right: 1px solid var(--overlayBorder);
+
+      .sword-icon, .tournament-logo {
+        img {
+          height: 30px;
+          width: 30px;
+          object-fit: contain;
+          object-position: center;
+        }
+      }
+    }
+
+    overflow: hidden;
+
+    &::after {
+      content: " ";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      height: var(--height);
+      top: 0;
+      left: 0;
+      right: 0;
+      background: var(--overlayBackground);
+      opacity: 1;
+      z-index: -3;
+      border-top-left-radius: var(--overlayBorderRadius);
+      border-top-right-radius: var(--overlayBorderRadius);
+    }
+
+    &::before {
+      content: " ";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--height);
+      opacity: 0.1;
+      border-top-left-radius: var(--overlayBorderRadius);
+      border-top-right-radius: var(--overlayBorderRadius);
+      background: linear-gradient(to right, var(--blueSide) 0%, var(--blueSide) 20%, transparent 42%, transparent 58%, var(--redSide) 80%, var(--redSide) 100%);
+      z-index: -2;
+    }
+  }
+
+  .scoreboard-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top: 1px solid var(--overlayBorder);
+
+    &::after {
+      content: " ";
+      height: 30px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to right, transparent 15%, var(--overlayBackground) 40%, var(--overlayBackground) 60%, transparent 85%);
+      z-index: -1;
+    }
+
+    .game-time {
+      font-size: 18px;
+      font-weight: bolder;
+      color: white;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .drakes {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      position: relative;
+
+      .drake {
+        img {
+          height: 20px;
+          width: 20px;
+          object-fit: contain;
+          object-position: center;
+        }
+      }
+    }
+
+    .team-platings {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      position: relative;
+
+      .platings-icon {
+        img {
+          height: 15px;
+          width: 15px;
+          object-fit: contain;
+          object-position: center;
+        }
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .platings-text {
+        font-size: 18px;
+        font-weight: bolder;
+        color: white;
+      }
+    }
+
+    .team-grubs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      position: relative;
+
+      .grubs-icon {
+        img {
+          height: 15px;
+          width: 15px;
+          object-fit: contain;
+          object-position: center;
+        }
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .grubs-text {
+        font-size: 18px;
+        font-weight: bolder;
+        color: white;
+      }
+    }
+  }
+}

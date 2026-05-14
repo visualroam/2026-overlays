@@ -1,0 +1,75 @@
+@keyframes roundWinBanner {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  82% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-6px);
+  }
+}
+
+.round-win-banner {
+  position: fixed;
+  top: 145px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 125;
+  padding: 0.55rem 1.5rem 0.65rem;
+  font-family: Montserrat, system-ui, sans-serif;
+  font-weight: 800;
+  pointer-events: none;
+  max-width: min(92vw, 720px);
+  text-align: center;
+  border-radius: var(--overlayBorderRadius);
+  border: 1px solid var(--overlayBorder);
+  background: var(--overlayBackground);
+  box-shadow: var(--panelShadow);
+
+  .round-win-banner__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+  }
+
+  .round-win-banner__team {
+    font-size: clamp(1.45rem, 3.8vw, 2.35rem);
+    line-height: 1.05;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+
+  .round-win-banner__tagline {
+    font-size: clamp(0.72rem, 1.8vw, 0.95rem);
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.92);
+  }
+
+  &.CT {
+    .round-win-banner__team {
+      color: var(--color-new-ct);
+    }
+  }
+
+  &.T {
+    .round-win-banner__team {
+      color: var(--color-new-t);
+    }
+  }
+
+  &.round-win-banner--visible {
+    animation: roundWinBanner 5s ease-out forwards;
+  }
+}

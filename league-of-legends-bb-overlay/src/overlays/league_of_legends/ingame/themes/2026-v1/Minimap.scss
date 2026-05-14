@@ -1,0 +1,94 @@
+.minimap {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  width: 280px;
+  height: 280px;
+
+  .minimap-top-left {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 2px;
+    background: var(--blueSide);
+    z-index: 10000;
+  }
+
+  .minimap-top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 60%;
+    background: var(--blueSide);
+    z-index: 10000;
+  }
+
+  .minimap-bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 2px;
+    background: var(--redSide);
+    z-index: 10000;
+  }
+
+  .minimap-bottom-right {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    height: 60%;
+    background: var(--redSide);
+    z-index: 10000;
+  }
+
+  .minimap-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #000;
+    z-index: -1;
+
+    .minimap-inner-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 10px;
+      background: #000;
+    }
+
+    .minimap-inner-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 10px;
+      background: #000;
+    }
+
+    .minimap-inner-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 10px;
+      background: #000;
+    }
+
+    .minimap-inner-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 10px;
+      background: #000;
+    }
+  }
+}

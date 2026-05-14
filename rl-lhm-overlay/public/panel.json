@@ -1,0 +1,22 @@
+[
+    {
+        "label": "Player Cams",
+        "name":"cams",
+        "inputs": [
+            {
+                "type": "action",
+                "name": "playerCams",
+                "values": [
+                    {
+                        "name": "show",
+                        "label": "Show Player Cams"
+                    },
+                    {
+                        "name": "hide",
+                        "label": "Hide Player Cams"
+                    }
+                ]
+            }
+        ]
+    }
+]

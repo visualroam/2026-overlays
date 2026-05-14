@@ -1,0 +1,1195 @@
+.a1esports .player-image {
+
+}
+
+.a1esports .player-stats {
+  display: none!important;
+}
+
+.pick-and-ban-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  &.a1esports {
+
+    .pick-and-ban-bg {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      --width: 0;
+      width: var(--width);
+      transition: width 0.3s ease-in-out;
+      transform: translate(-50%, 0);
+      overflow: hidden;
+
+      --height: 500px;
+      height: var(--height);
+
+      .fearless-bans {
+        position: absolute;
+        left: 50%;
+        width: 600px;
+        height: 70px;
+        bottom: 250px;
+        outline: 1px solid #00000088;
+        transform: translateX(-50%);
+
+        transform: translate(-50%, 100%);
+        z-index: -1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.5s ease-in-out;
+        transition-delay: 1s;
+        background: #111;
+
+        &.active {
+          transform: translate(-50%, 0);
+        }
+
+        .fearless-bans-blue {
+          position: absolute;
+          top: 0;
+          left: -1px;
+          height: 100%;
+          width: 1px;
+
+          background: linear-gradient(0deg, var(--blueSide) 0%, transparent 95%);
+        }
+        .fearless-bans-red {
+          position: absolute;
+          top: 0;
+          right: -1px;
+          height: 100%;
+          width: 1px;
+
+          background: linear-gradient(0deg, var(--redSide) 0%, transparent 95%);
+        }
+        .series-bans {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          text-align: center;
+          font-family: "Montserrat";
+          font-size: 14px;
+          color: white;
+          opacity: 0;
+        }
+        .fearless-lane {
+          height: 60px;
+          margin-left: 40px;
+          width: 20%;
+
+          position: relative;
+
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          flex-direction: row;
+          flex-wrap: wrap;
+
+          --size: 20px;
+
+          &.r2 {
+            --size: 40px;
+          }
+
+          &.r4 {
+            --size: 30px;
+          }
+
+          .lane {
+            position: absolute;
+            top: 50%;
+            left: -35px;
+
+            height: 30px;
+            width: 30px;
+
+            transform: translateY(-50%);
+
+            --laneDark: #fff;
+            --lane: #aaa;
+          }
+
+          .fearless-ban {
+            height: var(--size);
+            width: var(--size);
+
+            background-size: cover;
+          }
+        }
+      }
+
+      &.active {
+        --width: 1860px;
+
+        .bn-blue, .bn-red {
+          bottom: 250px;
+          transition: bottom 0.5s ease-in-out 0.5s;
+        }
+
+        .player {
+          opacity: 1!important;
+          transition: 1s ease-in-out, background-image 1ms ease-in-out, opacity 0.5s ease-in-out 0.6s!important;
+        }
+      }
+
+      &::after {
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 240px;
+        //background: linear-gradient(0deg, #111111aa, #11111144);
+        background: linear-gradient(0deg, #00000099, #febd0022);
+        z-index: 1;
+      }
+
+      .top {
+        position: absolute;
+        bottom: 249px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, var(--blueSide) 0%, var(--blueSide) 727px, #111,var(--redSide) calc(100% - 727px), var(--redSide));
+        z-index: 1000;
+      }
+
+      .bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, var(--blueSide) 0%, var(--blueSide) 727px, #111,var(--redSide) calc(100% - 727px), var(--redSide));
+        z-index: 1000;
+      }
+
+      .left {
+        height: 400px;
+        width: 1px;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(0deg, var(--blueSide) 0%, var(--blueSide) 50%, transparent 70%);
+        z-index: 1000;
+      }
+
+      .right {
+        height: 400px;
+        width: 1px;
+
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(0deg, var(--redSide) 0%, var(--redSide) 50%, transparent 70%);
+        z-index: 1000;
+      }
+
+      .bg {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1860px;
+        height: 245px;
+        opacity: 1;
+        object-fit: cover;
+        object-position: center;
+        z-index: 0;
+        filter: blur(3px);
+      }
+
+      .middle, .blue-side, .red-side, .bans-blue, .bans-red {
+        z-index: 10;
+      }
+
+      .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        &::after {
+          content: " ";
+          height: 1px;
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+
+          background: linear-gradient(90deg, var(--blueSide) 0px, var(--blueSide) 727px, #111,var(--redSide) calc(100% - 727px), var(--redSide));
+          z-index: 100;
+        }
+      }
+
+      .timer-bar {
+        --height: 10px;
+        position: absolute;
+        bottom: 239px;
+        left: 0;
+        right: 0;
+        background: linear-gradient(90deg, #000, #222);
+        height: var(--height);
+        z-index: 100;
+        display: flex;
+
+        &.blue {
+          justify-content: start;
+        }
+
+        &.red {
+          justify-content: end;
+        }
+
+        &.none {
+          justify-content: center;
+        }
+
+        .inner-timer-bar {
+          height: 100%;
+          transition: 1s linear;
+          position: relative;
+          top: 0;
+          overflow: hidden;
+
+          &::after {
+            height: 100%;
+            width: 150%;
+            display: block;
+            position: absolute;
+            top: 0;
+            content: " ";
+          }
+
+          &.blue {
+            left: 0;
+
+            &:after {
+              right: 0;
+              background: linear-gradient(90deg, var(--blueSide-graph-1), var(--blueSide));
+            }
+          }
+
+          &.red {
+
+            right: 0;
+
+            &:after {
+              left: 0;
+              background: linear-gradient(-90deg, var(--redSide-graph-1), var(--redSide));
+            }
+          }
+
+          &.none {
+            &:after {
+              width: 100%;
+              background: linear-gradient(90deg, var(--blueSide), #111 ,var(--redSide));
+            }
+          }
+        }
+      }
+
+      .ban-icon {
+        box-shadow: 0px 0px 3px #111;
+      }
+
+      .bans-blue {
+        --height: 80px;
+        position: absolute;
+
+        top: 0px;
+        left: 0;
+
+        height: var(--height);
+        display: flex;
+
+        &.no-coach {
+          top: unset;
+          bottom: 0;
+
+          .ban {
+            &::after {
+              height: 100px;
+            }
+          }
+        }
+
+        .ban {
+          height: var(--height);
+          width: var(--height);
+          background-color: #111;
+
+          position: relative;
+          overflow: hidden;
+          background-size: 115%;
+          background-position: center;
+
+          &:before {
+            content: " ";
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(0deg, var(--blueSide) 0%, transparent 95%);
+          }
+
+          &:after {
+            content: " ";
+
+            position: absolute;
+            top: -25%;
+            left: 0;
+
+            height: 150%;
+            width: 100%;
+            background: linear-gradient(180deg, var(--blueSide), #00000000);
+            opacity: 0;
+          }
+
+          &.active {
+            &:after {
+              animation: blink 3s ease 0s infinite normal forwards;
+            }
+          }
+
+          .ban-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+
+            width: 50px;
+            height: 4px;
+
+            background-color: var(--blueSide);
+            z-index: 100;
+          }
+        }
+      }
+
+      .bn-blue, .bn-red {
+        z-index: -1000;
+        bottom: 50px;
+      }
+
+      .bn-blue {
+        height: 130px;
+        width: 400px;
+
+        position: absolute;
+        left: 0;
+        overflow: hidden;
+      }
+
+      .bn-red {
+        height: 130px;
+        width: 400px;
+        position: absolute;
+        right: 0;
+        overflow: hidden;
+      }
+
+      .bans-red-coach {
+        width: 400px;
+        height: 50px;
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Montserrat";
+        font-size: 20px;
+
+        border-top: 1px solid var(--redSide);
+        border-left: 1px solid var(--redSide);
+        background-color: #221111;
+        color: white;
+
+        z-index: -100;
+        padding-left: 115px;
+        padding-right: 15px;
+
+        .coach {
+          position: absolute;
+          top: calc(50% + 2px);
+          left: 15px;
+          transform: translateY(-50%);
+          line-height: 1;
+
+          border-right: 1px solid var(--redSide);
+          padding-right: 10px;
+        }
+      }
+
+      .bans-blue-coach {
+        width: 400px;
+        height: 50px;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Montserrat";
+        font-size: 20px;
+
+        border-top: 1px solid var(--blueSide);
+        border-right: 1px solid var(--blueSide);
+        background-color: #111122;
+        color: white;
+
+        z-index: -100;
+        padding-left: 15px;
+        padding-right: 115px;
+
+        .coach {
+          position: absolute;
+          top: calc(50% + 2px);
+          right: 15px;
+          transform: translateY(-50%);
+          line-height: 1;
+
+          border-left: 1px solid var(--blueSide);
+          padding-left: 10px;
+        }
+      }
+
+      .bans-red {
+        --height: 80px;
+        position: absolute;
+
+        top: 0px;
+        right: 0;
+
+        height: var(--height);
+        display: flex;
+        flex-direction: row-reverse;
+
+        &.no-coach {
+          top: unset;
+          bottom: 0;
+        }
+
+        .ban {
+          height: var(--height);
+          width: var(--height);
+          background-color: #111;
+
+          position: relative;
+          overflow: hidden;
+          background-size: 115%;
+          background-position: center;
+
+          &:before {
+            content: " ";
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(0deg, var(--redSide) 0%, transparent 95%);
+          }
+
+          &:after {
+            content: " ";
+
+            position: absolute;
+            top: -25%;
+            left: 0;
+
+            height: 150%;
+            width: 100%;
+            background: linear-gradient(180deg, var(--redSide), #00000000);
+            opacity: 0;
+          }
+
+          &.active {
+            &:after {
+              animation: blink 3s ease 0s infinite normal forwards;
+            }
+          }
+
+          .ban-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+
+            width: 50px;
+            height: 4px;
+
+            background-color: var(--redSide);
+            z-index: 100;
+          }
+        }
+      }
+
+      .blue-side {
+        position: absolute;
+        left: 0;
+        width: 705px;
+        height: 100%;
+        overflow: hidden;
+
+        .player {
+          z-index: 10;
+          background: linear-gradient(0deg, #11111199, transparent);
+
+          &::after {
+            content: " ";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(0deg, var(--blueSide) 0%, transparent 95%);
+            z-index: 10;
+          }
+
+          .player-active {
+            background: linear-gradient(180deg, var(--blueSide), #22222200);
+          }
+
+          .player-name {
+            left: 100%!important;
+            padding-bottom: 8px!important;
+            align-items: end!important;
+          }
+
+          .lane {
+            left: 10px;
+          }
+        }
+      }
+
+      .red-side {
+        position: absolute;
+        right: 0;
+        width: 705px;
+        height: 100%;
+        overflow: hidden;
+
+        .player {
+          z-index: 10;
+          background: linear-gradient(0deg, #11111199, transparent);
+
+          &::after {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(0deg, var(--redSide) 0%, transparent 95%);
+            z-index: 10;
+          }
+
+          .player-active {
+            background: linear-gradient(180deg, var(--redSide), #22222200);
+          }
+
+          .player-name {
+            left: 100%!important;
+            padding-bottom: 8px!important;
+            align-items: end!important;
+          }
+
+          .lane {
+            left: 10px;
+          }
+        }
+      }
+
+      .players {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+
+        width: 705px;
+        height: 240px;
+
+        position: absolute;
+        bottom: 0;
+
+        .player {
+          height: 240px;
+          transition: 0.3s ease-in-out, background-image 1ms ease-in-out;
+          background-size: cover;
+	        background-position: center;
+          position: relative;
+          width: 20%;
+          overflow: hidden;
+
+          opacity: 0;
+
+          &.show-stats {
+            .lane {
+              opacity: 0;
+            }
+          }
+
+          .player-stats {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            color: white;
+
+            opacity: 0;
+            animation: fadeInOut 7.4s ease-in-out forwards;
+
+            @keyframes fadeInOut {
+              0% {
+                opacity: 0;
+              }
+              10.77% { /* 0.7s of 6.5s = 0.7 / 6.5 ≈ 10.77% */
+                opacity: 1;
+              }
+              89.23% { /* 6.5 - 0.7 = 5.8s => 5.8 / 6.5 ≈ 89.23% */
+                opacity: 1;
+              }
+              100% {
+                opacity: 0;
+              }
+            }
+
+            text-shadow: 0px 0px 10px #00000099;
+
+            .player-stat-champion-name {
+              color: #fff;
+              font-family: "Montserrat";
+              font-size: 20px;
+
+              display: flex;
+              align-items: start;
+              justify-content: start;
+              padding-top: 5px;
+              padding-left: 12px;
+
+              position: absolute;
+              top: 0px;
+              left: 0px;
+
+              width: 240px;
+              height: 50px;
+
+              z-index: 10;
+              text-shadow: 0px 0px 10px #00000099;
+            }
+
+
+
+            .player-stat-value {
+              color: #fff;
+              font-family: "Montserrat";
+              font-size: 20px;
+              text-shadow: 0px 0px 10px #00000099;
+
+              position: absolute;
+              bottom: 50px;
+              left: 12px;
+
+              &.r1 {
+                bottom: unset;
+                top: 40px;
+              }
+
+              &.r2 {
+                bottom: unset;
+                top: 90px;
+              }
+
+              &.r3 {
+                bottom: unset;
+                top: 140px;
+              }
+
+              &.r4 {
+                bottom: unset;
+                top: 190px;
+              }
+            }
+
+            .player-stat-label {
+              color: #fff;
+              font-family: "Montserrat";
+              font-size: 14px;
+
+              position: absolute;
+              bottom: 80px;
+              left: 12px;
+              text-shadow: 0px 0px 10px #00000099;
+
+              &.r1 {
+                bottom: unset;
+                top: 65px;
+              }
+
+              &.r2 {
+                bottom: unset;
+                top: 115px;
+              }
+
+              &.r3 {
+                bottom: unset;
+                top: 165px;
+              }
+            }
+          }
+
+          &::before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #00000000, #00000066);
+          }
+
+          .player-image {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            object-position: top center;
+            object-fit: cover;
+            z-index: -10;
+          }
+
+          &.active {
+            width: 200px;
+            min-width: 200px;
+            flex: unset;
+          }
+
+          .bg-champion {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            z-index: 1;
+          }
+
+          .player-active {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150%;
+
+            animation: blink 3s ease 0s infinite normal forwards;
+
+            z-index: 5;
+          }
+
+          .player-name {
+            color: #fff;
+            font-family: "Montserrat";
+            font-size: 20px;
+
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            padding-top: 5px;
+            padding-left: 12px;
+
+            position: absolute;
+            bottom: 0;
+            left: 50px;
+
+            width: 240px;
+            height: 50px;
+
+            transform: rotate(-90deg);
+            transform-origin: bottom left;
+            z-index: 10;
+            text-shadow: 0px 0px 10px #00000099;
+          }
+
+          .lane {
+            position: absolute;
+            bottom: 10px;
+
+            width: 50px;
+            height: 50px;
+            opacity: 1;
+            z-index: 10;
+
+            filter: drop-shadow(0px 0px 10px #00000099);
+
+            --lane: #777;
+            --laneDark: #fff;
+          }
+        }
+      }
+
+      .team-logo {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 100;
+
+        &.blue {
+          left: 40px;
+        }
+        &.red {
+          right: 40px;
+        }
+      }
+
+      .team-tag {
+
+        position: absolute;
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        line-height: 1;
+        font-size: 25px;
+
+        font-family: "Montserrat";
+        font-weight: bold;
+        padding: 10px;
+        color: #ffff;
+        z-index: 100;
+
+        top: calc(50% + 40px);
+
+        &.blue {
+          left: 40px;
+        }
+
+        &.red {
+          right: 40px;
+        }
+      }
+
+      .best-of-score {
+        right: 0px;
+
+        position: absolute;
+        bottom: 15px;
+
+        left: calc(50% + 65px);
+        z-index: 10000;
+        color: white;
+
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        font-family: "Montserrat";
+        font-size: 25px;
+
+        &.blue {
+          .count.active {
+            border-color: var(--blueSideDarker);
+            background-color: var(--blueSide);
+          }
+        }
+
+        &.red {
+          .count.active {
+            border-color: var(--redSideDarker);
+            background-color: var(--redSide);
+          }
+        }
+
+        gap: 5px;
+
+        .count {
+          height: 20px;
+          width: 20px;
+          border: 1px solid #ffffff88;
+          font-size: 10px;
+          display: flex;
+          justify-content: center;
+          color: transparent;
+          align-items: center;
+
+          &.active {
+            background-color: #ffffff88;
+          }
+        }
+
+        &.blue {
+          left: 0;
+          right: calc(50% + 65px);
+        }
+      }
+
+      .team-name {
+        position: absolute;
+        bottom: calc(50% + 45px);
+        width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 5px;
+
+        font-size: 16px;
+        font-family: "Montserrat";
+        text-align: center;
+        color: white;
+        line-height: 1.1;
+        z-index: 100;
+
+        &.red {
+          right: 20px;
+        }
+
+        &.blue {
+          left: 20px;
+        }
+
+      }
+
+      .middle {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 450px;
+        height: 240px;
+        overflow: hidden;
+
+        &::before {
+          content: " ";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, #00000066, #00000033, #00000066);
+        }
+
+        &::after {
+          content: " ";
+          position: absolute;
+
+          width: 200%;
+          height: 100%;
+          background: linear-gradient(90deg, var(--blueSide), #111111, var(--redSide));
+          background-color: #000000;
+          opacity: 0.2;
+          left: 0;
+          transition: 800ms ease-in-out;
+        }
+
+        &.red {
+          &::after {
+            transform: translateX(-50%);
+          }
+        }
+      }
+
+      .best-of {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 200px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        font-family: "Montserrat";
+
+        .best-of-value {
+          font-size: 20px;
+          color: white;
+          line-height: 1;
+
+        }
+
+        .best-of-text {
+          font-size: 12px;
+          color: white;
+          padding-top: 5px;
+        }
+
+        transform: translateX(-50%);
+      }
+
+      .patch {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 200px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        font-family: "Montserrat";
+
+        .patch-value {
+          font-size: 20px;
+          color: white;
+          line-height: 1;
+        }
+
+        .patch-text {
+          font-size: 12px;
+          color: white;
+          padding-bottom: 5px;
+        }
+
+        transform: translateX(-50%);
+      }
+
+      .timer {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        height: var(--height);
+        overflow: hidden;
+
+        .timer-phase {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 50px;
+
+          font-size: 20px;
+          color: white;
+          font-family: "Poppins", sans-serif;
+          font-weight: bold;
+          line-height: 1;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .timer-foreground {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+
+          font-size: 50px;
+          color: white;
+          font-family: "Poppins", sans-serif;
+          font-weight: bold;
+          line-height: 1;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-top: 50px;
+        }
+
+        .timer-background {
+          position: absolute;
+          top: 0px;
+          left: 0;
+          width: 100%;
+          height: 100%;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-top: 50px;
+
+          font-size: 90px;
+          color: transparent;
+          font-weight: bolder;
+          font-family: "Poppins", sans-serif;
+          -webkit-text-stroke: 1px var(--timerStroke);
+          line-height: 1;
+        }
+      }
+
+      .main-logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 120px;
+        height: 120px;
+        z-index: 100;
+        object-fit: contain;
+      }
+    }
+
+  }
+}
+
+@keyframes randomMove {
+  0%   { top: -10%; left: -20%; }
+  20%  { top: -45%; left: -5%;  }
+  40%  { top: -0%;  left: -50%; }
+  60%  { top: -30%; left: -30%; }
+  80%  { top: -50%; left: -15%; }
+  100% { top: -10%; left: -40%; }
+}
+
+@keyframes bgAnimationBlue {
+  0% {
+    transform: translateX(-30px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-30px);
+  }
+}
+
+@keyframes bgAnimationRed {
+  0% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(calc(-50% + 30px));
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}

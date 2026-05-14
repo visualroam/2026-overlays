@@ -1,0 +1,13 @@
+{
+    "name":"2026-rl-lan-overlay",
+    "version":"1.2.8",
+    "author":"xd0m3",
+    "game":"rocketleague",
+    "legacy": false,
+    "radar": false,
+    "killfeed": false,
+    "boltobserv":{
+        "css":false,
+        "maps":false
+    }
+}

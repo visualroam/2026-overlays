@@ -1,0 +1,3227 @@
+{
+  "type": "ingame-state-update",
+  "state": {
+      "gameTime": 9061,
+      "playbackSpeed": 1,
+      "isTestingEnvironment": true,
+      "gameVersion": "15.1.0",
+      "patch": null,
+      "teams": [
+          {
+              "members": [
+                  {
+                      "memberId": 0,
+                      "teamId": 4294967293,
+                      "alias": "BluePlayer1",
+                      "puuid": "00000000-0000-0000-0000-000000000001",
+                      "isActive": true,
+                      "tag": "BLUE",
+                      "iconUri": null,
+                      "role": "Player",
+                      "familyName": "Blue",
+                      "givenName": "Player"
+                  },
+                  {
+                      "memberId": 0,
+                      "teamId": 4294967293,
+                      "alias": "BluePlayer2",
+                      "puuid": "00000000-0000-0000-0000-000000000002",
+                      "isActive": true,
+                      "tag": "BLUE",
+                      "iconUri": null,
+                      "role": "Player",
+                      "familyName": "Blue",
+                      "givenName": "Player"
+                  },
+                  {
+                      "memberId": 0,
+                      "teamId": 4294967293,
+                      "alias": "BluePlayer3",
+                      "puuid": "00000000-0000-0000-0000-000000000003",
+                      "isActive": true,
+                      "tag": "BLUE",
+                      "iconUri": null,
+                      "role": "Player",
+                      "familyName": "Blue",
+                      "givenName": "Player"
+                  },
+                  {
+                      "memberId": 0,
+                      "teamId": 4294967293,
+                      "alias": "BluePlayer4",
+                      "puuid": "00000000-0000-0000-0000-000000000004",
+                      "isActive": true,
+                      "tag": "BLUE",
+                      "iconUri": null,
+                      "role": "Player",
+                      "familyName": "Blue",
+                      "givenName": "Player"
+                  },
+                  {
+                      "memberId": 0,
+                      "teamId": 4294967293,
+                      "alias": "BluePlayer5",
+                      "puuid": "00000000-0000-0000-0000-000000000005",
+                      "isActive": true,
+                      "tag": "BLUE",
+                      "iconUri": null,
+                      "role": "Player",
+                      "familyName": "Blue",
+                      "givenName": "Player"
+                  }
+              ],
+              "teamId": 4294967293,
+              "name": "Blue Team",
+              "tag": "BLUE",
+              "description": null,
+              "iconUri": "cache/style/BlueBottle.png",
+              "isActive": true,
+              "primaryColor": "#0000FFFF",
+              "secondaryColor": "#FFFFFFFF",
+              "tertiaryColor": "#000000FF",
+              "backgroundColor": "#000000FF"
+          },
+          {
+              "members": [
+                  {
+                      "memberId": 0,
+                      "teamId": 4294967293,
+                      "alias": "RedPlayer1",
+                      "puuid": "00000000-0000-0000-0000-000000000011",
+                      "isActive": true,
+                      "tag": "Red",
+                      "iconUri": null,
+                      "role": "Player",
+                      "familyName": "Red",
+                      "givenName": "Player"
+                  },
+                  {
+                      "memberId": 0,
+                      "teamId": 4294967293,
+                      "alias": "RedPlayer2",
+                      "puuid": "00000000-0000-0000-0000-000000000012",
+                      "isActive": true,
+                      "tag": "Red",
+                      "iconUri": null,
+                      "role": "Player",
+                      "familyName": "Red",
+                      "givenName": "Player"
+                  },
+                  {
+                      "memberId": 0,
+                      "teamId": 4294967293,
+                      "alias": "RedPlayer3",
+                      "puuid": "00000000-0000-0000-0000-000000000013",
+                      "isActive": true,
+                      "tag": "Red",
+                      "iconUri": null,
+                      "role": "Player",
+                      "familyName": "Red",
+                      "givenName": "Player"
+                  },
+                  {
+                      "memberId": 0,
+                      "teamId": 4294967293,
+                      "alias": "RedPlayer4",
+                      "puuid": "00000000-0000-0000-0000-000000000014",
+                      "isActive": true,
+                      "tag": "Red",
+                      "iconUri": null,
+                      "role": "Player",
+                      "familyName": "Red",
+                      "givenName": "Player"
+                  },
+                  {
+                      "memberId": 0,
+                      "teamId": 4294967293,
+                      "alias": "RedPlayer5",
+                      "puuid": "00000000-0000-0000-0000-000000000015",
+                      "isActive": true,
+                      "tag": "Red",
+                      "iconUri": null,
+                      "role": "Player",
+                      "familyName": "Red",
+                      "givenName": "Player"
+                  }
+              ],
+              "teamId": 4294967294,
+              "name": "Red Team",
+              "tag": "RED",
+              "description": null,
+              "iconUri": "cache/style/BlueBottle.png",
+              "isActive": true,
+              "primaryColor": "#FF0000FF",
+              "secondaryColor": "#FFFFFFFF",
+              "tertiaryColor": "#000000FF",
+              "backgroundColor": "#000000FF"
+          }
+      ],
+      "gameStatus": 2,
+      "scoreboard": {
+          "teams": [
+              {
+                  "teamName": "Blue Team",
+                  "teamTag": "BLUE",
+                  "teamIconUrl": "cache/style/BlueBottle.png",
+                  "seriesScore": {
+                      "wins": 2,
+                      "losses": 1
+                  },
+                  "totalScore": {
+                      "wins": 5,
+                      "losses": 3
+                  },
+                  "infoText": "LEC #1",
+                  "gold": 18324,
+                  "kills": 12,
+                  "towers": 1,
+                  "towerPlates": 15,
+                  "grubs": 3,
+                  "dragons": [
+                      "air",
+                      "earth"
+                  ],
+                  "baronPowerPlay": null,
+                  "dragonPowerPlay": {
+                      "gold": 1500,
+                      "kills": 2,
+                      "deaths": 0,
+                      "timeStart": 9028,
+                      "timeEnd": 9073
+                  }
+              },
+              {
+                  "teamName": "Red Team",
+                  "teamTag": "RED",
+                  "teamIconUrl": "cache/style/BlueBottle.png",
+                  "seriesScore": {
+                      "wins": 1,
+                      "losses": 2
+                  },
+                  "totalScore": {
+                      "wins": 3,
+                      "losses": 5
+                  },
+                  "infoText": "LEC #2",
+                  "gold": 16393,
+                  "kills": 7,
+                  "towers": 0,
+                  "towerPlates": 8,
+                  "grubs": 3,
+                  "dragons": [
+                      "hextech",
+                      "hextech",
+                      "hextech"
+                  ],
+                  "baronPowerPlay": {
+                      "gold": 1500,
+                      "kills": 2,
+                      "deaths": 0,
+                      "timeStart": 9044,
+                      "timeEnd": 9089
+                  },
+                  "dragonPowerPlay": null
+              }
+          ],
+          "gameTime": 9061,
+          "bestOf": 3
+      },
+      "tabs": {
+          "Order": {
+              "id": 4294967293,
+              "players": [
+                  {
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "playerName": "Player 0",
+                      "playerHashtag": "EUW",
+                      "givenName": "",
+                      "familyName": "",
+                      "championAssets": {
+                          "id": 119,
+                          "alias": "Draven",
+                          "name": "Draven",
+                          "splashCenteredImg": "cache/game/4f/4f8c2145106520f617f1ad59ad6f51871749bb359c4410adb1a247fdfe122fdb.jpg",
+                          "splashImg": "cache/game/a4/a40fbcbd21f5227bd9dac5a531c9b7c9c8a01c700a4897b42959ad86f0ec7e8b.jpg",
+                          "loadingImg": "cache/game/5b/5bc03d5024e1a5a8ceae5c937a06d9a81b4b05c6310391d43bd982eafa4a2eff.png",
+                          "squareImg": "cache/game/c9/c96190c54544676eb0082177ce0e5b3a823b7e709abb5ce70dbde4598578bcf2.png",
+                          "tileImg": "cache/game/a5/a58be8f6e3ca2b5bb4013dccfe0aae91d94ec6808b76c1197ddacb9897d89af8.jpg"
+                      },
+                      "abilities": [
+                          {
+                              "identifier": "DravenBasicAttack2",
+                              "displayName": "DravenBasicAttack2",
+                              "slot": "Q",
+                              "totalCooldown": 40,
+                              "cooldown": 51,
+                              "level": 2,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "DravenBasicAttack2",
+                                  "iconAsset": "",
+                                  "iconName": "",
+                                  "nativeBinHash": 176843442
+                              }
+                          },
+                          {
+                              "identifier": "DravenSpinningAttack",
+                              "displayName": "DravenSpinningAttack",
+                              "slot": "W",
+                              "totalCooldown": 9,
+                              "cooldown": 0,
+                              "level": 5,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "DravenSpinningAttack",
+                                  "iconAsset": "cache/game/7a/7aaec6718d02b92dda910e6048f1fea3213c2ad019518d9155d047281e6dfe6d.png",
+                                  "iconName": "7aaec6718d02b92dda910e6048f1fea3213c2ad019518d9155d047281e6dfe6d.png",
+                                  "nativeBinHash": 50473675
+                              }
+                          },
+                          {
+                              "identifier": "DravenSpinning",
+                              "displayName": "DravenSpinning",
+                              "slot": "E",
+                              "totalCooldown": 37,
+                              "cooldown": 87,
+                              "level": 4,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "DravenSpinning",
+                                  "iconAsset": "cache/game/7a/7aaec6718d02b92dda910e6048f1fea3213c2ad019518d9155d047281e6dfe6d.png",
+                                  "iconName": "7aaec6718d02b92dda910e6048f1fea3213c2ad019518d9155d047281e6dfe6d.png",
+                                  "nativeBinHash": 243895639
+                              }
+                          },
+                          {
+                              "identifier": "DravenSpinningReturn",
+                              "displayName": "DravenSpinningReturn",
+                              "slot": "R",
+                              "totalCooldown": 46,
+                              "cooldown": 0,
+                              "level": 4,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "DravenSpinningReturn",
+                                  "iconAsset": "cache/game/7a/7aaec6718d02b92dda910e6048f1fea3213c2ad019518d9155d047281e6dfe6d.png",
+                                  "iconName": "7aaec6718d02b92dda910e6048f1fea3213c2ad019518d9155d047281e6dfe6d.png",
+                                  "nativeBinHash": 340446
+                              }
+                          },
+                          {
+                              "identifier": "ultbook_lux_square",
+                              "displayName": "ultbook_lux_square",
+                              "slot": "D",
+                              "totalCooldown": 64,
+                              "cooldown": 85,
+                              "level": 5,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "ultbook_lux_square",
+                                  "iconAsset": "cache/game/aa/aa298021f9a8a329f9f0d9c1bb0aff1e24c20fbd4a36d815c16ae7e6724e1370.png",
+                                  "iconName": "aa298021f9a8a329f9f0d9c1bb0aff1e24c20fbd4a36d815c16ae7e6724e1370.png",
+                                  "nativeBinHash": 92220741
+                              }
+                          },
+                          {
+                              "identifier": "ultbook_gragas_square",
+                              "displayName": "ultbook_gragas_square",
+                              "slot": "D",
+                              "totalCooldown": 11,
+                              "cooldown": 11,
+                              "level": 2,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "ultbook_gragas_square",
+                                  "iconAsset": "cache/game/43/435939667d4b11a987d0ddc072fb6b8f1e7ad5c6724b387c51c8d63ad0121ddf.png",
+                                  "iconName": "435939667d4b11a987d0ddc072fb6b8f1e7ad5c6724b387c51c8d63ad0121ddf.png",
+                                  "nativeBinHash": 45702517
+                              }
+                          }
+                      ],
+                      "perks": [
+                          {
+                              "iconHash": "df2be82d05c7c4d640df95c2607340c990d9259c86b85137141cc237fa4fe259",
+                              "id": 8242,
+                              "name": "Unflinching",
+                              "iconPath": "cache/game/df/df2be82d05c7c4d640df95c2607340c990d9259c86b85137141cc237fa4fe259.png"
+                          },
+                          {
+                              "iconHash": "1153dc1fe6e6e78f022c5accb1fe696b2206e08721181bc6c2a43f4498c86b70",
+                              "id": 8229,
+                              "name": "Arcane Comet",
+                              "iconPath": "cache/game/11/1153dc1fe6e6e78f022c5accb1fe696b2206e08721181bc6c2a43f4498c86b70.png"
+                          }
+                      ],
+                      "health": {
+                          "current": 2866,
+                          "max": 3000,
+                          "shield": 0,
+                          "physicalShield": 0,
+                          "magicalShield": 0
+                      },
+                      "resource": {
+                          "type": "mana",
+                          "current": 1822,
+                          "max": 3000
+                      },
+                      "stacksData": null,
+                      "hasBaron": false,
+                      "hasElder": true,
+                      "level": 9,
+                      "experience": {
+                          "previousLevel": 0,
+                          "current": 62,
+                          "nextLevel": 100
+                      },
+                      "timeToRespawn": 72
+                  },
+                  {
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "playerName": "Player 1",
+                      "playerHashtag": "EUW",
+                      "givenName": "",
+                      "familyName": "",
+                      "championAssets": {
+                          "id": 432,
+                          "alias": "Bard",
+                          "name": "Bard",
+                          "splashCenteredImg": "cache/game/f3/f386e1465e8a1695760f5f7d7727859b4110e1baf92c26161b1d7ab92307805d.jpg",
+                          "splashImg": "cache/game/1f/1fec6ab7c140b81083bcb913e91e5103b9276da62248bb1d9c3900b08d70ab28.jpg",
+                          "loadingImg": "cache/game/e1/e1ad6b0ae8ba9bcd75a0355b4340dee347c72eaadece470b48765e7742091335.png",
+                          "squareImg": "cache/game/41/41d48bfa691fa315e71ed48e346a5e2c0a3d9974ac63afb4803da49d43ebc0e1.png",
+                          "tileImg": "cache/game/28/288570f2bab4499e91aeeae453c5ee6461c0611d371ca3fc23fcf717d002db83.jpg"
+                      },
+                      "abilities": [
+                          {
+                              "identifier": "BardPSpiritAmmoCount",
+                              "displayName": "BardPSpiritAmmoCount",
+                              "slot": "Q",
+                              "totalCooldown": 47,
+                              "cooldown": 0,
+                              "level": 4,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "BardPSpiritAmmoCount",
+                                  "iconAsset": "cache/game/f9/f97091b0e067e7d7d520045d9869fbe44d0fd7fee39ffd69c3e6913ce5133fbb.png",
+                                  "iconName": "f97091b0e067e7d7d520045d9869fbe44d0fd7fee39ffd69c3e6913ce5133fbb.png",
+                                  "nativeBinHash": 205764740
+                              }
+                          },
+                          {
+                              "identifier": "BardPChimes",
+                              "displayName": "BardPChimes",
+                              "slot": "W",
+                              "totalCooldown": 87,
+                              "cooldown": 42,
+                              "level": 1,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "BardPChimes",
+                                  "iconAsset": "cache/game/f9/f97091b0e067e7d7d520045d9869fbe44d0fd7fee39ffd69c3e6913ce5133fbb.png",
+                                  "iconName": "f97091b0e067e7d7d520045d9869fbe44d0fd7fee39ffd69c3e6913ce5133fbb.png",
+                                  "nativeBinHash": 116820851
+                              }
+                          },
+                          {
+                              "identifier": "BardPTooltip_D_nS",
+                              "displayName": "BardPTooltip_D_nS",
+                              "slot": "E",
+                              "totalCooldown": 38,
+                              "cooldown": 0,
+                              "level": 5,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "BardPTooltip_D_nS",
+                                  "iconAsset": "cache/game/f9/f97091b0e067e7d7d520045d9869fbe44d0fd7fee39ffd69c3e6913ce5133fbb.png",
+                                  "iconName": "f97091b0e067e7d7d520045d9869fbe44d0fd7fee39ffd69c3e6913ce5133fbb.png",
+                                  "nativeBinHash": 127635315
+                              }
+                          },
+                          {
+                              "identifier": "BardPTooltip_DS_nM",
+                              "displayName": "BardPTooltip_DS_nM",
+                              "slot": "R",
+                              "totalCooldown": 34,
+                              "cooldown": 13,
+                              "level": 5,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "BardPTooltip_DS_nM",
+                                  "iconAsset": "cache/game/f9/f97091b0e067e7d7d520045d9869fbe44d0fd7fee39ffd69c3e6913ce5133fbb.png",
+                                  "iconName": "f97091b0e067e7d7d520045d9869fbe44d0fd7fee39ffd69c3e6913ce5133fbb.png",
+                                  "nativeBinHash": 162875453
+                              }
+                          },
+                          {
+                              "identifier": "fiora_danceofdeath",
+                              "displayName": "fiora_danceofdeath",
+                              "slot": "D",
+                              "totalCooldown": 41,
+                              "cooldown": 69,
+                              "level": 3,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "fiora_danceofdeath",
+                                  "iconAsset": "cache/game/7c/7c458b07c38cf59c40b7687c1b5fdb70e21bdac26a031c3368c33049be86d5a1.png",
+                                  "iconName": "7c458b07c38cf59c40b7687c1b5fdb70e21bdac26a031c3368c33049be86d5a1.png",
+                                  "nativeBinHash": 112367992
+                              }
+                          },
+                          {
+                              "identifier": "ultbook_corki_square_0",
+                              "displayName": "ultbook_corki_square_0",
+                              "slot": "D",
+                              "totalCooldown": 36,
+                              "cooldown": 2,
+                              "level": 5,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "ultbook_corki_square_0",
+                                  "iconAsset": "cache/game/4b/4b1d6d1a81dee8e23e173546b9ea6f434d8caaa0ffe1f53e1df208591dfdfa7e.png",
+                                  "iconName": "4b1d6d1a81dee8e23e173546b9ea6f434d8caaa0ffe1f53e1df208591dfdfa7e.png",
+                                  "nativeBinHash": 122342336
+                              }
+                          }
+                      ],
+                      "perks": [
+                          {
+                              "iconHash": "e37476b286dcfcc0e0d7ad3066cad7055e75321a89dfe291c9e6425ec59c21b2",
+                              "id": 5011,
+                              "name": "Health",
+                              "iconPath": "cache/game/e3/e37476b286dcfcc0e0d7ad3066cad7055e75321a89dfe291c9e6425ec59c21b2.png"
+                          },
+                          {
+                              "iconHash": "f6c8ccc5fb6bc04969270f21561094b7c6cf46456af0c815cf4c28651a324195",
+                              "id": 8237,
+                              "name": "Scorch",
+                              "iconPath": "cache/game/f6/f6c8ccc5fb6bc04969270f21561094b7c6cf46456af0c815cf4c28651a324195.png"
+                          }
+                      ],
+                      "health": {
+                          "current": 843,
+                          "max": 3000,
+                          "shield": 0,
+                          "physicalShield": 0,
+                          "magicalShield": 0
+                      },
+                      "resource": {
+                          "type": "energy",
+                          "current": 2117,
+                          "max": 3000
+                      },
+                      "stacksData": null,
+                      "hasBaron": false,
+                      "hasElder": true,
+                      "level": 10,
+                      "experience": {
+                          "previousLevel": 0,
+                          "current": 59,
+                          "nextLevel": 100
+                      },
+                      "timeToRespawn": 0
+                  },
+                  {
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "playerName": "Player 2",
+                      "playerHashtag": "EUW",
+                      "givenName": "",
+                      "familyName": "",
+                      "championAssets": {
+                          "id": 526,
+                          "alias": "Rell",
+                          "name": "Rell",
+                          "splashCenteredImg": "cache/game/b7/b768240716e42f97685a32c8de153b4fe883a1180f6e713054cf6eb2cee5f98e.jpg",
+                          "splashImg": "cache/game/29/2960d570b648b61400a9b9e3f3c886ff98a6dd6d7e9a6817ff4f68900b2b8ff2.jpg",
+                          "loadingImg": "cache/game/5c/5c469930fb44cb8e398d8c10dd75a0f4edd445792ed9eb88aa852ba3146bfd1d.png",
+                          "squareImg": "cache/game/fb/fb6a50de4571ec3f978d1ef3b5c815ffaf59effe48956353124eb3c45dbfca20.png",
+                          "tileImg": "cache/game/75/75117b4e932ec241096e1abfda9ae97a3600e015dd015a600ab2dd185ca5b3bd.jpg"
+                      },
+                      "abilities": [
+                          {
+                              "identifier": "RellP_Debuff",
+                              "displayName": "RellP_Debuff",
+                              "slot": "Q",
+                              "totalCooldown": 75,
+                              "cooldown": 20,
+                              "level": 2,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "RellP_Debuff",
+                                  "iconAsset": "cache/game/05/053413c16708b5c02b4b1047e543d415b4c780d97e580db044373302d7117ced.png",
+                                  "iconName": "053413c16708b5c02b4b1047e543d415b4c780d97e580db044373302d7117ced.png",
+                                  "nativeBinHash": 36153510
+                              }
+                          },
+                          {
+                              "identifier": "RellP_Buff",
+                              "displayName": "RellP_Buff",
+                              "slot": "W",
+                              "totalCooldown": 18,
+                              "cooldown": 87,
+                              "level": 1,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "RellP_Buff",
+                                  "iconAsset": "cache/game/05/053413c16708b5c02b4b1047e543d415b4c780d97e580db044373302d7117ced.png",
+                                  "iconName": "053413c16708b5c02b4b1047e543d415b4c780d97e580db044373302d7117ced.png",
+                                  "nativeBinHash": 56760310
+                              }
+                          },
+                          {
+                              "identifier": "RellP",
+                              "displayName": "RellP",
+                              "slot": "E",
+                              "totalCooldown": 2,
+                              "cooldown": 0,
+                              "level": 1,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "RellP",
+                                  "iconAsset": "cache/game/05/053413c16708b5c02b4b1047e543d415b4c780d97e580db044373302d7117ced.png",
+                                  "iconName": "053413c16708b5c02b4b1047e543d415b4c780d97e580db044373302d7117ced.png",
+                                  "nativeBinHash": 7914288
+                              }
+                          },
+                          {
+                              "identifier": "RellW_KnockUp",
+                              "displayName": "RellW_KnockUp",
+                              "slot": "R",
+                              "totalCooldown": 88,
+                              "cooldown": 0,
+                              "level": 5,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "RellW_KnockUp",
+                                  "iconAsset": "cache/game/df/df81f2dceedbcbf8f766a49949e042f1a382c1215b01f481dd2558c93aaeb57c.png",
+                                  "iconName": "df81f2dceedbcbf8f766a49949e042f1a382c1215b01f481dd2558c93aaeb57c.png",
+                                  "nativeBinHash": 177651696
+                              }
+                          },
+                          {
+                              "identifier": "smite_red",
+                              "displayName": "smite_red",
+                              "slot": "D",
+                              "totalCooldown": 21,
+                              "cooldown": 40,
+                              "level": 5,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "smite_red",
+                                  "iconAsset": "cache/game/7c/7c7860e76232580d6fdb55ecac6056c31f3c2df98f263ed38a42254e4a9c6d20.png",
+                                  "iconName": "7c7860e76232580d6fdb55ecac6056c31f3c2df98f263ed38a42254e4a9c6d20.png",
+                                  "nativeBinHash": 11211508
+                              }
+                          },
+                          {
+                              "identifier": "ragebladeenrage",
+                              "displayName": "ragebladeenrage",
+                              "slot": "D",
+                              "totalCooldown": 13,
+                              "cooldown": 23,
+                              "level": 1,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "ragebladeenrage",
+                                  "iconAsset": "cache/game/46/466d02a6bddca5a6255ebf3270505306a3f07db457c866a74e044eecbc071239.png",
+                                  "iconName": "466d02a6bddca5a6255ebf3270505306a3f07db457c866a74e044eecbc071239.png",
+                                  "nativeBinHash": 102553605
+                              }
+                          }
+                      ],
+                      "perks": [
+                          {
+                              "iconHash": "680fce54c7cf4eb2f602d3de433f762fe2152d945866a3dfb6c6aa9fed49fb63",
+                              "id": 8007,
+                              "name": "The Savant",
+                              "iconPath": "cache/game/68/680fce54c7cf4eb2f602d3de433f762fe2152d945866a3dfb6c6aa9fed49fb63.png"
+                          },
+                          {
+                              "iconHash": "fedfbadd81e6232da201b6435a6d8295a2c17f7138b836dc7eac99bde8244273",
+                              "id": 8465,
+                              "name": "Guardian",
+                              "iconPath": "cache/game/fe/fedfbadd81e6232da201b6435a6d8295a2c17f7138b836dc7eac99bde8244273.png"
+                          }
+                      ],
+                      "health": {
+                          "current": 1556,
+                          "max": 3000,
+                          "shield": 0,
+                          "physicalShield": 0,
+                          "magicalShield": 0
+                      },
+                      "resource": {
+                          "type": "none",
+                          "current": 1048,
+                          "max": 3000
+                      },
+                      "stacksData": null,
+                      "hasBaron": true,
+                      "hasElder": false,
+                      "level": 11,
+                      "experience": {
+                          "previousLevel": 0,
+                          "current": 20,
+                          "nextLevel": 100
+                      },
+                      "timeToRespawn": 12
+                  },
+                  {
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "playerName": "Player 3",
+                      "playerHashtag": "EUW",
+                      "givenName": "",
+                      "familyName": "",
+                      "championAssets": {
+                          "id": 58,
+                          "alias": "Renekton",
+                          "name": "Renekton",
+                          "splashCenteredImg": "cache/game/87/878c7cc1bc2be00dc3117295a5f982ffd625a437299b758126c930f07ea4ea60.jpg",
+                          "splashImg": "cache/game/d6/d6b87cea7f94ba7cd1a7bc2def14050c9f04336930899a146dd85a1ef2caef82.jpg",
+                          "loadingImg": "cache/game/a0/a077880ba5d836df7e2207fae20ea738dbd3487e9038729d7f7d9e404e7160e4.png",
+                          "squareImg": "cache/game/ad/adbe66fc6e5123ea5ee969ae8448863b8eb37605a6d0a062a4e49a556f4414b5.png",
+                          "tileImg": "cache/game/9c/9c1a2e1c759b78d701755b6bb4ce313c731f2e4c59a88b62a9c332655958e65b.jpg"
+                      },
+                      "abilities": [
+                          {
+                              "identifier": "RenektonSiblingRivalryDefeat",
+                              "displayName": "RenektonSiblingRivalryDefeat",
+                              "slot": "Q",
+                              "totalCooldown": 4,
+                              "cooldown": 73,
+                              "level": 4,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "RenektonSiblingRivalryDefeat",
+                                  "iconAsset": "cache/game/15/15141024287ddd08c1bd6de5d3fb712dbb4bfc5f845eea9bd611b5792b17bc7a.png",
+                                  "iconName": "15141024287ddd08c1bd6de5d3fb712dbb4bfc5f845eea9bd611b5792b17bc7a.png",
+                                  "nativeBinHash": 52143396
+                              }
+                          },
+                          {
+                              "identifier": "RenektonExecute",
+                              "displayName": "RenektonExecute",
+                              "slot": "W",
+                              "totalCooldown": 13,
+                              "cooldown": 0,
+                              "level": 4,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "RenektonExecute",
+                                  "iconAsset": "cache/game/e4/e40fca5716b4ac449aa1f876330017a5212456b85ef6909b9fd3a7ee6801159a.png",
+                                  "iconName": "e40fca5716b4ac449aa1f876330017a5212456b85ef6909b9fd3a7ee6801159a.png",
+                                  "nativeBinHash": 136921637
+                              }
+                          },
+                          {
+                              "identifier": "RenektonPreExecute",
+                              "displayName": "RenektonPreExecute",
+                              "slot": "E",
+                              "totalCooldown": 81,
+                              "cooldown": 13,
+                              "level": 3,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "RenektonPreExecute",
+                                  "iconAsset": "cache/game/e4/e40fca5716b4ac449aa1f876330017a5212456b85ef6909b9fd3a7ee6801159a.png",
+                                  "iconName": "e40fca5716b4ac449aa1f876330017a5212456b85ef6909b9fd3a7ee6801159a.png",
+                                  "nativeBinHash": 33724469
+                              }
+                          },
+                          {
+                              "identifier": "RenektonExecuteAttack",
+                              "displayName": "RenektonExecuteAttack",
+                              "slot": "R",
+                              "totalCooldown": 71,
+                              "cooldown": 0,
+                              "level": 4,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "RenektonExecuteAttack",
+                                  "iconAsset": "cache/game/e4/e40fca5716b4ac449aa1f876330017a5212456b85ef6909b9fd3a7ee6801159a.png",
+                                  "iconName": "e40fca5716b4ac449aa1f876330017a5212456b85ef6909b9fd3a7ee6801159a.png",
+                                  "nativeBinHash": 61007291
+                              }
+                          },
+                          {
+                              "identifier": "ultbook_briar_square",
+                              "displayName": "ultbook_briar_square",
+                              "slot": "D",
+                              "totalCooldown": 75,
+                              "cooldown": 0,
+                              "level": 1,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "ultbook_briar_square",
+                                  "iconAsset": "cache/game/ba/bac3b04fac560d22d96246c229e9b9f9fefd62fe81ec1f418cbec9f9ca9188c9.png",
+                                  "iconName": "bac3b04fac560d22d96246c229e9b9f9fefd62fe81ec1f418cbec9f9ca9188c9.png",
+                                  "nativeBinHash": 10036021
+                              }
+                          },
+                          {
+                              "identifier": "summoner_flashperkshextechflashtraptionblue",
+                              "displayName": "summoner_flashperkshextechflashtraptionblue",
+                              "slot": "D",
+                              "totalCooldown": 75,
+                              "cooldown": 0,
+                              "level": 2,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "summoner_flashperkshextechflashtraptionblue",
+                                  "iconAsset": "cache/game/ed/ed666a2034a63ff2095a6fd40258e23868455ee312ac0baf695033e123949a4c.png",
+                                  "iconName": "ed666a2034a63ff2095a6fd40258e23868455ee312ac0baf695033e123949a4c.png",
+                                  "nativeBinHash": 14982037
+                              }
+                          }
+                      ],
+                      "perks": [
+                          {
+                              "iconHash": "680fce54c7cf4eb2f602d3de433f762fe2152d945866a3dfb6c6aa9fed49fb63",
+                              "id": 8207,
+                              "name": "The Cryptic",
+                              "iconPath": "cache/game/68/680fce54c7cf4eb2f602d3de433f762fe2152d945866a3dfb6c6aa9fed49fb63.png"
+                          },
+                          {
+                              "iconHash": "92932052a612d94dd85ae5d04d57c514e1cc378d08a0543e1eb632445fca8133",
+                              "id": 8134,
+                              "name": "Ingenious Hunter",
+                              "iconPath": "cache/game/92/92932052a612d94dd85ae5d04d57c514e1cc378d08a0543e1eb632445fca8133.png"
+                          }
+                      ],
+                      "health": {
+                          "current": 1461,
+                          "max": 3000,
+                          "shield": 0,
+                          "physicalShield": 0,
+                          "magicalShield": 0
+                      },
+                      "resource": {
+                          "type": "shield",
+                          "current": 560,
+                          "max": 3000
+                      },
+                      "stacksData": 15,
+                      "hasBaron": true,
+                      "hasElder": false,
+                      "level": 12,
+                      "experience": {
+                          "previousLevel": 0,
+                          "current": 93,
+                          "nextLevel": 100
+                      },
+                      "timeToRespawn": 0
+                  },
+                  {
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "playerName": "Player 4",
+                      "playerHashtag": "EUW",
+                      "givenName": "",
+                      "familyName": "",
+                      "championAssets": {
+                          "id": 8,
+                          "alias": "Vladimir",
+                          "name": "Vladimir",
+                          "splashCenteredImg": "cache/game/89/898b9f4237b2510bd1f604805244081fb763311c6dcc1772f4d6855f9a300bbd.jpg",
+                          "splashImg": "cache/game/0e/0e04fd1ab5cf69ec74b1a8c729fae81f1a18e54fe099b23bce2ce892157e0774.jpg",
+                          "loadingImg": "cache/game/d7/d74b6661563bcc552408fda0696227f250fa0b2169aaacd224007dd2f9a96942.png",
+                          "squareImg": "cache/game/4e/4e5ed720d03133a68f682883172a3f9645f626b98cea4b518b4c456f604b878c.png",
+                          "tileImg": "cache/game/37/370b20633e0a8371df0e6e83b98b4482e0ee2a5a9c6c3d9d2a6e73f175944c33.jpg"
+                      },
+                      "abilities": [
+                          {
+                              "identifier": "VladimirEMissile",
+                              "displayName": "VladimirEMissile",
+                              "slot": "Q",
+                              "totalCooldown": 93,
+                              "cooldown": 34,
+                              "level": 1,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "VladimirEMissile",
+                                  "iconAsset": "cache/game/d1/d13f8f3476cdb6ba06b4e3d6c062187301158dd8584952e97b03f734b1297d33.png",
+                                  "iconName": "d13f8f3476cdb6ba06b4e3d6c062187301158dd8584952e97b03f734b1297d33.png",
+                                  "nativeBinHash": 151996149
+                              }
+                          },
+                          {
+                              "identifier": "VladimirESlow",
+                              "displayName": "VladimirESlow",
+                              "slot": "W",
+                              "totalCooldown": 38,
+                              "cooldown": 79,
+                              "level": 3,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "VladimirESlow",
+                                  "iconAsset": "cache/game/d1/d13f8f3476cdb6ba06b4e3d6c062187301158dd8584952e97b03f734b1297d33.png",
+                                  "iconName": "d13f8f3476cdb6ba06b4e3d6c062187301158dd8584952e97b03f734b1297d33.png",
+                                  "nativeBinHash": 229323575
+                              }
+                          },
+                          {
+                              "identifier": "VladimirE",
+                              "displayName": "VladimirE",
+                              "slot": "E",
+                              "totalCooldown": 31,
+                              "cooldown": 0,
+                              "level": 4,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "VladimirE",
+                                  "iconAsset": "cache/game/d1/d13f8f3476cdb6ba06b4e3d6c062187301158dd8584952e97b03f734b1297d33.png",
+                                  "iconName": "d13f8f3476cdb6ba06b4e3d6c062187301158dd8584952e97b03f734b1297d33.png",
+                                  "nativeBinHash": 128998821
+                              }
+                          },
+                          {
+                              "identifier": "VladimirBloodGorged",
+                              "displayName": "VladimirBloodGorged",
+                              "slot": "R",
+                              "totalCooldown": 6,
+                              "cooldown": 0,
+                              "level": 4,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "VladimirBloodGorged",
+                                  "iconAsset": "cache/game/47/473dd80f912ca06c2f2a0fd9a5e67ca705a76dc65627782a2097cc58e061a9ca.png",
+                                  "iconName": "473dd80f912ca06c2f2a0fd9a5e67ca705a76dc65627782a2097cc58e061a9ca.png",
+                                  "nativeBinHash": 125184948
+                              }
+                          },
+                          {
+                              "identifier": "summoner_teleport_2",
+                              "displayName": "summoner_teleport_2",
+                              "slot": "D",
+                              "totalCooldown": 8,
+                              "cooldown": 0,
+                              "level": 4,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "summoner_teleport_2",
+                                  "iconAsset": "cache/game/29/2968813a46fb4f3d7409084d2f8b8cb11ed7d28500427eb2cdb5edf4e953b614.png",
+                                  "iconName": "2968813a46fb4f3d7409084d2f8b8cb11ed7d28500427eb2cdb5edf4e953b614.png",
+                                  "nativeBinHash": 179599410
+                              }
+                          },
+                          {
+                              "identifier": "ultbook_kindred_square",
+                              "displayName": "ultbook_kindred_square",
+                              "slot": "D",
+                              "totalCooldown": 57,
+                              "cooldown": 27,
+                              "level": 2,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "ultbook_kindred_square",
+                                  "iconAsset": "cache/game/a0/a0fe1e1b06d394ac357a068320ccd5f608cad41ff8028616522c1bdebb945f8f.png",
+                                  "iconName": "a0fe1e1b06d394ac357a068320ccd5f608cad41ff8028616522c1bdebb945f8f.png",
+                                  "nativeBinHash": 25224373
+                              }
+                          }
+                      ],
+                      "perks": [
+                          {
+                              "iconHash": "bedf6223c679999d68bfbd1076a4c6fcff58beec936875b89c15dfcc11cc81e9",
+                              "id": 8369,
+                              "name": "First Strike",
+                              "iconPath": "cache/game/be/bedf6223c679999d68bfbd1076a4c6fcff58beec936875b89c15dfcc11cc81e9.png"
+                          },
+                          {
+                              "iconHash": "eced2c3afb8365c27ef5abd74eb31637dacf1bd61d55e4e305a583ff5950f985",
+                              "id": 8451,
+                              "name": "Overgrowth",
+                              "iconPath": "cache/game/ec/eced2c3afb8365c27ef5abd74eb31637dacf1bd61d55e4e305a583ff5950f985.png"
+                          }
+                      ],
+                      "health": {
+                          "current": 1811,
+                          "max": 3000,
+                          "shield": 0,
+                          "physicalShield": 0,
+                          "magicalShield": 0
+                      },
+                      "resource": {
+                          "type": "battlefury",
+                          "current": 590,
+                          "max": 3000
+                      },
+                      "stacksData": null,
+                      "hasBaron": true,
+                      "hasElder": true,
+                      "level": 5,
+                      "experience": {
+                          "previousLevel": 0,
+                          "current": 19,
+                          "nextLevel": 100
+                      },
+                      "timeToRespawn": 0
+                  }
+              ]
+          },
+          "Chaos": {
+              "id": 4294967294,
+              "players": [
+                  {
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "playerName": "Player 5",
+                      "playerHashtag": "EUW",
+                      "givenName": "",
+                      "familyName": "",
+                      "championAssets": {
+                          "id": 266,
+                          "alias": "Aatrox",
+                          "name": "Aatrox",
+                          "splashCenteredImg": "cache/game/6e/6ecbdbdef41926627972685b16862147867f49ab5666a3c2fa662451f6b20f43.jpg",
+                          "splashImg": "cache/game/f0/f0ba7832ef5cf0ce323ff9d0c990dd226974bab109451370286a3629919830f9.jpg",
+                          "loadingImg": "cache/game/7e/7ebf8c3c97e2b36993c076b184369e3eb08efbfe41cf02410b5be2b60f453c62.png",
+                          "squareImg": "cache/game/f6/f6e460af71a44bba2464b35ff73c85f33f66d3679eb12f9c07f5375866aae615.png",
+                          "tileImg": "cache/game/dc/dc96a6e708c585b4828dfb5458f69a517a5352cb75f0ffb0854ba5e307af397e.jpg"
+                      },
+                      "abilities": [
+                          {
+                              "identifier": "KayleVsAatroxMorganaLoss",
+                              "displayName": "KayleVsAatroxMorganaLoss",
+                              "slot": "Q",
+                              "totalCooldown": 11,
+                              "cooldown": 0,
+                              "level": 2,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "KayleVsAatroxMorganaLoss",
+                                  "iconAsset": "cache/game/01/01c2e0a9c100dee55b25523557bbf6fd135c925f81e7f84b95609d58730e5800.png",
+                                  "iconName": "01c2e0a9c100dee55b25523557bbf6fd135c925f81e7f84b95609d58730e5800.png",
+                                  "nativeBinHash": 205182755
+                              }
+                          },
+                          {
+                              "identifier": "KayleVsAatroxKayleLoss",
+                              "displayName": "KayleVsAatroxKayleLoss",
+                              "slot": "W",
+                              "totalCooldown": 47,
+                              "cooldown": 73,
+                              "level": 4,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "KayleVsAatroxKayleLoss",
+                                  "iconAsset": "cache/game/01/01c2e0a9c100dee55b25523557bbf6fd135c925f81e7f84b95609d58730e5800.png",
+                                  "iconName": "01c2e0a9c100dee55b25523557bbf6fd135c925f81e7f84b95609d58730e5800.png",
+                                  "nativeBinHash": 125331875
+                              }
+                          },
+                          {
+                              "identifier": "KayleVsAatroxAatroxDescription",
+                              "displayName": "KayleVsAatroxAatroxDescription",
+                              "slot": "E",
+                              "totalCooldown": 54,
+                              "cooldown": 0,
+                              "level": 3,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "KayleVsAatroxAatroxDescription",
+                                  "iconAsset": "cache/game/12/127b556493207f0bf8322d22af0c16d8004e25ee718f1d6a4a5190c0fc0e3f93.png",
+                                  "iconName": "127b556493207f0bf8322d22af0c16d8004e25ee718f1d6a4a5190c0fc0e3f93.png",
+                                  "nativeBinHash": 59008286
+                              }
+                          },
+                          {
+                              "identifier": "KayleVsAatroxAatroxStart",
+                              "displayName": "KayleVsAatroxAatroxStart",
+                              "slot": "R",
+                              "totalCooldown": 63,
+                              "cooldown": 75,
+                              "level": 5,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "KayleVsAatroxAatroxStart",
+                                  "iconAsset": "",
+                                  "iconName": "",
+                                  "nativeBinHash": 177449588
+                              }
+                          },
+                          {
+                              "identifier": "evelynn_outofstealth",
+                              "displayName": "evelynn_outofstealth",
+                              "slot": "D",
+                              "totalCooldown": 54,
+                              "cooldown": 68,
+                              "level": 5,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "evelynn_outofstealth",
+                                  "iconAsset": "cache/game/25/25a4d6d13c611f271838e827f8540de77d90a171f59415f6608746d7f2125bcc.png",
+                                  "iconName": "25a4d6d13c611f271838e827f8540de77d90a171f59415f6608746d7f2125bcc.png",
+                                  "nativeBinHash": 250488
+                              }
+                          },
+                          {
+                              "identifier": "ultbook_mordekaiser_square",
+                              "displayName": "ultbook_mordekaiser_square",
+                              "slot": "D",
+                              "totalCooldown": 9,
+                              "cooldown": 85,
+                              "level": 4,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "ultbook_mordekaiser_square",
+                                  "iconAsset": "cache/game/9b/9bedf0d6c6fc10608b3560e059a71e5e92ee60a5e9d6bb13e978eaac09f2aada.png",
+                                  "iconName": "9bedf0d6c6fc10608b3560e059a71e5e92ee60a5e9d6bb13e978eaac09f2aada.png",
+                                  "nativeBinHash": 4705685
+                              }
+                          }
+                      ],
+                      "perks": [
+                          {
+                              "iconHash": "680fce54c7cf4eb2f602d3de433f762fe2152d945866a3dfb6c6aa9fed49fb63",
+                              "id": 8414,
+                              "name": "The Behemoth",
+                              "iconPath": "cache/game/68/680fce54c7cf4eb2f602d3de433f762fe2152d945866a3dfb6c6aa9fed49fb63.png"
+                          },
+                          {
+                              "iconHash": "1a1d3dedf6c46f3a105bc6733623f9f52d92ad48d4fc0e38b8ca95d2a6c4177c",
+                              "id": 8017,
+                              "name": "Cut Down",
+                              "iconPath": "cache/game/1a/1a1d3dedf6c46f3a105bc6733623f9f52d92ad48d4fc0e38b8ca95d2a6c4177c.png"
+                          }
+                      ],
+                      "health": {
+                          "current": 2569,
+                          "max": 3000,
+                          "shield": 0,
+                          "physicalShield": 0,
+                          "magicalShield": 0
+                      },
+                      "resource": {
+                          "type": "mana",
+                          "current": 1632,
+                          "max": 3000
+                      },
+                      "stacksData": null,
+                      "hasBaron": false,
+                      "hasElder": true,
+                      "level": 8,
+                      "experience": {
+                          "previousLevel": 0,
+                          "current": 37,
+                          "nextLevel": 100
+                      },
+                      "timeToRespawn": 0
+                  },
+                  {
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "playerName": "Player 6",
+                      "playerHashtag": "EUW",
+                      "givenName": "",
+                      "familyName": "",
+                      "championAssets": {
+                          "id": 164,
+                          "alias": "Camille",
+                          "name": "Camille",
+                          "splashCenteredImg": "cache/game/33/334bec5896a85d2dba3794bc2c48a868375bf4bb9e05e0d74dfebe740258ab4a.jpg",
+                          "splashImg": "cache/game/9c/9ca2b7eb26c1bd728e89c7715ba2d5c3f1ae3f17656e216d457ad8a94285104d.jpg",
+                          "loadingImg": "cache/game/1e/1e01581a0c5c046a96ef01ac99de7e0bfc4b8b754d2605f8bb683a30550ea3fb.png",
+                          "squareImg": "cache/game/b7/b7242f856d68e673203c335f21b4ba2946ee9ec586a743bc554a71c04def2c0b.png",
+                          "tileImg": "cache/game/f7/f739f5c0d5cce256705c23949a13d32b695fa431670342b5b20380e852b4da88.jpg"
+                      },
+                      "abilities": [
+                          {
+                              "identifier": "CamillePassiveReady",
+                              "displayName": "CamillePassiveReady",
+                              "slot": "Q",
+                              "totalCooldown": 98,
+                              "cooldown": 0,
+                              "level": 3,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "CamillePassiveReady",
+                                  "iconAsset": "cache/game/79/799aed730bd513e4d7726d49794c2710a9ba3ffe66558ffeaf41e82a649a3d92.png",
+                                  "iconName": "799aed730bd513e4d7726d49794c2710a9ba3ffe66558ffeaf41e82a649a3d92.png",
+                                  "nativeBinHash": 153361657
+                              }
+                          },
+                          {
+                              "identifier": "CamillePassiveShieldMagic",
+                              "displayName": "CamillePassiveShieldMagic",
+                              "slot": "W",
+                              "totalCooldown": 98,
+                              "cooldown": 0,
+                              "level": 5,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "CamillePassiveShieldMagic",
+                                  "iconAsset": "cache/game/79/799aed730bd513e4d7726d49794c2710a9ba3ffe66558ffeaf41e82a649a3d92.png",
+                                  "iconName": "799aed730bd513e4d7726d49794c2710a9ba3ffe66558ffeaf41e82a649a3d92.png",
+                                  "nativeBinHash": 194394355
+                              }
+                          },
+                          {
+                              "identifier": "CamillePassive",
+                              "displayName": "CamillePassive",
+                              "slot": "E",
+                              "totalCooldown": 86,
+                              "cooldown": 18,
+                              "level": 2,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "CamillePassive",
+                                  "iconAsset": "cache/game/79/799aed730bd513e4d7726d49794c2710a9ba3ffe66558ffeaf41e82a649a3d92.png",
+                                  "iconName": "799aed730bd513e4d7726d49794c2710a9ba3ffe66558ffeaf41e82a649a3d92.png",
+                                  "nativeBinHash": 248165525
+                              }
+                          },
+                          {
+                              "identifier": "CamillePassiveCooldown",
+                              "displayName": "CamillePassiveCooldown",
+                              "slot": "R",
+                              "totalCooldown": 77,
+                              "cooldown": 50,
+                              "level": 3,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "CamillePassiveCooldown",
+                                  "iconAsset": "cache/game/79/799aed730bd513e4d7726d49794c2710a9ba3ffe66558ffeaf41e82a649a3d92.png",
+                                  "iconName": "799aed730bd513e4d7726d49794c2710a9ba3ffe66558ffeaf41e82a649a3d92.png",
+                                  "nativeBinHash": 16139182
+                              }
+                          },
+                          {
+                              "identifier": "Exhaust",
+                              "displayName": "Exhaust",
+                              "slot": "D",
+                              "totalCooldown": 95,
+                              "cooldown": 5,
+                              "level": 3,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "Exhaust",
+                                  "iconAsset": "cache/game/01/01e0389d456f121c5c3a9d475d466ea21887106b6cb75764e1eb475b01b1328d.png",
+                                  "iconName": "01e0389d456f121c5c3a9d475d466ea21887106b6cb75764e1eb475b01b1328d.png",
+                                  "nativeBinHash": 216960196
+                              }
+                          },
+                          {
+                              "identifier": "Primal Smite",
+                              "displayName": "Primal Smite",
+                              "slot": "D",
+                              "totalCooldown": 22,
+                              "cooldown": 20,
+                              "level": 3,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "Primal Smite",
+                                  "iconAsset": "cache/game/ee/ee5bc3802cac949557c95c3b91ffdbb6691f480398a3a8ad4e2622ee8110e085.png",
+                                  "iconName": "ee5bc3802cac949557c95c3b91ffdbb6691f480398a3a8ad4e2622ee8110e085.png",
+                                  "nativeBinHash": 151077845
+                              }
+                          }
+                      ],
+                      "perks": [
+                          {
+                              "iconHash": "098ae91bfa5beec8d3b1a7bb5cc1f0923710c071ed4c6edee06db986aa848952",
+                              "id": 5008,
+                              "name": "Adaptive Force",
+                              "iconPath": "cache/game/09/098ae91bfa5beec8d3b1a7bb5cc1f0923710c071ed4c6edee06db986aa848952.png"
+                          },
+                          {
+                              "iconHash": "9abc363287179d34b4e84c14b007b9b4d145df53e2cc1fe1d82747ad7648a153",
+                              "id": 5003,
+                              "name": "Magic Resist",
+                              "iconPath": "cache/game/9a/9abc363287179d34b4e84c14b007b9b4d145df53e2cc1fe1d82747ad7648a153.png"
+                          }
+                      ],
+                      "health": {
+                          "current": 2532,
+                          "max": 3000,
+                          "shield": 0,
+                          "physicalShield": 0,
+                          "magicalShield": 0
+                      },
+                      "resource": {
+                          "type": "energy",
+                          "current": 2164,
+                          "max": 3000
+                      },
+                      "stacksData": 142,
+                      "hasBaron": false,
+                      "hasElder": true,
+                      "level": 4,
+                      "experience": {
+                          "previousLevel": 0,
+                          "current": 24,
+                          "nextLevel": 100
+                      },
+                      "timeToRespawn": 0
+                  },
+                  {
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "playerName": "Player 7",
+                      "playerHashtag": "EUW",
+                      "givenName": "",
+                      "familyName": "",
+                      "championAssets": {
+                          "id": 66614,
+                          "alias": "Ruby_Wukong",
+                          "name": "Doom Bot Wukong",
+                          "splashCenteredImg": "cache/game/17/17ad6290428b7f598ee085868fa1b8bdb91e4a3586e7905664ce42a2bb98259e.jpg",
+                          "splashImg": "cache/game/ec/ecfbecaad005a3e182f64eb9ea35754841467b010cfa0a1b68b60701ae3bae9d.jpg",
+                          "loadingImg": "cache/game/75/754f221d0824cd503fb581379413dd519e06c4be3a2a8ea461860e1c0287f5d6.png",
+                          "squareImg": "cache/game/48/48497ae339ab9a719348576012b65213040dbfe330d5c1540e5f4b58459bf556.png",
+                          "tileImg": "cache/game/aa/aa80096524afea6008dc5b123150f50cf31219b9bb3b1cbafde47de71de6c84e.jpg"
+                      },
+                      "abilities": [
+                          {
+                              "identifier": "MonkeyKingDAHitC",
+                              "displayName": "MonkeyKingDAHitC",
+                              "slot": "Q",
+                              "totalCooldown": 77,
+                              "cooldown": 0,
+                              "level": 2,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "MonkeyKingDAHitC",
+                                  "iconAsset": "cache/game/f4/f4c5b9e4628892f5cd19461f9599f6f23a7d267245036ec158429eb07366edbd.png",
+                                  "iconName": "f4c5b9e4628892f5cd19461f9599f6f23a7d267245036ec158429eb07366edbd.png",
+                                  "nativeBinHash": 208587443
+                              }
+                          },
+                          {
+                              "identifier": "Ruby_WukongBasicAttack2",
+                              "displayName": "Ruby_WukongBasicAttack2",
+                              "slot": "W",
+                              "totalCooldown": 25,
+                              "cooldown": 0,
+                              "level": 4,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "Ruby_WukongBasicAttack2",
+                                  "iconAsset": "",
+                                  "iconName": "",
+                                  "nativeBinHash": 60906434
+                              }
+                          },
+                          {
+                              "identifier": "Ruby_WukongSpinToWin",
+                              "displayName": "Ruby_WukongSpinToWin",
+                              "slot": "E",
+                              "totalCooldown": 68,
+                              "cooldown": 69,
+                              "level": 5,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "Ruby_WukongSpinToWin",
+                                  "iconAsset": "cache/game/34/34ce0e240f9e2df5816d1a444ea370d8dd7db57db0de3abadc9fd80ed6a59088.png",
+                                  "iconName": "34ce0e240f9e2df5816d1a444ea370d8dd7db57db0de3abadc9fd80ed6a59088.png",
+                                  "nativeBinHash": 92466862
+                              }
+                          },
+                          {
+                              "identifier": "Ruby_WukongSpinToWinLeave",
+                              "displayName": "Ruby_WukongSpinToWinLeave",
+                              "slot": "R",
+                              "totalCooldown": 13,
+                              "cooldown": 85,
+                              "level": 3,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "Ruby_WukongSpinToWinLeave",
+                                  "iconAsset": "cache/game/34/34ce0e240f9e2df5816d1a444ea370d8dd7db57db0de3abadc9fd80ed6a59088.png",
+                                  "iconName": "34ce0e240f9e2df5816d1a444ea370d8dd7db57db0de3abadc9fd80ed6a59088.png",
+                                  "nativeBinHash": 187340325
+                              }
+                          },
+                          {
+                              "identifier": "ultbook_tryndamere_square",
+                              "displayName": "ultbook_tryndamere_square",
+                              "slot": "D",
+                              "totalCooldown": 39,
+                              "cooldown": 31,
+                              "level": 3,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "ultbook_tryndamere_square",
+                                  "iconAsset": "cache/game/73/73b168133bcd7be037230c14aa0ba65453b1f925a2cda5964952c36d3492bc1c.png",
+                                  "iconName": "73b168133bcd7be037230c14aa0ba65453b1f925a2cda5964952c36d3492bc1c.png",
+                                  "nativeBinHash": 26901093
+                              }
+                          },
+                          {
+                              "identifier": "ultbook_pyke_square_0",
+                              "displayName": "ultbook_pyke_square_0",
+                              "slot": "D",
+                              "totalCooldown": 8,
+                              "cooldown": 80,
+                              "level": 2,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "ultbook_pyke_square_0",
+                                  "iconAsset": "cache/game/86/861adbc4a29a3641600821eb7777e8854554acfc7ddd06f52f1a44bddb87d988.png",
+                                  "iconName": "861adbc4a29a3641600821eb7777e8854554acfc7ddd06f52f1a44bddb87d988.png",
+                                  "nativeBinHash": 97460944
+                              }
+                          }
+                      ],
+                      "perks": [
+                          {
+                              "iconHash": "9abc363287179d34b4e84c14b007b9b4d145df53e2cc1fe1d82747ad7648a153",
+                              "id": 5003,
+                              "name": "Magic Resist",
+                              "iconPath": "cache/game/9a/9abc363287179d34b4e84c14b007b9b4d145df53e2cc1fe1d82747ad7648a153.png"
+                          },
+                          {
+                              "iconHash": "b02e7388625e0337fdc5946f8c793ea231280cf8586eb5320bd63e4ae77a49c2",
+                              "id": 8224,
+                              "name": "Axiom Arcanist",
+                              "iconPath": "cache/game/b0/b02e7388625e0337fdc5946f8c793ea231280cf8586eb5320bd63e4ae77a49c2.png"
+                          }
+                      ],
+                      "health": {
+                          "current": 1611,
+                          "max": 3000,
+                          "shield": 0,
+                          "physicalShield": 0,
+                          "magicalShield": 0
+                      },
+                      "resource": {
+                          "type": "none",
+                          "current": 611,
+                          "max": 3000
+                      },
+                      "stacksData": null,
+                      "hasBaron": true,
+                      "hasElder": true,
+                      "level": 5,
+                      "experience": {
+                          "previousLevel": 0,
+                          "current": 30,
+                          "nextLevel": 100
+                      },
+                      "timeToRespawn": 0
+                  },
+                  {
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "playerName": "Player 8",
+                      "playerHashtag": "EUW",
+                      "givenName": "",
+                      "familyName": "",
+                      "championAssets": {
+                          "id": 69,
+                          "alias": "Cassiopeia",
+                          "name": "Cassiopeia",
+                          "splashCenteredImg": "cache/game/be/be45670729e4d96295d88fd19018cf01f614b3205b7100c22edc0ab6cdfb9fe5.jpg",
+                          "splashImg": "cache/game/00/0056673cf2a99215cb5ae14d6a84e4b270c15fcabac0e302787c179fd6a3b20c.jpg",
+                          "loadingImg": "cache/game/43/4343ddc6fb1a2aaee03c763df9b68ad0266991b37cb5ad8b1bb68d52ffdba24e.png",
+                          "squareImg": "cache/game/c7/c776c8a28d04038b596aa6c3e5721019557173dd868f61e98a0c1df8582c1609.png",
+                          "tileImg": "cache/game/29/29daf1920132f6f526af1e77f65b7078d3a36d2cfe88cfcf992af5707f37abd2.jpg"
+                      },
+                      "abilities": [
+                          {
+                              "identifier": "CassiopeiaPassive",
+                              "displayName": "CassiopeiaPassive",
+                              "slot": "Q",
+                              "totalCooldown": 55,
+                              "cooldown": 0,
+                              "level": 3,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "CassiopeiaPassive",
+                                  "iconAsset": "cache/game/d8/d8f33567cea25338807212234ec82532cff74b2ae72b3363536c8c6af9e9409a.png",
+                                  "iconName": "d8f33567cea25338807212234ec82532cff74b2ae72b3363536c8c6af9e9409a.png",
+                                  "nativeBinHash": 109426149
+                              }
+                          },
+                          {
+                              "identifier": "CassiopeiaPassive_Feats",
+                              "displayName": "CassiopeiaPassive_Feats",
+                              "slot": "W",
+                              "totalCooldown": 93,
+                              "cooldown": 0,
+                              "level": 3,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "CassiopeiaPassive_Feats",
+                                  "iconAsset": "cache/game/0f/0f1548cf2041edfb29dbef68a1fb9d0a9f9078e91121937b51bd339cb09bef8b.png",
+                                  "iconName": "0f1548cf2041edfb29dbef68a1fb9d0a9f9078e91121937b51bd339cb09bef8b.png",
+                                  "nativeBinHash": 232328531
+                              }
+                          },
+                          {
+                              "identifier": "CassiopeiaQ",
+                              "displayName": "CassiopeiaQ",
+                              "slot": "E",
+                              "totalCooldown": 81,
+                              "cooldown": 0,
+                              "level": 2,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "CassiopeiaQ",
+                                  "iconAsset": "cache/game/18/189a9752c6ce5c1660863763eaf23d701612d66d9b94fbb0cc831f8cb591df65.png",
+                                  "iconName": "189a9752c6ce5c1660863763eaf23d701612d66d9b94fbb0cc831f8cb591df65.png",
+                                  "nativeBinHash": 996641
+                              }
+                          },
+                          {
+                              "identifier": "CassiopeiaQDebuff",
+                              "displayName": "CassiopeiaQDebuff",
+                              "slot": "R",
+                              "totalCooldown": 23,
+                              "cooldown": 5,
+                              "level": 1,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "CassiopeiaQDebuff",
+                                  "iconAsset": "cache/game/18/189a9752c6ce5c1660863763eaf23d701612d66d9b94fbb0cc831f8cb591df65.png",
+                                  "iconName": "189a9752c6ce5c1660863763eaf23d701612d66d9b94fbb0cc831f8cb591df65.png",
+                                  "nativeBinHash": 128233190
+                              }
+                          },
+                          {
+                              "identifier": "gw_debuff",
+                              "displayName": "gw_debuff",
+                              "slot": "D",
+                              "totalCooldown": 45,
+                              "cooldown": 0,
+                              "level": 3,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "gw_debuff",
+                                  "iconAsset": "cache/game/ef/ef9dd9de6b9b003dcaf57eafec5973b0d6159c51ba491f88655dafc90fd1f00e.png",
+                                  "iconName": "ef9dd9de6b9b003dcaf57eafec5973b0d6159c51ba491f88655dafc90fd1f00e.png",
+                                  "nativeBinHash": 95155478
+                              }
+                          },
+                          {
+                              "identifier": "10",
+                              "displayName": "10",
+                              "slot": "D",
+                              "totalCooldown": 40,
+                              "cooldown": 0,
+                              "level": 1,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "10",
+                                  "iconAsset": "cache/game/95/950cd55c3b34cb5b8644bf0029c0bc7583d208b1dfce81e7d45ee98cbeaf19fb.png",
+                                  "iconName": "950cd55c3b34cb5b8644bf0029c0bc7583d208b1dfce81e7d45ee98cbeaf19fb.png",
+                                  "nativeBinHash": 832
+                              }
+                          }
+                      ],
+                      "perks": [
+                          {
+                              "iconHash": "497fdefd2719525f79284c8701a2d050d1d3406a4cec607118a2f064412231d1",
+                              "id": 8453,
+                              "name": "Revitalize",
+                              "iconPath": "cache/game/49/497fdefd2719525f79284c8701a2d050d1d3406a4cec607118a2f064412231d1.png"
+                          },
+                          {
+                              "iconHash": "8059506d8d886338a4b4dbc160745cd3fa3bc257a63bbd0fad7cd8d746d05f8f",
+                              "id": 5007,
+                              "name": "Ability Haste",
+                              "iconPath": "cache/game/80/8059506d8d886338a4b4dbc160745cd3fa3bc257a63bbd0fad7cd8d746d05f8f.png"
+                          }
+                      ],
+                      "health": {
+                          "current": 881,
+                          "max": 3000,
+                          "shield": 0,
+                          "physicalShield": 0,
+                          "magicalShield": 0
+                      },
+                      "resource": {
+                          "type": "shield",
+                          "current": 2138,
+                          "max": 3000
+                      },
+                      "stacksData": null,
+                      "hasBaron": false,
+                      "hasElder": true,
+                      "level": 9,
+                      "experience": {
+                          "previousLevel": 0,
+                          "current": 5,
+                          "nextLevel": 100
+                      },
+                      "timeToRespawn": 42
+                  },
+                  {
+                      "id": "00000000-0000-0000-0000-000000000000",
+                      "playerName": "Player 9",
+                      "playerHashtag": "EUW",
+                      "givenName": "",
+                      "familyName": "",
+                      "championAssets": {
+                          "id": 66603,
+                          "alias": "Ruby_Lux",
+                          "name": "Doom Bot Lux",
+                          "splashCenteredImg": "cache/game/88/8811931cb598ae7569a60eab18888bc05c4af07c741e6b3fa6a73c4dedb79b30.jpg",
+                          "splashImg": "cache/game/f7/f74a9a47926d32ad9cd84126ad4e21a90a8aeeefccc3e494bbc4f3bf9dbb6de3.jpg",
+                          "loadingImg": "cache/game/13/13dcbd1d6b124796c5de974d9973f3eabad289f4ca60697ed650f80a74c9b5a2.png",
+                          "squareImg": "cache/game/9c/9cb01fc55e3ab7b32ae291ea5dcf82bec604b10cbbfedf911a06ba1853f55a0f.png",
+                          "tileImg": "cache/game/ea/ea84a96185a921de1e22616d5cae96afa9b2ca6b188a3e7d18477837badcee5a.jpg"
+                      },
+                      "abilities": [
+                          {
+                              "identifier": "Ruby_LuxLightBindingDummy",
+                              "displayName": "Ruby_LuxLightBindingDummy",
+                              "slot": "Q",
+                              "totalCooldown": 32,
+                              "cooldown": 22,
+                              "level": 5,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "Ruby_LuxLightBindingDummy",
+                                  "iconAsset": "cache/game/e1/e18b8d5c86eb9a09a377664765843a086a382fa12f42c4723fc9aecd1532bce6.png",
+                                  "iconName": "e18b8d5c86eb9a09a377664765843a086a382fa12f42c4723fc9aecd1532bce6.png",
+                                  "nativeBinHash": 188678937
+                              }
+                          },
+                          {
+                              "identifier": "Ruby_LuxLightBinding",
+                              "displayName": "Ruby_LuxLightBinding",
+                              "slot": "W",
+                              "totalCooldown": 71,
+                              "cooldown": 0,
+                              "level": 3,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "Ruby_LuxLightBinding",
+                                  "iconAsset": "cache/game/e1/e18b8d5c86eb9a09a377664765843a086a382fa12f42c4723fc9aecd1532bce6.png",
+                                  "iconName": "e18b8d5c86eb9a09a377664765843a086a382fa12f42c4723fc9aecd1532bce6.png",
+                                  "nativeBinHash": 240391607
+                              }
+                          },
+                          {
+                              "identifier": "Ruby_LuxLightBindingMis",
+                              "displayName": "Ruby_LuxLightBindingMis",
+                              "slot": "E",
+                              "totalCooldown": 13,
+                              "cooldown": 0,
+                              "level": 2,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "Ruby_LuxLightBindingMis",
+                                  "iconAsset": "cache/game/e1/e18b8d5c86eb9a09a377664765843a086a382fa12f42c4723fc9aecd1532bce6.png",
+                                  "iconName": "e18b8d5c86eb9a09a377664765843a086a382fa12f42c4723fc9aecd1532bce6.png",
+                                  "nativeBinHash": 22759235
+                              }
+                          },
+                          {
+                              "identifier": "Ruby_LuxIlluminationPassive",
+                              "displayName": "Ruby_LuxIlluminationPassive",
+                              "slot": "R",
+                              "totalCooldown": 72,
+                              "cooldown": 73,
+                              "level": 3,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "Ruby_LuxIlluminationPassive",
+                                  "iconAsset": "cache/game/fd/fd91dbdabc4a7bc86ffeb3d7f36bf161399144b48ba9e1358c0de651997f2db0.png",
+                                  "iconName": "fd91dbdabc4a7bc86ffeb3d7f36bf161399144b48ba9e1358c0de651997f2db0.png",
+                                  "nativeBinHash": 99066917
+                              }
+                          },
+                          {
+                              "identifier": "Ghost",
+                              "displayName": "Ghost",
+                              "slot": "D",
+                              "totalCooldown": 86,
+                              "cooldown": 0,
+                              "level": 5,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "Ghost",
+                                  "iconAsset": "cache/game/fa/fa05e1fa50d756fcafc6effb86d14146a0ece0186407e895f75dc88d327df25c.png",
+                                  "iconName": "fa05e1fa50d756fcafc6effb86d14146a0ece0186407e895f75dc88d327df25c.png",
+                                  "nativeBinHash": 7206564
+                              }
+                          },
+                          {
+                              "identifier": "1102_buff",
+                              "displayName": "1102_buff",
+                              "slot": "D",
+                              "totalCooldown": 89,
+                              "cooldown": 0,
+                              "level": 2,
+                              "charges": 0,
+                              "assets": {
+                                  "spellName": "1102_buff",
+                                  "iconAsset": "cache/game/33/336741fd7bc9a5ba69dec38a2362207440b6f5ec1a16f5d5dcb88f4dc01f798e.png",
+                                  "iconName": "336741fd7bc9a5ba69dec38a2362207440b6f5ec1a16f5d5dcb88f4dc01f798e.png",
+                                  "nativeBinHash": 59092870
+                              }
+                          }
+                      ],
+                      "perks": [
+                          {
+                              "iconHash": "99b6093edb0f90677432356b454e96527712907c81fbb5ec297c54ed6551ae8a",
+                              "id": 8275,
+                              "name": "Nimbus Cloak",
+                              "iconPath": "cache/game/99/99b6093edb0f90677432356b454e96527712907c81fbb5ec297c54ed6551ae8a.png"
+                          },
+                          {
+                              "iconHash": "7a7537353675db91c8fa915ca877e23bbbd526c73513efd98f4b652c4329b9fe",
+                              "id": 9111,
+                              "name": "Triumph",
+                              "iconPath": "cache/game/7a/7a7537353675db91c8fa915ca877e23bbbd526c73513efd98f4b652c4329b9fe.png"
+                          }
+                      ],
+                      "health": {
+                          "current": 643,
+                          "max": 3000,
+                          "shield": 0,
+                          "physicalShield": 0,
+                          "magicalShield": 0
+                      },
+                      "resource": {
+                          "type": "battlefury",
+                          "current": 935,
+                          "max": 3000
+                      },
+                      "stacksData": null,
+                      "hasBaron": false,
+                      "hasElder": false,
+                      "level": 10,
+                      "experience": {
+                          "previousLevel": 0,
+                          "current": 45,
+                          "nextLevel": 100
+                      },
+                      "timeToRespawn": 0
+                  }
+              ]
+          }
+      },
+      "scoreboardBottom": {
+          "gameTime": 34,
+          "teams": [
+              {
+                  "id": "4294967293",
+                  "name": "Blue Team",
+                  "tag": "BLUE",
+                  "players": [
+                      {
+                          "champion": {
+                              "id": 119,
+                              "alias": "Draven",
+                              "name": "Draven",
+                              "splashCenteredImg": "cache/game/4f/4f8c2145106520f617f1ad59ad6f51871749bb359c4410adb1a247fdfe122fdb.jpg",
+                              "splashImg": "cache/game/a4/a40fbcbd21f5227bd9dac5a531c9b7c9c8a01c700a4897b42959ad86f0ec7e8b.jpg",
+                              "loadingImg": "cache/game/5b/5bc03d5024e1a5a8ceae5c937a06d9a81b4b05c6310391d43bd982eafa4a2eff.png",
+                              "squareImg": "cache/game/c9/c96190c54544676eb0082177ce0e5b3a823b7e709abb5ce70dbde4598578bcf2.png",
+                              "tileImg": "cache/game/a5/a58be8f6e3ca2b5bb4013dccfe0aae91d94ec6808b76c1197ddacb9897d89af8.jpg"
+                          },
+                          "name": "",
+                          "kills": 4,
+                          "deaths": 9,
+                          "assists": 5,
+                          "level": 6,
+                          "gold": 2715,
+                          "totalGold": 7034,
+                          "creepScore": 253,
+                          "visionScore": 39,
+                          "shutdown": 326,
+                          "respawnTimeRemaining": 0,
+                          "items": [
+                              {
+                                  "id": 4643,
+                                  "slot": 0,
+                                  "displayName": "Vigilant Wardstone",
+                                  "assetUrl": "cache/game/d7/d7fd12f5349750e5a77fa89748f8b1aca20e1a841e0de85ee9667fa36f728ee5.png",
+                                  "modifierUrl": null,
+                                  "cost": 2300,
+                                  "count": 1,
+                                  "combineCost": 1200,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 1094,
+                                  "slot": 1,
+                                  "displayName": "Quest: Jungle",
+                                  "assetUrl": "cache/game/98/98e25b89db99c1d62ae0a0a4a2285a6fc881e27e7ea8b8411dc59c06a99549e7.png",
+                                  "modifierUrl": null,
+                                  "cost": 0,
+                                  "count": 1,
+                                  "combineCost": 0,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 323504,
+                                  "slot": 2,
+                                  "displayName": "Ardent Censer",
+                                  "assetUrl": "cache/game/a5/a54b4aa7ba3361492982a630916b268ddc1402aa2a702e7d746bc232853caad4.png",
+                                  "modifierUrl": null,
+                                  "cost": 2600,
+                                  "count": 1,
+                                  "combineCost": 700,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 1507,
+                                  "slot": 3,
+                                  "displayName": "Overcharged",
+                                  "assetUrl": "cache/game/20/20e9bcb8c62fcb9570ccab17b4e8a36028e72d53f12798c7d7259de70b3c1077.png",
+                                  "modifierUrl": null,
+                                  "cost": 0,
+                                  "count": 1,
+                                  "combineCost": 0,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 2422,
+                                  "slot": 4,
+                                  "displayName": "Slightly Magical Footwear",
+                                  "assetUrl": "cache/game/68/688e6968d64eff838a343623ee773fcb2f17f0c392d209bff9c9d9fba45e68ef.png",
+                                  "modifierUrl": null,
+                                  "cost": 300,
+                                  "count": 1,
+                                  "combineCost": 300,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 323004,
+                                  "slot": 5,
+                                  "displayName": "Manamune",
+                                  "assetUrl": "cache/game/13/135ddc64dea6623e4060bfabcca2a67ea4475e7fb91e02d3807deb06fead36ae.png",
+                                  "modifierUrl": null,
+                                  "cost": 2900,
+                                  "count": 1,
+                                  "combineCost": 1100,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 222523,
+                                  "slot": 6,
+                                  "displayName": "Hexoptics C44",
+                                  "assetUrl": "cache/game/17/1794c3eb21382135f45e093c12f9988017b761453b664817dbfdc76fecce0d6f.png",
+                                  "modifierUrl": null,
+                                  "cost": 2500,
+                                  "count": 1,
+                                  "combineCost": 2500,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 3599,
+                                  "slot": 8,
+                                  "displayName": "Kalista's Black Spear",
+                                  "assetUrl": "cache/game/a5/a5129cca9d2e92f33dd92f21a731cd568679066445a3782ec819c93723d587cf.png",
+                                  "modifierUrl": null,
+                                  "cost": 0,
+                                  "count": 1,
+                                  "combineCost": 0,
+                                  "stats": [
+                                      0,
+                                      88,
+                                      257,
+                                      0,
+                                      0,
+                                      0,
+                                      0,
+                                      0
+                                  ],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              }
+                          ]
+                      },
+                      {
+                          "champion": {
+                              "id": 432,
+                              "alias": "Bard",
+                              "name": "Bard",
+                              "splashCenteredImg": "cache/game/f3/f386e1465e8a1695760f5f7d7727859b4110e1baf92c26161b1d7ab92307805d.jpg",
+                              "splashImg": "cache/game/1f/1fec6ab7c140b81083bcb913e91e5103b9276da62248bb1d9c3900b08d70ab28.jpg",
+                              "loadingImg": "cache/game/e1/e1ad6b0ae8ba9bcd75a0355b4340dee347c72eaadece470b48765e7742091335.png",
+                              "squareImg": "cache/game/41/41d48bfa691fa315e71ed48e346a5e2c0a3d9974ac63afb4803da49d43ebc0e1.png",
+                              "tileImg": "cache/game/28/288570f2bab4499e91aeeae453c5ee6461c0611d371ca3fc23fcf717d002db83.jpg"
+                          },
+                          "name": "",
+                          "kills": 7,
+                          "deaths": 3,
+                          "assists": 5,
+                          "level": 17,
+                          "gold": 7221,
+                          "totalGold": 7658,
+                          "creepScore": 101,
+                          "visionScore": 21,
+                          "shutdown": 398,
+                          "respawnTimeRemaining": 0,
+                          "items": [
+                              {
+                                  "id": 9293,
+                                  "slot": 0,
+                                  "displayName": "Deep Freeze",
+                                  "assetUrl": "cache/game/b5/b539a18fd4a866c9a69f431469e86fc3a3b56e75d626a5252e7bfbc933428e31.png",
+                                  "modifierUrl": null,
+                                  "cost": 0,
+                                  "count": 1,
+                                  "combineCost": 0,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 663059,
+                                  "slot": 1,
+                                  "displayName": "Cloak of Starry Night",
+                                  "assetUrl": "cache/game/85/85fabeb0cc20a48256d6ca842b32b3454616602669a135b4481697d202db525a.png",
+                                  "modifierUrl": null,
+                                  "cost": 2500,
+                                  "count": 1,
+                                  "combineCost": 2500,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 1208,
+                                  "slot": 2,
+                                  "displayName": "Support Quest",
+                                  "assetUrl": "cache/game/26/26a4cbd0ed89a97fec92fc6674305458722e2b695607c30abc36a07b2e8a1d71.png",
+                                  "modifierUrl": null,
+                                  "cost": 0,
+                                  "count": 1,
+                                  "combineCost": 0,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 1038,
+                                  "slot": 3,
+                                  "displayName": "B. F. Sword",
+                                  "assetUrl": "cache/game/4b/4bc069943090ead9e1755d7829162216ac94fd96b8c9d2c33c83d0e2baabaae6.png",
+                                  "modifierUrl": null,
+                                  "cost": 1300,
+                                  "count": 1,
+                                  "combineCost": 1300,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 2033,
+                                  "slot": 4,
+                                  "displayName": "Corrupting Potion",
+                                  "assetUrl": "cache/game/37/3762f873ef59ab68e8711e586e05092950d2f9a916c250e98691ca1862368d68.png",
+                                  "modifierUrl": null,
+                                  "cost": 500,
+                                  "count": 1,
+                                  "combineCost": 350,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 994403,
+                                  "slot": 5,
+                                  "displayName": "Golden Spatula",
+                                  "assetUrl": "cache/game/40/404aeb2501d3e5926c3f16ab4b0a1317377b32c5353b8e719605283a024267a0.png",
+                                  "modifierUrl": null,
+                                  "cost": 2500,
+                                  "count": 1,
+                                  "combineCost": 2500,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 2021,
+                                  "slot": 6,
+                                  "displayName": "Tunneler",
+                                  "assetUrl": "cache/game/f1/f1830bc2c979598729e38a268f946e9fdfe87d740109b08d37cc0437105a32cf.png",
+                                  "modifierUrl": null,
+                                  "cost": 1150,
+                                  "count": 1,
+                                  "combineCost": 400,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 1511,
+                                  "slot": 8,
+                                  "displayName": "Super Mech Armor",
+                                  "assetUrl": "cache/game/bb/bb016a0e48f244642820ff397b8337128fccab6083f4933e1399ec430547fb26.png",
+                                  "modifierUrl": null,
+                                  "cost": 0,
+                                  "count": 1,
+                                  "combineCost": 0,
+                                  "stats": [
+                                      0,
+                                      91,
+                                      220,
+                                      0,
+                                      0,
+                                      0,
+                                      0,
+                                      0
+                                  ],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              }
+                          ]
+                      },
+                      {
+                          "champion": {
+                              "id": 526,
+                              "alias": "Rell",
+                              "name": "Rell",
+                              "splashCenteredImg": "cache/game/b7/b768240716e42f97685a32c8de153b4fe883a1180f6e713054cf6eb2cee5f98e.jpg",
+                              "splashImg": "cache/game/29/2960d570b648b61400a9b9e3f3c886ff98a6dd6d7e9a6817ff4f68900b2b8ff2.jpg",
+                              "loadingImg": "cache/game/5c/5c469930fb44cb8e398d8c10dd75a0f4edd445792ed9eb88aa852ba3146bfd1d.png",
+                              "squareImg": "cache/game/fb/fb6a50de4571ec3f978d1ef3b5c815ffaf59effe48956353124eb3c45dbfca20.png",
+                              "tileImg": "cache/game/75/75117b4e932ec241096e1abfda9ae97a3600e015dd015a600ab2dd185ca5b3bd.jpg"
+                          },
+                          "name": "",
+                          "kills": 4,
+                          "deaths": 3,
+                          "assists": 2,
+                          "level": 13,
+                          "gold": 240,
+                          "totalGold": 2855,
+                          "creepScore": 36,
+                          "visionScore": 98,
+                          "shutdown": 563,
+                          "respawnTimeRemaining": 83,
+                          "items": [
+                              {
+                                  "id": 223068,
+                                  "slot": 0,
+                                  "displayName": "Sunfire Aegis",
+                                  "assetUrl": "cache/game/06/068a49be32de62283076e9d2f3d16ad40bf489e7676a07be9fa5755424467bca.png",
+                                  "modifierUrl": null,
+                                  "cost": 2500,
+                                  "count": 1,
+                                  "combineCost": 2500,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 326617,
+                                  "slot": 1,
+                                  "displayName": "Moonstone Renewer",
+                                  "assetUrl": "cache/game/62/623b7cca1beb857ffd09d1c7b03dd68a085220d5e685a245c817721dad8b76b5.png",
+                                  "modifierUrl": null,
+                                  "cost": 2900,
+                                  "count": 1,
+                                  "combineCost": 800,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 323110,
+                                  "slot": 2,
+                                  "displayName": "Frozen Heart",
+                                  "assetUrl": "cache/game/a8/a8cdbcc34142c109e4aec418047e00f14c5da19ecfa2fdf4960cbe33024995a0.png",
+                                  "modifierUrl": null,
+                                  "cost": 2700,
+                                  "count": 1,
+                                  "combineCost": 800,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 9403,
+                                  "slot": 3,
+                                  "displayName": "Savage Slice",
+                                  "assetUrl": "cache/game/5f/5f5b784b91cbac0f51e242937cb500f6a116e2d3324b02145beeebdeef8abd43.png",
+                                  "modifierUrl": null,
+                                  "cost": 0,
+                                  "count": 1,
+                                  "combineCost": 0,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 226609,
+                                  "slot": 4,
+                                  "displayName": "Chempunk Chainsword",
+                                  "assetUrl": "cache/game/86/864118a0ff2bcf7c7f6bbaf80509b87c127065c6a5efaec0b51f529bed69661f.png",
+                                  "modifierUrl": null,
+                                  "cost": 2500,
+                                  "count": 1,
+                                  "combineCost": 2500,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 1511,
+                                  "slot": 5,
+                                  "displayName": "Super Mech Armor",
+                                  "assetUrl": "cache/game/bb/bb016a0e48f244642820ff397b8337128fccab6083f4933e1399ec430547fb26.png",
+                                  "modifierUrl": null,
+                                  "cost": 0,
+                                  "count": 1,
+                                  "combineCost": 0,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 323002,
+                                  "slot": 6,
+                                  "displayName": "Trailblazer",
+                                  "assetUrl": "cache/game/4d/4df6deea8dadf2caa0e338603d150299ed3fa118eb246545a7a013c3098debd5.png",
+                                  "modifierUrl": null,
+                                  "cost": 2600,
+                                  "count": 1,
+                                  "combineCost": 1000,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 4014,
+                                  "slot": 8,
+                                  "displayName": "Frozen Mallet",
+                                  "assetUrl": "cache/game/95/95dcac846b4a050a849451c1dc6ef010a5dcb71ce10366a8436a5a9a257ce0bb.png",
+                                  "modifierUrl": null,
+                                  "cost": 3000,
+                                  "count": 1,
+                                  "combineCost": 3000,
+                                  "stats": [
+                                      0,
+                                      42,
+                                      483,
+                                      0,
+                                      0,
+                                      0,
+                                      0,
+                                      0
+                                  ],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              }
+                          ]
+                      },
+                      {
+                          "champion": {
+                              "id": 58,
+                              "alias": "Renekton",
+                              "name": "Renekton",
+                              "splashCenteredImg": "cache/game/87/878c7cc1bc2be00dc3117295a5f982ffd625a437299b758126c930f07ea4ea60.jpg",
+                              "splashImg": "cache/game/d6/d6b87cea7f94ba7cd1a7bc2def14050c9f04336930899a146dd85a1ef2caef82.jpg",
+                              "loadingImg": "cache/game/a0/a077880ba5d836df7e2207fae20ea738dbd3487e9038729d7f7d9e404e7160e4.png",
+                              "squareImg": "cache/game/ad/adbe66fc6e5123ea5ee969ae8448863b8eb37605a6d0a062a4e49a556f4414b5.png",
+                              "tileImg": "cache/game/9c/9c1a2e1c759b78d701755b6bb4ce313c731f2e4c59a88b62a9c332655958e65b.jpg"
+                          },
+                          "name": "",
+                          "kills": 0,
+                          "deaths": 4,
+                          "assists": 8,
+                          "level": 14,
+                          "gold": 8778,
+                          "totalGold": 8778,
+                          "creepScore": 193,
+                          "visionScore": 66,
+                          "shutdown": 323,
+                          "respawnTimeRemaining": 19,
+                          "items": [
+                              {
+                                  "id": 4005,
+                                  "slot": 0,
+                                  "displayName": "Imperial Mandate",
+                                  "assetUrl": "cache/game/20/2031cad4f88a73f4940c6b17881eca646c7b22909837324201b40e4c4132247d.png",
+                                  "modifierUrl": null,
+                                  "cost": 2250,
+                                  "count": 1,
+                                  "combineCost": 500,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 2522,
+                                  "slot": 1,
+                                  "displayName": "Actualizer",
+                                  "assetUrl": "cache/game/ca/cae7f583eff923ea81a6ce5e27c0d6ece4b26571be26bfc7050c84c528c81928.png",
+                                  "modifierUrl": null,
+                                  "cost": 2800,
+                                  "count": 1,
+                                  "combineCost": 750,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 2031,
+                                  "slot": 2,
+                                  "displayName": "Refillable Potion",
+                                  "assetUrl": "cache/game/6b/6bad76fd5475609b592d2e8ee5258dadc90434c85688dd7df897faab46cacd55.png",
+                                  "modifierUrl": null,
+                                  "cost": 150,
+                                  "count": 1,
+                                  "combineCost": 150,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 1504,
+                                  "slot": 3,
+                                  "displayName": "Vanguard",
+                                  "assetUrl": "cache/game/04/046919fc27d7bd46b72ab07e296b1c6798e912a581fa3e7cc78f6fe52ba1429f.png",
+                                  "modifierUrl": null,
+                                  "cost": 0,
+                                  "count": 1,
+                                  "combineCost": 0,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 3854,
+                                  "slot": 4,
+                                  "displayName": "Steel Shoulderguards",
+                                  "assetUrl": "cache/game/06/06c72cda9d56e0e4e0884bb35e4422e31d194f45ca7006bd049d8e73a3b4a317.png",
+                                  "modifierUrl": null,
+                                  "cost": 400,
+                                  "count": 1,
+                                  "combineCost": 400,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 226676,
+                                  "slot": 5,
+                                  "displayName": "The Collector",
+                                  "assetUrl": "cache/game/ea/ea53c453e5f7d4d94985ee47d3625ec000fe614d935c2ae5897c142ed50094b9.png",
+                                  "modifierUrl": null,
+                                  "cost": 2500,
+                                  "count": 1,
+                                  "combineCost": 2500,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 3010,
+                                  "slot": 6,
+                                  "displayName": "Symbiotic Soles",
+                                  "assetUrl": "cache/game/ae/ae7f84e282e736121a7a853b4c51697534abb3bc74bfb9a9af1a53cd20719e91.png",
+                                  "modifierUrl": null,
+                                  "cost": 900,
+                                  "count": 1,
+                                  "combineCost": 600,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 1057,
+                                  "slot": 8,
+                                  "displayName": "Negatron Cloak",
+                                  "assetUrl": "cache/game/2a/2aceb82355ea579a7638770d7a42cf74d649321f6226983c4498c0a56fcbbe1a.png",
+                                  "modifierUrl": null,
+                                  "cost": 850,
+                                  "count": 1,
+                                  "combineCost": 450,
+                                  "stats": [
+                                      0,
+                                      10,
+                                      140,
+                                      0,
+                                      0,
+                                      0,
+                                      0,
+                                      0
+                                  ],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              }
+                          ]
+                      },
+                      {
+                          "champion": {
+                              "id": 8,
+                              "alias": "Vladimir",
+                              "name": "Vladimir",
+                              "splashCenteredImg": "cache/game/89/898b9f4237b2510bd1f604805244081fb763311c6dcc1772f4d6855f9a300bbd.jpg",
+                              "splashImg": "cache/game/0e/0e04fd1ab5cf69ec74b1a8c729fae81f1a18e54fe099b23bce2ce892157e0774.jpg",
+                              "loadingImg": "cache/game/d7/d74b6661563bcc552408fda0696227f250fa0b2169aaacd224007dd2f9a96942.png",
+                              "squareImg": "cache/game/4e/4e5ed720d03133a68f682883172a3f9645f626b98cea4b518b4c456f604b878c.png",
+                              "tileImg": "cache/game/37/370b20633e0a8371df0e6e83b98b4482e0ee2a5a9c6c3d9d2a6e73f175944c33.jpg"
+                          },
+                          "name": "",
+                          "kills": 3,
+                          "deaths": 4,
+                          "assists": 2,
+                          "level": 14,
+                          "gold": 326,
+                          "totalGold": 5189,
+                          "creepScore": 21,
+                          "visionScore": 43,
+                          "shutdown": 275,
+                          "respawnTimeRemaining": 0,
+                          "items": [
+                              {
+                                  "id": 323110,
+                                  "slot": 0,
+                                  "displayName": "Frozen Heart",
+                                  "assetUrl": "cache/game/a8/a8cdbcc34142c109e4aec418047e00f14c5da19ecfa2fdf4960cbe33024995a0.png",
+                                  "modifierUrl": null,
+                                  "cost": 2700,
+                                  "count": 1,
+                                  "combineCost": 800,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 9183,
+                                  "slot": 1,
+                                  "displayName": "Blade-o-rang",
+                                  "assetUrl": "cache/game/a4/a4a411b4c390026e32dd9b1b1ff210834fe2704fa6b8841939ad4f064d3f97c6.png",
+                                  "modifierUrl": null,
+                                  "cost": 0,
+                                  "count": 1,
+                                  "combineCost": 0,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 1204,
+                                  "slot": 2,
+                                  "displayName": "Jungle Quest",
+                                  "assetUrl": "cache/game/fb/fbdcd60b795182ca00cc2bf7cb3d989201307d72e41209b522250922997adf14.png",
+                                  "modifierUrl": null,
+                                  "cost": 0,
+                                  "count": 1,
+                                  "combineCost": 0,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 3134,
+                                  "slot": 3,
+                                  "displayName": "Serrated Dirk",
+                                  "assetUrl": "cache/game/fa/fa55c8247fd64865b19686036d1e42b8edb288daebf4b1bed571aefeafa24c60.png",
+                                  "modifierUrl": null,
+                                  "cost": 1000,
+                                  "count": 1,
+                                  "combineCost": 300,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 3001,
+                                  "slot": 4,
+                                  "displayName": "Evenshroud",
+                                  "assetUrl": "cache/game/9e/9e9febe84cbaba9ce4379fd2a1075900b467e59645bcae6ec5c370bbdc7b848a.png",
+                                  "modifierUrl": null,
+                                  "cost": 2300,
+                                  "count": 1,
+                                  "combineCost": 850,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 3173,
+                                  "slot": 5,
+                                  "displayName": "Chainlaced Crushers",
+                                  "assetUrl": "cache/game/46/46b8dde8bdd6f822c94bd1cccbaca4894b8b1c680c90989bd116defab57b2cd5.png",
+                                  "modifierUrl": null,
+                                  "cost": 1250,
+                                  "count": 1,
+                                  "combineCost": 0,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 3076,
+                                  "slot": 6,
+                                  "displayName": "Bramble Vest",
+                                  "assetUrl": "cache/game/35/3512d0bd89a54af612caeb95ccbc49b5e4b1b07bb4c6814bf83e8baf60f08037.png",
+                                  "modifierUrl": null,
+                                  "cost": 800,
+                                  "count": 1,
+                                  "combineCost": 200,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 2146,
+                                  "slot": 8,
+                                  "displayName": "Enhanced Lucky Dice",
+                                  "assetUrl": "cache/game/62/62c5ad709fa556d460083603f5767ff1ec60ee88290833b1a12ed7070b9f816e.png",
+                                  "modifierUrl": null,
+                                  "cost": 0,
+                                  "count": 1,
+                                  "combineCost": 0,
+                                  "stats": [
+                                      0,
+                                      30,
+                                      459,
+                                      0,
+                                      0,
+                                      0,
+                                      0,
+                                      0
+                                  ],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              }
+                          ]
+                      }
+                  ]
+              },
+              {
+                  "id": "4294967294",
+                  "name": "Red Team",
+                  "tag": "RED",
+                  "players": [
+                      {
+                          "champion": {
+                              "id": 266,
+                              "alias": "Aatrox",
+                              "name": "Aatrox",
+                              "splashCenteredImg": "cache/game/6e/6ecbdbdef41926627972685b16862147867f49ab5666a3c2fa662451f6b20f43.jpg",
+                              "splashImg": "cache/game/f0/f0ba7832ef5cf0ce323ff9d0c990dd226974bab109451370286a3629919830f9.jpg",
+                              "loadingImg": "cache/game/7e/7ebf8c3c97e2b36993c076b184369e3eb08efbfe41cf02410b5be2b60f453c62.png",
+                              "squareImg": "cache/game/f6/f6e460af71a44bba2464b35ff73c85f33f66d3679eb12f9c07f5375866aae615.png",
+                              "tileImg": "cache/game/dc/dc96a6e708c585b4828dfb5458f69a517a5352cb75f0ffb0854ba5e307af397e.jpg"
+                          },
+                          "name": "",
+                          "kills": 3,
+                          "deaths": 3,
+                          "assists": 2,
+                          "level": 8,
+                          "gold": 8773,
+                          "totalGold": 8773,
+                          "creepScore": 159,
+                          "visionScore": 69,
+                          "shutdown": 510,
+                          "respawnTimeRemaining": 0,
+                          "items": [
+                              {
+                                  "id": 223100,
+                                  "slot": 0,
+                                  "displayName": "Lich Bane",
+                                  "assetUrl": "cache/game/44/44372a46c544474c22148b38db5000a64632d2df6b1f8797d31b32ffbef6df81.png",
+                                  "modifierUrl": null,
+                                  "cost": 2500,
+                                  "count": 1,
+                                  "combineCost": 2500,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 220010,
+                                  "slot": 1,
+                                  "displayName": "Prismatic Stat Voucher",
+                                  "assetUrl": "cache/game/15/154e5f8221b8f94729bf2bc76978c7791d3e362ad1f6ae47c0217d3d4797cd58.png",
+                                  "modifierUrl": null,
+                                  "cost": 750,
+                                  "count": 1,
+                                  "combineCost": 750,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 226698,
+                                  "slot": 2,
+                                  "displayName": "Profane Hydra",
+                                  "assetUrl": "cache/game/e4/e4c123d12c65bc79078895d118732e4e457804b8a3aa683198146788d88e80cf.png",
+                                  "modifierUrl": null,
+                                  "cost": 2500,
+                                  "count": 1,
+                                  "combineCost": 2500,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 447113,
+                                  "slot": 3,
+                                  "displayName": "Detonation Orb",
+                                  "assetUrl": "cache/game/40/40d808d54f04dae11c59741f703994947d29aab63995499a3b170bd8b15bb212.png",
+                                  "modifierUrl": null,
+                                  "cost": 1000,
+                                  "count": 1,
+                                  "combineCost": 1000,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 222525,
+                                  "slot": 4,
+                                  "displayName": "Protoplasm Harness",
+                                  "assetUrl": "cache/game/d2/d210f72cf34185d8aafc936a9a04996847bfa6ae9e0b69c7e291e07416188de3.png",
+                                  "modifierUrl": null,
+                                  "cost": 2500,
+                                  "count": 1,
+                                  "combineCost": 2500,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 3026,
+                                  "slot": 5,
+                                  "displayName": "Guardian Angel",
+                                  "assetUrl": "cache/game/87/87464fbccbc5cc3f1b07b7e8c76fffd2a17dc1e600aff2cff58a051e76aaca51.png",
+                                  "modifierUrl": null,
+                                  "cost": 3200,
+                                  "count": 1,
+                                  "combineCost": 800,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 1519,
+                                  "slot": 6,
+                                  "displayName": "Structure Bounty",
+                                  "assetUrl": "cache/game/64/641542e745679fb99551e1b97006bef620e182609dd8f026f22c84844484fe1a.png",
+                                  "modifierUrl": null,
+                                  "cost": 0,
+                                  "count": 1,
+                                  "combineCost": 0,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 663060,
+                                  "slot": 8,
+                                  "displayName": "Sword of the Divine",
+                                  "assetUrl": "cache/game/13/13603157991b6e4fed2ff017fb57b8988374dc457f2c9d227d2d9392e248c428.png",
+                                  "modifierUrl": null,
+                                  "cost": 2500,
+                                  "count": 1,
+                                  "combineCost": 2500,
+                                  "stats": [
+                                      0,
+                                      21,
+                                      288,
+                                      0,
+                                      0,
+                                      0,
+                                      0,
+                                      0
+                                  ],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              }
+                          ]
+                      },
+                      {
+                          "champion": {
+                              "id": 164,
+                              "alias": "Camille",
+                              "name": "Camille",
+                              "splashCenteredImg": "cache/game/33/334bec5896a85d2dba3794bc2c48a868375bf4bb9e05e0d74dfebe740258ab4a.jpg",
+                              "splashImg": "cache/game/9c/9ca2b7eb26c1bd728e89c7715ba2d5c3f1ae3f17656e216d457ad8a94285104d.jpg",
+                              "loadingImg": "cache/game/1e/1e01581a0c5c046a96ef01ac99de7e0bfc4b8b754d2605f8bb683a30550ea3fb.png",
+                              "squareImg": "cache/game/b7/b7242f856d68e673203c335f21b4ba2946ee9ec586a743bc554a71c04def2c0b.png",
+                              "tileImg": "cache/game/f7/f739f5c0d5cce256705c23949a13d32b695fa431670342b5b20380e852b4da88.jpg"
+                          },
+                          "name": "",
+                          "kills": 0,
+                          "deaths": 1,
+                          "assists": 8,
+                          "level": 5,
+                          "gold": 7754,
+                          "totalGold": 7754,
+                          "creepScore": 54,
+                          "visionScore": 55,
+                          "shutdown": 378,
+                          "respawnTimeRemaining": 0,
+                          "items": [
+                              {
+                                  "id": 221031,
+                                  "slot": 0,
+                                  "displayName": "Chain Vest",
+                                  "assetUrl": "cache/game/ee/ee7110f9a8fe7ef9c7a07528c8fa649cba3652539cbbfd528499ee9b47130b38.png",
+                                  "modifierUrl": null,
+                                  "cost": 500,
+                                  "count": 1,
+                                  "combineCost": 500,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 3020,
+                                  "slot": 1,
+                                  "displayName": "Sorcerer's Shoes",
+                                  "assetUrl": "cache/game/7c/7ccf8e9da88f0573567cf82ac76884de44be86140d4e102a8f8bf5f87821507f.png",
+                                  "modifierUrl": null,
+                                  "cost": 1100,
+                                  "count": 1,
+                                  "combineCost": 800,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 223001,
+                                  "slot": 2,
+                                  "displayName": "Evenshroud",
+                                  "assetUrl": "cache/game/9e/9e9febe84cbaba9ce4379fd2a1075900b467e59645bcae6ec5c370bbdc7b848a.png",
+                                  "modifierUrl": null,
+                                  "cost": 2500,
+                                  "count": 1,
+                                  "combineCost": 2500,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 223003,
+                                  "slot": 3,
+                                  "displayName": "Archangel's Staff",
+                                  "assetUrl": "cache/game/c7/c7c42b79d364bdcaf71e4e9afd8c87f2000fe76d1950202509c51762db62e389.png",
+                                  "modifierUrl": null,
+                                  "cost": 2500,
+                                  "count": 1,
+                                  "combineCost": 2500,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 3175,
+                                  "slot": 4,
+                                  "displayName": "Spellslinger's Shoes",
+                                  "assetUrl": "cache/game/00/00f2833d0017c6e184b070e4eccef1c7157ac98b27986c24ce6def8d500286e2.png",
+                                  "modifierUrl": null,
+                                  "cost": 1100,
+                                  "count": 1,
+                                  "combineCost": 0,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 443056,
+                                  "slot": 5,
+                                  "displayName": "Demon King's Crown",
+                                  "assetUrl": "cache/game/fd/fd489e987cc7942d08f5c0b18447071639aa99de96ae65b330ad938182ff0b23.png",
+                                  "modifierUrl": null,
+                                  "cost": 1000,
+                                  "count": 1,
+                                  "combineCost": 1000,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 224646,
+                                  "slot": 6,
+                                  "displayName": "Stormsurge",
+                                  "assetUrl": "cache/game/59/59cc9a4b8e9e3e4b0a2d71f688eb53ddfeb08ff660dd5e7309406dbc7eb05035.png",
+                                  "modifierUrl": null,
+                                  "cost": 2500,
+                                  "count": 1,
+                                  "combineCost": 2500,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 3302,
+                                  "slot": 8,
+                                  "displayName": "Terminus",
+                                  "assetUrl": "cache/game/8c/8cedb2acad3daa8c29d21b1b67e30717413a10f5cd3db4e9f13575d3049214be.png",
+                                  "modifierUrl": null,
+                                  "cost": 3000,
+                                  "count": 1,
+                                  "combineCost": 1100,
+                                  "stats": [
+                                      0,
+                                      51,
+                                      277,
+                                      0,
+                                      0,
+                                      0,
+                                      0,
+                                      0
+                                  ],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              }
+                          ]
+                      },
+                      {
+                          "champion": {
+                              "id": 66614,
+                              "alias": "Ruby_Wukong",
+                              "name": "Doom Bot Wukong",
+                              "splashCenteredImg": "cache/game/17/17ad6290428b7f598ee085868fa1b8bdb91e4a3586e7905664ce42a2bb98259e.jpg",
+                              "splashImg": "cache/game/ec/ecfbecaad005a3e182f64eb9ea35754841467b010cfa0a1b68b60701ae3bae9d.jpg",
+                              "loadingImg": "cache/game/75/754f221d0824cd503fb581379413dd519e06c4be3a2a8ea461860e1c0287f5d6.png",
+                              "squareImg": "cache/game/48/48497ae339ab9a719348576012b65213040dbfe330d5c1540e5f4b58459bf556.png",
+                              "tileImg": "cache/game/aa/aa80096524afea6008dc5b123150f50cf31219b9bb3b1cbafde47de71de6c84e.jpg"
+                          },
+                          "name": "",
+                          "kills": 5,
+                          "deaths": 4,
+                          "assists": 0,
+                          "level": 10,
+                          "gold": 3949,
+                          "totalGold": 3951,
+                          "creepScore": 276,
+                          "visionScore": 23,
+                          "shutdown": 187,
+                          "respawnTimeRemaining": 68,
+                          "items": [
+                              {
+                                  "id": 447108,
+                                  "slot": 0,
+                                  "displayName": "Runecarver",
+                                  "assetUrl": "cache/game/b5/b507ddd156a0760309edfea20ff93439f5a59873fc1d9a9dc8fb1b762bbcb1a4.png",
+                                  "modifierUrl": null,
+                                  "cost": 1000,
+                                  "count": 1,
+                                  "combineCost": 1000,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 3147,
+                                  "slot": 1,
+                                  "displayName": "Haunting Guise",
+                                  "assetUrl": "cache/game/9b/9b66882a5e19a4fc93b812303771e5deee894c6a619670a5b6b25e022f8bb8a1.png",
+                                  "modifierUrl": null,
+                                  "cost": 1300,
+                                  "count": 1,
+                                  "combineCost": 500,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 6657,
+                                  "slot": 2,
+                                  "displayName": "Rod of Ages",
+                                  "assetUrl": "cache/game/f0/f0abb47b753feb2cc757bc4b5fac146c541fe2ada2ff734407f7f4bceda50358.png",
+                                  "modifierUrl": null,
+                                  "cost": 2600,
+                                  "count": 1,
+                                  "combineCost": 450,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 2524,
+                                  "slot": 3,
+                                  "displayName": "Bandlepipes",
+                                  "assetUrl": "cache/game/f7/f7e4077aad44e7d8c2adb1ae0880fe25e921b5f5afaf412a6f90bb8602ea4e92.png",
+                                  "modifierUrl": null,
+                                  "cost": 2300,
+                                  "count": 1,
+                                  "combineCost": 800,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 1103,
+                                  "slot": 4,
+                                  "displayName": "Mosstomper Seedling",
+                                  "assetUrl": "cache/game/5d/5d51ace7b2c154a43ff3a31bb8e2108837afb49d6ec31e635bc88cc210d2f58a.png",
+                                  "modifierUrl": null,
+                                  "cost": 450,
+                                  "count": 1,
+                                  "combineCost": 450,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 2015,
+                                  "slot": 5,
+                                  "displayName": "Kircheis Shard",
+                                  "assetUrl": "cache/game/6e/6e740296fea95ff6e3ac1f2c3c600e5b264cfe80196b1f9aecd7c0910546cc19.png",
+                                  "modifierUrl": null,
+                                  "cost": 700,
+                                  "count": 1,
+                                  "combineCost": 350,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 3012,
+                                  "slot": 6,
+                                  "displayName": "Chalice of Blessing",
+                                  "assetUrl": "cache/game/fd/fde4fcee4798d3fbb52c017aaefd68176c8dd73cde2c33455a9be2a97248a2ec.png",
+                                  "modifierUrl": null,
+                                  "cost": 900,
+                                  "count": 1,
+                                  "combineCost": 300,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 664644,
+                                  "slot": 8,
+                                  "displayName": "Crown of the Shattered Queen",
+                                  "assetUrl": "cache/game/15/15113986b183e39bcefbd136f036336dab739797f7ad02276dc9b1f122d06e70.png",
+                                  "modifierUrl": null,
+                                  "cost": 2500,
+                                  "count": 1,
+                                  "combineCost": 2500,
+                                  "stats": [
+                                      0,
+                                      77,
+                                      344,
+                                      0,
+                                      0,
+                                      0,
+                                      0,
+                                      0
+                                  ],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              }
+                          ]
+                      },
+                      {
+                          "champion": {
+                              "id": 69,
+                              "alias": "Cassiopeia",
+                              "name": "Cassiopeia",
+                              "splashCenteredImg": "cache/game/be/be45670729e4d96295d88fd19018cf01f614b3205b7100c22edc0ab6cdfb9fe5.jpg",
+                              "splashImg": "cache/game/00/0056673cf2a99215cb5ae14d6a84e4b270c15fcabac0e302787c179fd6a3b20c.jpg",
+                              "loadingImg": "cache/game/43/4343ddc6fb1a2aaee03c763df9b68ad0266991b37cb5ad8b1bb68d52ffdba24e.png",
+                              "squareImg": "cache/game/c7/c776c8a28d04038b596aa6c3e5721019557173dd868f61e98a0c1df8582c1609.png",
+                              "tileImg": "cache/game/29/29daf1920132f6f526af1e77f65b7078d3a36d2cfe88cfcf992af5707f37abd2.jpg"
+                          },
+                          "name": "",
+                          "kills": 4,
+                          "deaths": 8,
+                          "assists": 3,
+                          "level": 1,
+                          "gold": 1935,
+                          "totalGold": 8043,
+                          "creepScore": 168,
+                          "visionScore": 86,
+                          "shutdown": 208,
+                          "respawnTimeRemaining": 8,
+                          "items": [
+                              {
+                                  "id": 2503,
+                                  "slot": 0,
+                                  "displayName": "Blackfire Torch",
+                                  "assetUrl": "cache/game/5b/5b4a4cad13f74320a4bf600062a5fa2a5a2185f052c8ea4d813f1b7444cd1ecd.png",
+                                  "modifierUrl": null,
+                                  "cost": 2800,
+                                  "count": 1,
+                                  "combineCost": 700,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 228002,
+                                  "slot": 1,
+                                  "displayName": "Wooglet's Witchcap",
+                                  "assetUrl": "cache/game/66/66dcf8dc913fbd92f1e0773918a9b424249a3f00671bf9f733c7c209ab53575d.png",
+                                  "modifierUrl": null,
+                                  "cost": 6000,
+                                  "count": 1,
+                                  "combineCost": 6000,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 9178,
+                                  "slot": 2,
+                                  "displayName": "The Annihilator",
+                                  "assetUrl": "cache/game/19/199ff3a25bb13e52cb460d3e1522bab717b10bdfea2dd43b00d2a4e59bb6a6c1.png",
+                                  "modifierUrl": null,
+                                  "cost": 0,
+                                  "count": 1,
+                                  "combineCost": 0,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 3009,
+                                  "slot": 3,
+                                  "displayName": "Boots of Swiftness",
+                                  "assetUrl": "cache/game/a6/a69f1ce0277b6177feff6ec5ec95f446c7e8add6073a5ffbe0d0a4ac27491ade.png",
+                                  "modifierUrl": null,
+                                  "cost": 1000,
+                                  "count": 1,
+                                  "combineCost": 700,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 3142,
+                                  "slot": 4,
+                                  "displayName": "Youmuu's Ghostblade",
+                                  "assetUrl": "cache/game/7f/7f0f4a15eede5ae41d46bce801358d76248155e8d14deb5b2f475ae12799ed27.png",
+                                  "modifierUrl": null,
+                                  "cost": 2800,
+                                  "count": 1,
+                                  "combineCost": 675,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 1104,
+                                  "slot": 5,
+                                  "displayName": "Eye of the Herald",
+                                  "assetUrl": "cache/game/1c/1cb02bd31c2f9b4a223484b3ab3b433d755056aee1635d20c88aaddb23371e05.png",
+                                  "modifierUrl": null,
+                                  "cost": 0,
+                                  "count": 1,
+                                  "combineCost": 0,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 2033,
+                                  "slot": 6,
+                                  "displayName": "Corrupting Potion",
+                                  "assetUrl": "cache/game/37/3762f873ef59ab68e8711e586e05092950d2f9a916c250e98691ca1862368d68.png",
+                                  "modifierUrl": null,
+                                  "cost": 500,
+                                  "count": 1,
+                                  "combineCost": 350,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 2524,
+                                  "slot": 8,
+                                  "displayName": "Bandlepipes",
+                                  "assetUrl": "cache/game/f7/f7e4077aad44e7d8c2adb1ae0880fe25e921b5f5afaf412a6f90bb8602ea4e92.png",
+                                  "modifierUrl": null,
+                                  "cost": 2300,
+                                  "count": 1,
+                                  "combineCost": 800,
+                                  "stats": [
+                                      0,
+                                      93,
+                                      329,
+                                      0,
+                                      0,
+                                      0,
+                                      0,
+                                      0
+                                  ],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              }
+                          ]
+                      },
+                      {
+                          "champion": {
+                              "id": 66603,
+                              "alias": "Ruby_Lux",
+                              "name": "Doom Bot Lux",
+                              "splashCenteredImg": "cache/game/88/8811931cb598ae7569a60eab18888bc05c4af07c741e6b3fa6a73c4dedb79b30.jpg",
+                              "splashImg": "cache/game/f7/f74a9a47926d32ad9cd84126ad4e21a90a8aeeefccc3e494bbc4f3bf9dbb6de3.jpg",
+                              "loadingImg": "cache/game/13/13dcbd1d6b124796c5de974d9973f3eabad289f4ca60697ed650f80a74c9b5a2.png",
+                              "squareImg": "cache/game/9c/9cb01fc55e3ab7b32ae291ea5dcf82bec604b10cbbfedf911a06ba1853f55a0f.png",
+                              "tileImg": "cache/game/ea/ea84a96185a921de1e22616d5cae96afa9b2ca6b188a3e7d18477837badcee5a.jpg"
+                          },
+                          "name": "",
+                          "kills": 2,
+                          "deaths": 0,
+                          "assists": 1,
+                          "level": 4,
+                          "gold": 3812,
+                          "totalGold": 8428,
+                          "creepScore": 52,
+                          "visionScore": 15,
+                          "shutdown": 184,
+                          "respawnTimeRemaining": 0,
+                          "items": [
+                              {
+                                  "id": 226657,
+                                  "slot": 0,
+                                  "displayName": "Rod of Ages",
+                                  "assetUrl": "cache/game/f0/f0abb47b753feb2cc757bc4b5fac146c541fe2ada2ff734407f7f4bceda50358.png",
+                                  "modifierUrl": null,
+                                  "cost": 2500,
+                                  "count": 1,
+                                  "combineCost": 2500,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 223742,
+                                  "slot": 1,
+                                  "displayName": "Dead Man's Plate",
+                                  "assetUrl": "cache/game/c8/c8c23cd4797de8222d00fdab7be1211e1aa3400c13de3af2df47c8b81af24204.png",
+                                  "modifierUrl": null,
+                                  "cost": 2500,
+                                  "count": 1,
+                                  "combineCost": 2500,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 4401,
+                                  "slot": 2,
+                                  "displayName": "Force of Nature",
+                                  "assetUrl": "cache/game/d9/d9ca20518b23017d01714f680ec5702e92805b59cdc3b4f75de4ee1dda0d9ce5.png",
+                                  "modifierUrl": null,
+                                  "cost": 2800,
+                                  "count": 1,
+                                  "combineCost": 750,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 1018,
+                                  "slot": 3,
+                                  "displayName": "Cloak of Agility",
+                                  "assetUrl": "cache/game/6b/6b2b1570ba2165de86d981340edc676b97cce52238ac91664722202575887a3b.png",
+                                  "modifierUrl": null,
+                                  "cost": 600,
+                                  "count": 1,
+                                  "combineCost": 600,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 3065,
+                                  "slot": 4,
+                                  "displayName": "Spirit Visage",
+                                  "assetUrl": "cache/game/1d/1d6ecd0e126fa5fde4336794a2d5c5149ee06bd6e07d942cc5612b9a9c61a694.png",
+                                  "modifierUrl": null,
+                                  "cost": 2700,
+                                  "count": 1,
+                                  "combineCost": 650,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 223040,
+                                  "slot": 5,
+                                  "displayName": "Seraph's Embrace",
+                                  "assetUrl": "cache/game/13/13c060e15c48cea2023a36e67db48c58e5ed463a09b51a5faab147b728493203.png",
+                                  "modifierUrl": null,
+                                  "cost": 2500,
+                                  "count": 1,
+                                  "combineCost": 2500,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 550007,
+                                  "slot": 6,
+                                  "displayName": "Party Favor",
+                                  "assetUrl": "cache/game/89/89b9200b1a78528e96e76bbe60068ecfb717739ac640288ef64ad6fcfda90ee9.png",
+                                  "modifierUrl": null,
+                                  "cost": 10,
+                                  "count": 1,
+                                  "combineCost": 10,
+                                  "stats": [],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              },
+                              {
+                                  "id": 1026,
+                                  "slot": 8,
+                                  "displayName": "Blasting Wand",
+                                  "assetUrl": "cache/game/c9/c9b98b1bc12cfa5f3e8128a9c5ba8b1144f1e7a21ed5e4a6cfd1d779263cd29a.png",
+                                  "modifierUrl": null,
+                                  "cost": 850,
+                                  "count": 1,
+                                  "combineCost": 850,
+                                  "stats": [
+                                      0,
+                                      52,
+                                      211,
+                                      0,
+                                      0,
+                                      0,
+                                      0,
+                                      0
+                                  ],
+                                  "cooldown": 0,
+                                  "maxCooldown": 0,
+                                  "stacks": 0
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ]
+      },
+      "baronPitTimer": {
+          "type": "GRUB",
+          "timeDestroy": 0,
+          "timeAlive": 9105,
+          "mapSide": "BaronPit"
+      },
+      "dragonPitTimer": {
+          "type": "DRAGON_AIR",
+          "timeDestroy": 0,
+          "timeAlive": 9105,
+          "mapSide": "DragonPit"
+      },
+      "inhibitors": [
+          {
+              "team": "BLUE",
+              "teamid": 4294967293,
+              "side": 1,
+              "inhibitors": {
+                  "L0": {
+                      "type": "INHIBITOR_L0",
+                      "timeDestroy": 9014,
+                      "timeAlive": 9314,
+                      "mapSide": null
+                  },
+                  "L1": {
+                      "type": "INHIBITOR_L1",
+                      "timeDestroy": 9031,
+                      "timeAlive": 9331,
+                      "mapSide": null
+                  },
+                  "L2": {
+                      "type": "INHIBITOR_L2",
+                      "timeDestroy": 9031,
+                      "timeAlive": 9331,
+                      "mapSide": null
+                  }
+              }
+          }
+      ],
+      "showTwitchPrediction": false,
+      "showTwitchPoll": false,
+      "showTwitchChatVote": false,
+      "sideInfoPage": null,
+      "goldGraph": null,
+      "runes": null,
+      "damageGraph": null,
+      "teamfightDamageOverview": null,
+      "damageRecap": null,
+      "damageSplit": null,
+      "goldEfficiency": null,
+      "teamfightTimeline": null,
+      "objectiveDps": null,
+      "killParticipation": null,
+      "damageComposition": null,
+      "damageFlow": null,
+      "skinDisplay": null
+  }
+}

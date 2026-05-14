@@ -1,0 +1,290 @@
+@import '../_colors.scss';
+
+.observed {
+  --width: 520px;
+  --height: 110px;
+  --speed-width: 110px;
+
+  width: var(--width);
+  height: var(--height);
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  border-radius: var(--overlayBorderRadius);
+  border: 1px solid var(--overlayBorder);
+  box-shadow: var(--panelShadow);
+  overflow: hidden;
+  z-index: 60;
+
+  transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+  transform-origin: center bottom;
+
+  &.hide {
+    opacity: 0;
+    transform: translateX(-50%) translateY(6px);
+    pointer-events: none;
+  }
+
+  &.show {
+    opacity: 1;
+  }
+
+  &.blue {
+    --sideColor: #{$blue};
+    --sideColorDark: #{darken($blue, 22%)};
+    --sideTintTop: #{rgba($blue, 0.14)};
+    --sideTintBottom: #{rgba($blue, 0.04)};
+  }
+
+  &.orange {
+    --sideColor: #{$orange};
+    --sideColorDark: #{darken($orange, 22%)};
+    --sideTintTop: #{rgba($orange, 0.14)};
+    --sideTintBottom: #{rgba($orange, 0.04)};
+  }
+
+  .observed-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        180deg,
+        var(--sideTintTop) 0%,
+        var(--sideTintBottom) 100%
+      ),
+      rgba(0, 0, 0, 0.94);
+    z-index: 0;
+  }
+
+  // Full-height speed gauge, sits on the inner edge (toward center of screen)
+  .speed {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: var(--speed-width);
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // Subtle separator from the content area
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 12px;
+      bottom: 12px;
+      width: 1px;
+      background: var(--overlayBorder);
+    }
+
+    .speed-ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 84px;
+      height: 84px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: conic-gradient(
+        var(--sideColor) 0deg var(--angle),
+        rgba(255, 255, 255, 0.08) var(--angle) 360deg
+      );
+      mask: radial-gradient(circle, transparent 64%, #000 66%);
+      -webkit-mask: radial-gradient(circle, transparent 64%, #000 66%);
+      transition: background 0.15s linear;
+    }
+
+    .speed-inner {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+
+      .speed-num {
+        font-size: 28px;
+        font-weight: bolder;
+        color: #fff;
+      }
+
+      .speed-unit {
+        font-size: 9px;
+        font-weight: bolder;
+        color: rgba(255, 255, 255, 0.6);
+        letter-spacing: 0.16em;
+        margin-top: 4px;
+      }
+    }
+  }
+
+  &.blue .speed {
+    right: 0;
+    &::after { left: 0; }
+  }
+
+  &.orange .speed {
+    left: 0;
+    &::after { right: 0; }
+  }
+
+  // Wrapper for stats + boost bar that takes the remaining width
+  .observed-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+  }
+
+  &.blue .observed-content {
+    left: 0;
+    right: var(--speed-width);
+  }
+
+  &.orange .observed-content {
+    left: var(--speed-width);
+    right: 0;
+  }
+
+  // Stats row (top portion of the content area)
+  .observed-top {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 6px 14px 0;
+    min-height: 0;
+
+    .stats {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+
+      .stat {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        line-height: 1;
+
+        i {
+          font-size: 16px;
+          color: var(--sideColor);
+        }
+
+        span {
+          font-size: 20px;
+          font-weight: bolder;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &.orange .observed-top .stats {
+    flex-direction: row-reverse;
+  }
+
+  // Boost bar strip (bottom portion of the content area)
+  .observed-bottom {
+    position: relative;
+    height: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.85);
+    overflow: hidden;
+
+    .boost-fill {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background: var(--sideColor);
+      opacity: 0.45;
+      transition: width 0.15s linear;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .boost-icon {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+
+      i {
+        font-size: 16px;
+        color: #fff;
+      }
+    }
+
+    .boost-value {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 36px;
+      width: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: bolder;
+      color: #fff;
+      line-height: 1;
+      z-index: 2;
+    }
+
+    .player-name {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 88px;
+      right: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bolder;
+      color: #fff;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      z-index: 2;
+    }
+  }
+
+  &.orange .observed-bottom {
+    .boost-fill {
+      left: auto;
+      right: 0;
+    }
+
+    .boost-icon {
+      left: auto;
+      right: 14px;
+    }
+
+    .boost-value {
+      left: auto;
+      right: 36px;
+    }
+
+    .player-name {
+      left: 14px;
+      right: 88px;
+    }
+  }
+}

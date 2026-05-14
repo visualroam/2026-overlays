@@ -1,0 +1,8 @@
+// 2026-general team colors — aligned with the CS2 / LoL 2026-v1 design system
+// (see ../../GENERAL.md). Rocket League is blue vs orange, so we keep blue from
+// the system and pair it with a warm orange for the opposing side.
+
+$blue: #318ce7;      // --blueSide
+$orange: #f29318;    // RL orange — matches the 2026 --accentWarn family
+$blueDark: darken($blue, 25%);
+$orangeDark: darken($orange, 25%);

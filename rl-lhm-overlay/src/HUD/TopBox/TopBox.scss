@@ -1,0 +1,271 @@
+@import '../_colors.scss';
+
+.matchbar-container {
+  width: 1100px;
+
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  z-index: 50;
+
+  .matchbar-inner-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+
+    width: 100%;
+    height: 80px;
+
+    border-top-left-radius: var(--overlayBorderRadius);
+    border-top-right-radius: var(--overlayBorderRadius);
+    border: 1px solid var(--overlayBorder);
+    border-bottom: 1px solid white;
+
+    &::after {
+      content: " ";
+      height: 80px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: var(--overlayBackground);
+      opacity: 1;
+      z-index: -3;
+      border-top-left-radius: var(--overlayBorderRadius);
+      border-top-right-radius: var(--overlayBorderRadius);
+    }
+
+    &::before {
+      content: " ";
+      height: 80px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      opacity: 0.1;
+      border-top-left-radius: var(--overlayBorderRadius);
+      border-top-right-radius: var(--overlayBorderRadius);
+      background: linear-gradient(
+        to right,
+        $blue 0%,
+        $blue 20%,
+        transparent 42%,
+        transparent 58%,
+        $orange 80%,
+        $orange 100%
+      );
+      z-index: -2;
+    }
+
+    .timer {
+      width: 250px;
+      height: 100%;
+      position: relative;
+      flex-shrink: 0;
+
+      .time {
+        font-size: 30px;
+        font-weight: bolder;
+        color: white;
+        line-height: 1;
+        text-align: center;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        right: 0;
+
+        &::after {
+          content: " ";
+          position: absolute;
+          bottom: -5px;
+          left: 75px;
+          right: 75px;
+          height: 1px;
+          background: white;
+        }
+
+        transition: var(--transitionDuration) ease-in-out;
+
+        &.overtime {
+          color: $orange;
+        }
+      }
+
+      .round {
+        font-size: 16px;
+        font-weight: bolder;
+        color: white;
+        line-height: 1;
+        text-align: center;
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        transition: var(--transitionDuration) ease-in-out;
+      }
+
+      .score {
+        font-size: 50px;
+        font-weight: bolder;
+        line-height: 1;
+
+        position: absolute;
+        top: 10px;
+        bottom: 10px;
+        aspect-ratio: 1/1;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.blue {
+          color: $blue;
+          left: 0;
+        }
+
+        &.orange {
+          color: $orange;
+          right: 0;
+        }
+      }
+    }
+
+    .team {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+      min-width: 0;
+
+      &.blue {
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        padding-left: 18px;
+
+        .team-name {
+          text-align: right;
+        }
+      }
+
+      &.orange {
+        justify-content: flex-end;
+        padding-right: 18px;
+
+        .team-name {
+          text-align: left;
+        }
+      }
+
+      .team-name {
+        color: white;
+        font-size: 24px;
+        font-weight: bolder;
+        line-height: 1;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .logo {
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: center;
+        }
+      }
+    }
+  }
+
+  .matchbar-inner-bottom {
+    height: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    &::after {
+      content: " ";
+      height: 30px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(
+        to right,
+        transparent 5%,
+        var(--overlayBackground) 25%,
+        var(--overlayBackground) 75%,
+        transparent 95%
+      );
+      z-index: -1;
+    }
+
+    .bo-label {
+      color: white;
+      font-size: 13px;
+      font-weight: bolder;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .series-wins {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 5px;
+
+      &.orange {
+        flex-direction: row-reverse;
+      }
+
+      .wins-box {
+        width: 16px;
+        height: 16px;
+        border-radius: 4px;
+        border: 1px solid transparent;
+        box-sizing: border-box;
+
+        &.blue {
+          background: $blue;
+
+          &.empty {
+            background: transparent;
+            border-color: rgba($blue, 0.5);
+          }
+        }
+
+        &.orange {
+          background: $orange;
+
+          &.empty {
+            background: transparent;
+            border-color: rgba($orange, 0.5);
+          }
+        }
+      }
+    }
+  }
+}
