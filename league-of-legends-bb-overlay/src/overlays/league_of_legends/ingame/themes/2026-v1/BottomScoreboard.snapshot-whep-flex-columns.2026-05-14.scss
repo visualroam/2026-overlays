@@ -559,143 +559,53 @@
   right: 0;
   height: 280px;
   background: var(--overlayBackground);
-  transition: bottom var(--transitionDuration) ease;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  --cam-width: 160px;
 
-  &:not(.bottom-scoreboard-champions--whep-embed) {
-    display: flex;
-    flex-direction: column;
+  /* Dedicated columns — cams participate in flex layout (no z-index overlay on item rows). */
+  &__cam-col {
+    flex: 0 0 var(--cam-width);
+    width: var(--cam-width);
+    min-width: var(--cam-width);
+    position: relative;
+    background: #000;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    &--left {
+      border-right: 1px solid var(--overlayBorder);
+    }
+
+    &--right {
+      border-left: 1px solid var(--overlayBorder);
+    }
+
+    .whep-cycler {
+      position: absolute !important;
+      top: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      max-height: none !important;
+      border-radius: 0;
+      background: #000;
+      z-index: 1;
+    }
+
+    .whep-cycler__debug-index {
+      font-size: 28px;
+    }
   }
 
-  &--whep-embed {
+  &__rows {
+    flex: 1;
     display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    --cam-width: 160px;
-
-    .bottom-scoreboard-champions__cam-col {
-      flex: 0 0 var(--cam-width);
-      width: var(--cam-width);
-      min-width: var(--cam-width);
-      position: relative;
-      background: #000;
-      overflow: hidden;
-      flex-shrink: 0;
-
-      &--left {
-        border-right: 1px solid var(--overlayBorder);
-      }
-
-      &--right {
-        border-left: 1px solid var(--overlayBorder);
-      }
-
-      .whep-cycler__debug-index {
-        font-size: 28px;
-      }
-    }
-
-    .bottom-scoreboard-champions__rows {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-    }
-
-    .bottom-scoreboard-champion-row .bottom-scoreboard-champion {
-      .bar {
-        --width: 100px;
-      }
-
-      &.blue {
-        .summoner-name {
-          left: 325px;
-        }
-        .xp {
-          left: 320px;
-          top: 30px;
-        }
-        .health {
-          left: 320px;
-          top: 36px;
-        }
-        .mana {
-          left: 320px;
-          top: 46px;
-        }
-        .champion-image {
-          right: 175px;
-        }
-        .ultimate {
-          right: 229px;
-        }
-        .spell-1,
-        .spell-2 {
-          right: 260px;
-        }
-        .items {
-          left: 10px;
-        }
-        .shutdown {
-          right: 35px;
-        }
-      }
-
-      &.red {
-        .summoner-name {
-          right: 325px;
-        }
-        .xp {
-          right: 320px;
-          top: 30px;
-        }
-        .health {
-          right: 320px;
-          top: 36px;
-        }
-        .mana {
-          right: 320px;
-          top: 46px;
-        }
-        .champion-image {
-          left: 175px;
-        }
-        .ultimate {
-          left: 229px;
-        }
-        .spell-1,
-        .spell-2 {
-          left: 260px;
-        }
-        .items {
-          right: 15px;
-        }
-        .shutdown {
-          left: 35px;
-        }
-      }
-
-      .shutdown {
-        font-size: 10px;
-      }
-
-      .items {
-        gap: 2px;
-
-        .item-slot {
-          height: 22px;
-          width: 22px;
-          border-radius: 4px;
-
-          .item-slot-empty {
-            font-size: 10px;
-          }
-
-          .item-slot-image {
-            border-radius: 4px;
-          }
-        }
-      }
-    }
+    flex-direction: column;
+    min-width: 0;
   }
 
   &.show {
@@ -705,6 +615,8 @@
   &.hide {
     bottom: -280px;
   }
+
+  transition: bottom var(--transitionDuration) ease;
 
   .bottom-scoreboard-champion-row {
     flex: 1;
@@ -718,6 +630,11 @@
       --cooldownHandleColor: #ffffff;
       overflow: hidden;
 
+      /* Narrower resource bars → frees horizontal space for tighter item row */
+      .bar {
+        --width: 100px;
+      }
+
       &.blue {
         --cooldownHandleColor: var(--blueSide);
 
@@ -728,19 +645,19 @@
           right: 7px;
         }
         .summoner-name {
-          left: 400px;
+          left: 325px;
         }
 
         .xp {
-          left: 400px;
+          left: 320px;
           top: 30px;
         }
         .health {
-          left: 400px;
+          left: 320px;
           top: 36px;
         }
         .mana {
-          left: 400px;
+          left: 320px;
           top: 46px;
         }
         .champion-image-level {
@@ -748,27 +665,27 @@
           border-top-right-radius: 5px;
         }
         .champion-image {
-          right: 245px;
+          right: 175px;
           img {
             transform: translateX(-5%);
           }
         }
 
         .ultimate {
-          right: 300px;
+          right: 229px;
           border-bottom-right-radius: 5px;
         }
 
         .spell-1 {
-          right: 332px;
+          right: 260px;
         }
 
         .spell-2 {
-          right: 332px;
+          right: 260px;
         }
 
         .items {
-          left: 15px;
+          left: 10px;
         }
 
         .respawn-timer {
@@ -779,12 +696,8 @@
           animation: level-up-right 5s ease-in-out forwards;
         }
 
-        .item-bought {
-          animation: level-up-right 5s ease-in-out forwards;
-        }
-
         .shutdown {
-          right: 40px;
+          right: 35px;
         }
       }
 
@@ -799,47 +712,47 @@
         }
 
         .shutdown {
-          left: 40px;
+          left: 35px;
         }
 
         .summoner-name {
-          right: 400px;
+          right: 325px;
         }
 
         .xp {
-          right: 400px;
+          right: 320px;
           top: 30px;
           justify-content: end;
         }
         .health {
-          right: 400px;
+          right: 320px;
           top: 36px;
           justify-content: end;
         }
         .mana {
-          right: 400px;
+          right: 320px;
           top: 46px;
           justify-content: end;
         }
 
         .champion-image {
-          left: 245px;
+          left: 175px;
           img {
             transform: translateX(-30%);
           }
         }
 
         .ultimate {
-          left: 300px;
+          left: 229px;
           border-bottom-left-radius: 5px;
         }
 
         .spell-1 {
-          left: 332px;
+          left: 260px;
         }
 
         .spell-2 {
-          left: 332px;
+          left: 260px;
         }
 
         .champion-image-level {
@@ -859,10 +772,6 @@
         .level-up {
           animation: level-up-left 5s ease-in-out forwards;
         }
-
-        .item-bought {
-          animation: level-up-left 5s ease-in-out forwards;
-        }
       }
 
       &.dead {
@@ -877,7 +786,7 @@
         color: gold;
         position: absolute;
         bottom: 9px;
-        font-size: 12px;
+        font-size: 10px;
       }
 
       .level-up {
@@ -904,66 +813,12 @@
         }
       }
 
-      .item-bought {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: #000;
-        z-index: 10000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-        font-size: 10px;
-        font-weight: bolder;
-        padding: 0 10px;
-        color: white;
-        text-shadow: 0 0 2px #000, 0 0 4px #000;
-
-        .arrow {
-          width: 30px;
-          height: 30px;
-          flex-shrink: 0;
-        }
-
-        &__icon {
-          width: 40px;
-          height: 40px;
-          object-fit: contain;
-          flex-shrink: 0;
-          border-radius: 5px;
-          overflow: hidden;
-        }
-
-        &__price {
-          font-size: 20px;
-          font-weight: bolder;
-          color: gold;
-          text-align: center;
-        }
-
-        &__name {
-          font-size: 20px;
-          font-weight: bolder;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          text-align: center;
-          flex: 1;
-        }
-      }
-
       .summoner-name {
         font-size: 12px;
         font-weight: bolder;
         color: white;
         top: 7px;
         position: absolute;
-      }
-
-      .summoner-name--long {
-        font-size: 10px;
       }
 
       .items {
@@ -973,23 +828,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 5px;
-        border: 1px solid var(--overlayBorder);
-        gap: 0px;
+        gap: 2px;
 
         .item-slot {
-          height: 32px;
-          width: 32px;
-
-          &:not(:last-child) {
-            border-right: 1px solid var(--overlayBorder);
-          }
-
+          height: 22px;
+          width: 22px;
+          border-radius: 4px;
           background: #000000;
+          border: 1px solid var(--overlayBorder);
           position: relative;
 
           .item-slot-empty {
-            font-size: 12px;
+            font-size: 10px;
             font-weight: bolder;
             color: #ccc;
             text-align: center;
@@ -1006,7 +856,7 @@
             width: 100%;
             object-fit: cover;
             object-position: center;
-            border-radius: 5px;
+            border-radius: 4px;
           }
 
           .count {
@@ -1270,10 +1120,10 @@
     }
 
     .bottom-scoreboard-champion-gold-diff {
-      width: 80px;
+      width: 60px;
       color: white;
       text-align: center;
-      font-size: 18px;
+      font-size: 12px;
       font-weight: bolder;
       display: flex;
       align-items: center;
@@ -1297,7 +1147,7 @@
           background: var(--blueSide);
 
           .gold-diff-bar-chevron {
-            left: 0px;
+            left: 3px;
             background: var(--blueSide);
             transform: translateY(-50%);
           }
@@ -1309,7 +1159,7 @@
           background: var(--redSide);
 
           .gold-diff-bar-chevron {
-            left: -4px;
+            left: -7px;
             transform: rotate(180deg) translateY(50%);
             background: var(--redSide);
           }
@@ -1472,177 +1322,6 @@
     &.cooldown {
       filter: grayscale(45%) brightness(0.8);
     }
-  }
-}
-
-// =============================================================================
-// WHEP scoreboard embed — EDIT HERE
-// Active when: whepConfig WHEP_CAMS_ENABLED + WHEP_LAYOUT === "scoreboard"
-// =============================================================================
-// Class map (all live under the champions strip):
-//
-//   .bottom-scoreboard-champions--whep-embed
-//       Root hook — also sets --cam-width (default 160px) earlier in this file.
-//
-//   .bottom-scoreboard-champions__cam-col
-//   .bottom-scoreboard-champions__cam-col--left
-//   .bottom-scoreboard-champions__cam-col--right
-//       Fixed-width side columns with the WebRTC video.
-//
-//   .bottom-scoreboard-champions__rows
-//       Middle flex column that stacks the five lanes.
-//
-//   .bottom-scoreboard-champion-row
-//       One horizontal lane: blue champion | gold diff | red champion.
-//
-//   .bottom-scoreboard-champion.blue
-//   .bottom-scoreboard-champion.red
-//       Half-row UI (items, portrait, spells, bars, …).
-//
-//   .whep-cycler.whep-cycler--embed
-//   .whep-cycler.whep-cycler--a | .whep-cycler--b
-//       Video box inside a cam column (object-fit, masking, opacity).
-//
-//   .whep-cycler__debug-index
-//       Big slot number on top of the stream.
-//
-// Default tight layout (offsets, item size, bar width) is in
-// `.bottom-scoreboard-champions--whep-embed` above; override below.
-// =============================================================================
-
-.bottom-scoreboard-champions--whep-embed {
-  // --cam-width: 160px;
-
-  .bottom-scoreboard-champions__cam-col {
-    // e.g. background, border width
-  }
-
-  .bottom-scoreboard-champions__rows {
-    // e.g. gap between lanes, padding, overflow
-
-    .bottom-scoreboard-champion-row {
-      // e.g. flex, min-height, max-height
-    }
-
-    // Example: wider XP/health/mana bars in the middle column only
-    // .bottom-scoreboard-champion .bar {
-    //   --width: 120px;
-    // }
-  }
-
-  .bottom-scoreboard-champion-gold-diff {
-    width: 60px!important;
-    font-size: 12px!important;
-  }
-
-  .bottom-scoreboard-champion {
-
-    .items {
-      .item-slot {
-        height: 25px!important;
-        width: 25px!important;
-      }
-    }
-
-    .bar {
-      --width: 80px!important;
-    }
-
-    &.blue {
-      // blue-side overrides
-
-      .items {
-        left: 10px!important;
-      }
-
-      .champion-image {
-        right: 175px!important;
-        width: 70px!important;
-      }
-
-      .ultimate {
-        right: 219px!important;
-      }
-
-
-      .spell-1, .spell-2 {
-        right: 250px!important;
-      }
-
-      .summoner-name {
-        left: 321px!important;
-      }
-
-      .champion-name {
-        left: 320px!important;
-      }
-
-      .health, .mana, .xp {
-        left: 320px!important;
-      }
-
-      .shutdown {
-        right: 35px!important;
-      }
-
-    }
-
-    &.red {
-      // red-side overrides
-
-      .items {
-        right: 10px!important;
-      }
-
-      .champion-image {
-        left: 175px!important;
-        width: 70px!important;
-      }
-
-      .ultimate {
-        left: 219px!important;
-      }
-
-      .spell-1, .spell-2 {
-        left: 250px!important;
-      }
-
-      .summoner-name {
-        right: 321px!important;
-      }
-
-      .champion-name {
-        right: 320px!important;
-      }
-
-      .health, .mana, .xp {
-        right: 320px!important;
-      }
-
-      .shutdown {
-        left: 35px!important;
-      }
-    }
-
-    .champion-image {
-      // portrait frame
-    }
-
-    .items {
-      // item strip
-    }
-
-    .summoner-name {
-      // name label
-    }
-  }
-
-  .whep-cycler--embed {
-    // video fills column; tweak border-radius, filter, etc.
-  }
-
-  .whep-cycler__debug-index {
-    // slot index text on cam
   }
 }
 

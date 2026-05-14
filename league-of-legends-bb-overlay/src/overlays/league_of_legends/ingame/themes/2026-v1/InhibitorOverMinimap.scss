@@ -1,0 +1,149 @@
+/* One lane icon per row; blue + red status (UP or countdown + bar). */
+.minimap-inhibitors {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: var(--overlayBorderRadius);
+  border: 1px solid var(--overlayBorder);
+  background: var(--overlayBackground);
+
+  gap: 6px;
+  padding: 6px 8px 8px;
+  width: 280px;
+  box-sizing: border-box;
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    min-height: 28px;
+  }
+
+  &__side {
+    flex: 1;
+    min-width: 0;
+
+    &--blue .minimap-inhibitors__time {
+      text-align: left;
+    }
+
+    &--blue .minimap-inhibitors__time-cell {
+      justify-content: flex-start;
+    }
+
+    &--red .minimap-inhibitors__time {
+      text-align: right;
+    }
+
+    &--red .minimap-inhibitors__time-cell {
+      justify-content: flex-end;
+    }
+
+    &--down .minimap-inhibitors__time {
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+
+  &__lane {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+  }
+
+  &__time-cell {
+    position: relative;
+    min-width: 0;
+    min-height: 28px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid transparent;
+
+    &--active {
+      border: 1px solid rgba(255, 255, 255, 0.12);
+
+      .minimap-inhibitors__bar-track {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__side--blue &__time-cell--active {
+    border-color: var(--blueSide);
+  }
+
+  &__side--red &__time-cell--active {
+    border-color: var(--redSide);
+  }
+
+  /* Blue left: bar grows from left edge toward center. Red right: from right edge. */
+  &__side--blue .minimap-inhibitors__bar-fill {
+    left: 0;
+    right: auto;
+    background: var(--blueSide);
+    opacity: 0.45;
+  }
+
+  &__side--red .minimap-inhibitors__bar-fill {
+    left: auto;
+    right: 0;
+    background: var(--redSide);
+    opacity: 0.45;
+  }
+
+  &__bar-track {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 4px;
+    opacity: 0;
+  }
+
+  &__bar-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    max-width: 100%;
+    border-radius: 4px;
+    background: rgba(160, 160, 170, 0.45);
+    transition: width 0.35s linear;
+    pointer-events: none;
+  }
+
+  &__lane-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    --lane: rgba(255, 255, 255, 0.78);
+    --laneDark: rgba(255, 255, 255, 0.38);
+  }
+
+  &__lane-icon--bright {
+    --lane: #fff;
+    --laneDark: rgba(255, 255, 255, 0.5);
+  }
+
+  &__time {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.02em;
+    width: 100%;
+    padding: 0 4px;
+    box-sizing: border-box;
+  }
+}

@@ -6,48 +6,7 @@ import { formatTime } from "../../../../../utils/formatTime";
 import { map } from "../../../../../utils/map";
 import { formatGold } from "../../../../../utils/formatGold";
 import { ReactComponent as ArrowUp } from "../../../../../assets/icons/arrow-up.svg";
-import { WhepCyclerProvider, WhepCyclerSide } from "../../../whep/WhepCycler";
-import { WHEP_CAMS_ENABLED, WHEP_LAYOUT } from "../../../whep/whepConfig";
 import "./BottomScoreboard.scss";
-
-/** Row-level item bought overlay only if feed `cost` is above this (gold). */
-const ITEM_BOUGHT_MIN_COST_GOLD = 2000;
-
-function resolveIngameGameTime(ingameState) {
-  const raw =
-    ingameState?.gameTime ??
-    ingameState?.scoreboard?.gameTime ??
-    ingameState?.scoreboardBottom?.gameTime;
-  const t = Number(raw);
-  return Number.isFinite(t) ? t : null;
-}
-
-/** Remaining cooldown (seconds): prefers readyAt − gameTime when both exist, else cooldown. */
-function remainingCooldownFromReadyAt(entity, gameTime) {
-  const gt = Number(gameTime);
-  const readyAt = Number(entity?.readyAt);
-  if (Number.isFinite(gt) && Number.isFinite(readyAt)) {
-    return Math.max(0, readyAt - gt);
-  }
-  const c = Number(entity?.cooldown);
-  return Number.isFinite(c) && c > 0 ? c : 0;
-}
-
-/** Seconds until respawn: timeToRespawn / respawnTime if set, else respawnAt|respawnedAt − gameTime. */
-function secondsToRespawn(entity, gameTime) {
-  const legacy = Number(
-    entity?.timeToRespawn ?? entity?.respawnTime,
-  );
-  if (Number.isFinite(legacy) && legacy > 0) return legacy;
-  const gt = Number(gameTime);
-  const at = Number(
-    entity?.respawnAt ?? entity?.respawnedAt,
-  );
-  if (Number.isFinite(gt) && Number.isFinite(at) && at > 0) {
-    return Math.max(0, at - gt);
-  }
-  return 0;
-}
 
 export function BottomScoreboard() {
   return <div className="bottom-scoreboard">
@@ -365,8 +324,6 @@ function TeamfightWithDamage() {
 }
 
 const TeamfightWithDamageChampion = ({ player }) => {
-  const { ingameState } = useBlueBottleContext();
-  const gameTime = resolveIngameGameTime(ingameState);
   let image = getImagePath(`${player?.champion?.splashCenteredImg ?? player?.champion?.squareImg ?? ""}`);
   let lvl = player?.level ?? 0;
 
@@ -380,13 +337,13 @@ const TeamfightWithDamageChampion = ({ player }) => {
   let spell2Image = getImagePath(`${spell2?.assets?.iconAsset ?? ""}`);
 
   let spell1TotalCooldown = spell1?.totalCooldown ?? 0;
-  let spell1CurrentCooldown = remainingCooldownFromReadyAt(spell1, gameTime);
+  let spell1CurrentCooldown = spell1?.cooldown ?? 0;
   let spell2TotalCooldown = spell2?.totalCooldown ?? 0;
-  let spell2CurrentCooldown = remainingCooldownFromReadyAt(spell2, gameTime);
+  let spell2CurrentCooldown = spell2?.cooldown ?? 0;
   let ultimateTotalCooldown = ultimate?.totalCooldown ?? 0;
-  let ultimateCurrentCooldown = remainingCooldownFromReadyAt(ultimate, gameTime);
+  let ultimateCurrentCooldown = ultimate?.cooldown ?? 0;
 
-  let respawnTimer = secondsToRespawn(player, gameTime);
+  let respawnTimer = player?.respawnTime ?? 0;
   let respawning = respawnTimer > 0;
 
   let activeItems = player?.activeItems ?? [];
@@ -422,7 +379,7 @@ const TeamfightWithDamageChampion = ({ player }) => {
     <ImageWithCooldown image={ultimateImage} total={ultimateTotalCooldown} current={ultimateCurrentCooldown} className="ultimate" />
 
     <div className="items">
-      {activeItems.map((item) => <ImageWithCooldown image={getImagePath(`${item?.assetUrl ?? ""}`)} total={item?.maxCooldown ?? 0} current={remainingCooldownFromReadyAt(item, gameTime)} className="item" />)}
+      {activeItems.map((item) => <ImageWithCooldown image={getImagePath(`${item?.assetUrl ?? ""}`)} total={item?.maxCooldown ?? 0} current={item?.cooldown ?? 0} className="item" />)}
     </div>
 
     <Bar current={health} max={maxHealth} orientation="horizontal" type="health" />
@@ -714,54 +671,13 @@ function BottomScoreboardChampions() {
     }
   }, [scoreboardBottom, tabs]);
 
-  const embedWhep = WHEP_CAMS_ENABLED && WHEP_LAYOUT === "scoreboard";
-  const championsClass = [
-    "bottom-scoreboard-champions",
-    show ? "show" : "hide",
-    embedWhep ? "bottom-scoreboard-champions--whep-embed" : "",
-  ]
-    .filter(Boolean)
-    .join(" ");
-
-  const rows = (
-    <>
-      <BottomScoreboardChampionRow index={0} tabs={persistentTabs} scoreboard={persistentScoreboard} />
-      <BottomScoreboardChampionRow index={1} tabs={persistentTabs} scoreboard={persistentScoreboard} />
-      <BottomScoreboardChampionRow index={2} tabs={persistentTabs} scoreboard={persistentScoreboard} />
-      <BottomScoreboardChampionRow index={3} tabs={persistentTabs} scoreboard={persistentScoreboard} />
-      <BottomScoreboardChampionRow index={4} tabs={persistentTabs} scoreboard={persistentScoreboard} />
-    </>
-  );
-
-  const championsInner = (
-    <div className={championsClass}>
-      {embedWhep ? (
-        <>
-          <div
-            className="bottom-scoreboard-champions__cam-col bottom-scoreboard-champions__cam-col--left"
-            aria-hidden="true"
-          >
-            <WhepCyclerSide which="a" variant="embed" />
-          </div>
-          <div className="bottom-scoreboard-champions__rows">{rows}</div>
-          <div
-            className="bottom-scoreboard-champions__cam-col bottom-scoreboard-champions__cam-col--right"
-            aria-hidden="true"
-          >
-            <WhepCyclerSide which="b" variant="embed" />
-          </div>
-        </>
-      ) : (
-        rows
-      )}
-    </div>
-  );
-
-  if (embedWhep) {
-    return <WhepCyclerProvider>{championsInner}</WhepCyclerProvider>;
-  }
-
-  return championsInner;
+  return <div className={`bottom-scoreboard-champions ${show ? "show" : "hide"}`}>
+    <BottomScoreboardChampionRow index={0} tabs={persistentTabs} scoreboard={persistentScoreboard} />
+    <BottomScoreboardChampionRow index={1} tabs={persistentTabs} scoreboard={persistentScoreboard} />
+    <BottomScoreboardChampionRow index={2} tabs={persistentTabs} scoreboard={persistentScoreboard} />
+    <BottomScoreboardChampionRow index={3} tabs={persistentTabs} scoreboard={persistentScoreboard} />
+    <BottomScoreboardChampionRow index={4} tabs={persistentTabs} scoreboard={persistentScoreboard} />
+  </div>;
 }
 
 const BottomScoreboardChampionRow = ({ index, scoreboard }) => {
@@ -784,7 +700,6 @@ const BottomScoreboardChampionRow = ({ index, scoreboard }) => {
 const BottomScoreboardChampion = ({ index, side }) => {
 
   const { ingameState } = useBlueBottleContext();
-  const gameTime = resolveIngameGameTime(ingameState);
   const { scoreboardBottom, tabs } = ingameState ?? {};
   const teams = scoreboardBottom?.teams ?? [];
   const tabKey = side === "blue" ? "Order" : "Chaos";
@@ -815,7 +730,7 @@ const BottomScoreboardChampion = ({ index, side }) => {
   const manaCurrent = tabPlayer?.resource?.current ?? 0;
   const manaType = tabPlayer?.resource?.type ?? "";
   const manaMax = tabPlayer?.resource?.max ?? 0;
-  const timeToRespawn = secondsToRespawn(tabPlayer, gameTime);
+  const timeToRespawn = tabPlayer?.timeToRespawn ?? 0;
 
   const hasElder = (tabPlayer?.hasElder ?? false);
   const hasBaron = (tabPlayer?.hasBaron ?? false);
@@ -831,25 +746,17 @@ const BottomScoreboardChampion = ({ index, side }) => {
   const ultimate = abilities.find((a) => a?.slot == "R") ?? {};
   const ultimateImage = getImagePath(`${ultimate?.assets?.iconAsset}`) ?? "";
   const ultimateTotalCooldown = ultimate?.totalCooldown ?? 0;
-  const ultimateCurrentCooldown = remainingCooldownFromReadyAt(ultimate, gameTime);
+  const ultimateCurrentCooldown = ultimate?.cooldown ?? 0;
 
   const spell1 = abilities.find((a) => a?.slot == "D") ?? {};
   const spell1Image = getImagePath(`${spell1?.assets?.iconAsset}`) ?? "";
   const spell1TotalCooldown = spell1?.totalCooldown ?? 0;
-  const spell1CurrentCooldown = remainingCooldownFromReadyAt(spell1, gameTime);
+  const spell1CurrentCooldown = spell1?.cooldown ?? 0;
 
   const spell2 = abilities.find((a) => a?.slot == "F") ?? {};
   const spell2Image = getImagePath(`${spell2?.assets?.iconAsset}`) ?? "";
   const spell2TotalCooldown = spell2?.totalCooldown ?? 0;
-  const spell2CurrentCooldown = remainingCooldownFromReadyAt(spell2, gameTime);
-
-  const [itemBoughtPayload, setItemBoughtPayload] = useState(null);
-
-  useEffect(() => {
-    if (!itemBoughtPayload) return;
-    const t = window.setTimeout(() => setItemBoughtPayload(null), 5000);
-    return () => window.clearTimeout(t);
-  }, [itemBoughtPayload]);
+  const spell2CurrentCooldown = spell2?.cooldown ?? 0;
 
   return <div className={`bottom-scoreboard-champion ${side} ${timeToRespawn > 0 ? "dead" : ""}`}>
     <div className="score">{kills} / {deaths} / {assists}</div>
@@ -860,12 +767,9 @@ const BottomScoreboardChampion = ({ index, side }) => {
     <Bar current={healthCurrent} max={healthMax} orientation="horizontal" type="health" />
     <Bar current={manaCurrent} max={manaMax} orientation="horizontal" type="mana" custom_type={manaType} />
 
-    <div
-      className={`summoner-name${summonerName.length > 10 ? " summoner-name--long" : ""}`}
-    >{summonerName}</div>
+    <div className="summoner-name">{summonerName}</div>
 
     <LevelUp level={level} />
-    <ItemBoughtBanner payload={itemBoughtPayload} />
 
     <div className={championImageClassName}>
       <img src={getImagePath(`${champion?.splashCenteredImg}`)} />
@@ -893,12 +797,7 @@ const BottomScoreboardChampion = ({ index, side }) => {
       className="spell-2"
     />
 
-    <Items
-      items={items}
-      visionScore={visionScore}
-      gameTime={gameTime}
-      onItemBought={setItemBoughtPayload}
-    />
+    <Items items={items} visionScore={visionScore} />
   </div>;
 };
 
@@ -913,17 +812,7 @@ const LevelUp = ({ level }) => {
   </div>;
 };
 
-const ItemBoughtBanner = ({ payload }) => {
-  if (!payload?.image) return null;
-
-  return <div className="item-bought">
-    <img src={payload.image} className="item-bought__icon" alt="" />
-    <div className="item-bought__name">{payload.displayName}</div>
-    <div className="item-bought__price">{payload.cost}g</div>
-  </div>;
-};
-
-const Items = ({ items, visionScore, gameTime, onItemBought }) => {
+const Items = ({ items, visionScore }) => {
   let quest = items.find((i) => i?.slot == 8);
   let _items = [0,1,2,3,4,5].map((_i) => {
     let item = items.find((i) => i?.slot == _i) ?? {};
@@ -933,16 +822,14 @@ const Items = ({ items, visionScore, gameTime, onItemBought }) => {
 
   return <div className="items">
     {_items.map((item, index) => {
-      return <ItemSlot key={`item-slot-${index}`} item={item} index={index} gameTime={gameTime} onItemBought={onItemBought} />;
+      return <ItemSlot item={item} index={index} />;
     })}
-    {trinket && <ItemSlot key="item-slot-6" item={trinket} index={6} visionScore={visionScore} gameTime={gameTime} onItemBought={onItemBought} />}
-    {quest && <ItemSlot key="item-slot-8" item={quest} index={8} gameTime={gameTime} onItemBought={onItemBought} />}
+    {trinket && <ItemSlot item={trinket} index={6} visionScore={visionScore} />}
+    {quest && <ItemSlot item={quest} index={8} />}
   </div>;
 };
 
-const ItemSlot = ({ item, index, visionScore, gameTime, onItemBought }) => {
-  const prevItemRef = useRef(null);
-
+const ItemSlot = ({ item, index, visionScore }) => {
   let isFilled = item?.assetUrl !== undefined;
   let image = isFilled ? getImagePath(`${item?.assetUrl}`) : null;
   let stacks = Math.round(item?.stacks ?? 0, 99);
@@ -952,7 +839,7 @@ const ItemSlot = ({ item, index, visionScore, gameTime, onItemBought }) => {
   }
 
   let maxCooldown = item?.maxCooldown ?? 0;
-  let currentCooldown = remainingCooldownFromReadyAt(item, gameTime);
+  let currentCooldown = item?.cooldown ?? 0;
   let count = Math.round(item?.count ?? 0, 99);
 
   if(index == 8) {
@@ -961,47 +848,6 @@ const ItemSlot = ({ item, index, visionScore, gameTime, onItemBought }) => {
     currentCooldown = stacks > 0 ? stacks : 0;
     stacks = 0;
   }
-
-  const itemId = item?.id ?? null;
-  const hasAsset = Boolean(item?.assetUrl);
-
-  useEffect(() => {
-    const prev = prevItemRef.current;
-    const snapshot = { itemId, hasAsset, count };
-    if (prev === null) {
-      prevItemRef.current = snapshot;
-      return;
-    }
-
-    let shouldFlash = false;
-    if (index === 6) {
-      shouldFlash =
-        (!prev.hasAsset && hasAsset)
-        || (prev.itemId != null && itemId != null && prev.itemId !== itemId)
-        || (prev.itemId == null && itemId != null && hasAsset);
-    } else if (index === 8) {
-      shouldFlash =
-        (!prev.hasAsset && hasAsset)
-        || (prev.itemId != null && itemId != null && prev.itemId !== itemId);
-    } else {
-      shouldFlash =
-        (!prev.hasAsset && hasAsset)
-        || (prev.itemId != null && itemId != null && prev.itemId !== itemId)
-        || (prev.itemId === itemId && itemId != null && count > prev.count);
-    }
-
-    prevItemRef.current = snapshot;
-    if (!shouldFlash || !hasAsset || !image) return;
-
-    const cost = Number(item?.cost);
-    if (!Number.isFinite(cost) || cost <= ITEM_BOUGHT_MIN_COST_GOLD) return;
-
-    onItemBought?.({
-      image,
-      displayName: item?.displayName ?? "Item",
-      cost,
-    });
-  }, [itemId, hasAsset, count, index, image, item?.displayName, item?.cost, onItemBought]);
 
   let formattedStacks = stacks >= 1000 ? `${formatGold(stacks)}k` : stacks;
 

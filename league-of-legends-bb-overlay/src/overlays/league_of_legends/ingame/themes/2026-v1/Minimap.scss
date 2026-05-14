@@ -91,4 +91,16 @@
       background: #000;
     }
   }
+
+  .minimap-overlay {
+    position: fixed;
+    bottom: 295px;
+    right: 15px;
+    z-index: 2;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+  }
 }

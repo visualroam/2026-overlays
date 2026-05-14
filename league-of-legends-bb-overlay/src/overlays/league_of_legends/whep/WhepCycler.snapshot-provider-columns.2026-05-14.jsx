@@ -1,16 +1,7 @@
-import {
-    createContext,
-    useContext,
-    useEffect,
-    useMemo,
-    useRef,
-    useState,
-} from "react";
+import { createContext, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { connectWhep } from "./whep";
 import {
-    WHEP_CAMS_ENABLED,
     WHEP_CYCLE_INTERVAL_MS,
-    WHEP_LAYOUT,
     WHEP_POSITION_A_URLS,
     WHEP_POSITION_B_URLS,
 } from "./whepConfig";
@@ -18,10 +9,7 @@ import "./whepCycler.scss";
 
 const WhepCyclerContext = createContext(null);
 
-/**
- * Holds WHEP sessions + cycle index. Use around any tree that renders
- * `WhepCyclerSide` (e.g. bottom scoreboard cam columns).
- */
+/** Holds WHEP sessions + cycle index; wrap sections that render `WhepCyclerSide`. */
 export function WhepCyclerProvider({ children }) {
     const [streams, setStreams] = useState({});
     const sessionsRef = useRef({});
@@ -100,12 +88,8 @@ export function WhepCyclerProvider({ children }) {
     );
 }
 
-/**
- * One camera: `which` is `"a"` (slots 1–5) or `"b"` (6–10).
- * @param {"a"|"b"} which
- * @param {"floating"|"embed"} variant — floating = screen corners; embed = fills parent column
- */
-export function WhepCyclerSide({ which, variant = "embed" }) {
+/** One camera column: `which` is `"a"` (slots 1–5) or `"b"` (6–10). */
+export function WhepCyclerSide({ which }) {
     const ctx = useContext(WhepCyclerContext);
     if (!ctx) {
         console.warn("WhepCyclerSide must be inside WhepCyclerProvider");
@@ -119,31 +103,26 @@ export function WhepCyclerSide({ which, variant = "embed" }) {
     const stream = url ? streams[url] : null;
 
     return (
-        <WhepVideoSlot
+        <WhepVideoSlotInternal
             position={position}
             stream={stream}
             slotNumber={slotNumber}
-            variant={variant}
         />
     );
 }
 
-/**
- * Floating corner cams (only when `WHEP_CAMS_ENABLED` and `WHEP_LAYOUT === "floating"`).
- */
+/** Standalone floating pair (full-screen corners). Use Provider + two absolute children internally. */
 export default function WhepCycler() {
-    if (!WHEP_CAMS_ENABLED || WHEP_LAYOUT !== "floating") return null;
     return (
         <WhepCyclerProvider>
-            <WhepCyclerSide which="a" variant="floating" />
-            <WhepCyclerSide which="b" variant="floating" />
+            <WhepCyclerSide which="a" />
+            <WhepCyclerSide which="b" />
         </WhepCyclerProvider>
     );
 }
 
-function WhepVideoSlot({ position, stream, slotNumber, variant }) {
+function WhepVideoSlotInternal({ position, stream, slotNumber }) {
     const videoRef = useRef(null);
-    const floating = variant === "floating";
 
     useEffect(() => {
         const v = videoRef.current;
@@ -161,11 +140,7 @@ function WhepVideoSlot({ position, stream, slotNumber, variant }) {
 
     return (
         <div
-            className={[
-                "whep-cycler",
-                `whep-cycler--${position}`,
-                floating ? "whep-cycler--floating" : "whep-cycler--embed",
-            ].join(" ")}
+            className={`whep-cycler whep-cycler--${position}`}
             data-slot={slotNumber}
         >
             <video

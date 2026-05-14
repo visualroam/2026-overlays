@@ -2,7 +2,14 @@
  * WHEP cycler configuration. Edit this file to point each slot at a different
  * WHEP endpoint.
  *
- * Layout (drives <WhepCycler />):
+ * Master switch: when false, no WebRTC sessions are opened.
+ *
+ * `WHEP_LAYOUT`:
+ *   - "scoreboard" — cam columns in the bottom champion bar (Provider in
+ *     BottomScoreboard). No floating corner widget.
+ *   - "floating" — two fixed corner videos from Ingame2026V1 (`<WhepCycler />`).
+ *
+ * Layout (two positions A / B):
  *   - Two on-screen positions, A and B.
  *   - Position A cycles through URLs 1..5 (the first array).
  *   - Position B cycles through URLs 6..10 (the second array).
@@ -15,6 +22,15 @@
  *     while you wire things up).
  *   - An empty string disables that slot.
  */
+
+/** If false: hide cams, skip all WHEP connections. */
+export const WHEP_CAMS_ENABLED = true;
+
+/**
+ * "scoreboard" | "floating"
+ * Pick exactly one visible surface: embedded columns vs corner overlays.
+ */
+export const WHEP_LAYOUT = "scoreboard";
 
 /** Default URL used to fill every slot until you replace them. */
 export const DEFAULT_WHEP_URL = "http://127.0.0.1:8889/facecam/whep";
